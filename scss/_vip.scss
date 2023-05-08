@@ -5,6 +5,11 @@
     overflow-y: auto;
     background: $mainBG_2;
 
+    .vip_info {
+        height: calc(354vw);
+        margin: 5%;
+    }
+
     //上部
     .topBox {
         width: 100%;

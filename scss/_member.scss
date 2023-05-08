@@ -1,56 +1,68 @@
 //會員中心
 .memberWrap {
-    @include bgStyle_1;
+    width: 100%;
+    height: auto;
+    min-height: calc(100% - 92px);
+    background: $mainBG_2;
+    padding-bottom: 10px;
 
     //玩家資訊
     .user {
         width: 100%;
         height: auto;
+        margin-bottom: 10px;
         background: $mainBG_1;
         padding-bottom: 13px;
-        margin-bottom: 10px;
 
         .info {
-            width: 100%;
-            height: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
             position: relative;
             padding: 20px 15px;
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
 
             div {
 
                 .account {
-                    color: $mainWord_1;
-                    font-weight: bold;
-                    font-size: 4vw;
-                    letter-spacing: 2px;
                     display: flex;
                     align-items: center;
                     margin-bottom: 6px;
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    color: $mainWord_1;
+                    font-weight: bold;
 
                     .lv {
                         width: auto;
                         height: 18px;
-                        @include operateLV;
                         margin-right: 9px;
+                        @include operateLV
                     }
                 }
 
                 .date {
-                    color: $title_Time;
                     font-size: 13px;
-                    font-weight: bold;
                     letter-spacing: 1px;
+                    font-weight: bold;
+                    color: $title_Time;
                 }
             }
+
+            // .arrow_ic {
+            //     display: block;
+            //     width: 1.7vw;
+            //     height: 3.2vw;
+            //     transform: scaleX(-1);
+            // }
 
             .infoBtn {
                 width: auto;
                 height: auto;
                 @include mainBtn;
-                font-size: 3.4vw;
+                font-size: 14px;
                 padding: 3px 15px;
             }
         }
@@ -71,15 +83,16 @@
                 height: 8.27vw;
                 @include mainBtn;
                 border-radius: 0 5vw 5vw 0;
+                font-size: 15px;
             }
         }
 
         .btnBox {
+            display: flex;
             width: 92.26vw;
             height: auto;
-            display: flex;
-            justify-content: space-between;
             margin: 0 auto;
+            justify-content: space-between;
 
             button {
                 width: 49%;
@@ -87,27 +100,29 @@
                 @include normalBtn;
 
                 .wallet_ic {
+                    display: block;
                     width: 8.8vw;
                     height: 8.8vw;
                 }
 
                 .vip_ic {
+                    display: block;
                     width: 8.8vw;
                     height: 8.8vw;
                     background-position-x: 100%;
                 }
 
                 .text {
-                    color: $title_1;
-                    font-size: 5vw;
+                    margin-left: 3.47vw;
+                    font-size: 18px;
                     font-weight: bold;
                     letter-spacing: 2px;
-                    margin-left: 3.47vw;
+                    color: $title_1;
 
                     p {
-                        color: $title_3;
                         font-size: 12px;
                         letter-spacing: 1px;
+                        color: $title_3;
                         text-align: left;
                     }
                 }
@@ -115,22 +130,22 @@
         }
 
         ul {
-            width: 92.26vw;
-            height: auto;
             display: flex;
             justify-content: space-between;
+            width: 92.26vw;
             margin: 15px auto 0;
 
             li {
-                width: 20.53vw;
-                height: auto;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                width: 20.53vw;
+                height: auto;
                 position: relative;
 
                 i {
+                    display: block;
                     width: 10.4vw;
                     height: 9.33vw;
 
@@ -148,11 +163,11 @@
                 }
 
                 p {
-                    color: $title_2;
                     font-size: 13px;
                     font-weight: bold;
                     letter-spacing: 1px;
                     margin-top: 5px;
+                    color: $optionColor;
                 }
 
                 .bubble {
@@ -196,9 +211,10 @@
         }
 
         i {
+            display: block;
+            margin-right: 2vw;
             width: 8vw;
             height: 8vw;
-            margin-right: 2vw;
 
             &.point_ic {
                 width: 6vw;
@@ -229,6 +245,7 @@
         }
 
         .arrow_ic {
+            display: block;
             width: 2vw;
             height: 3.4vw;
             transform: scaleX(-1);
@@ -238,28 +255,43 @@
 
 //會員中心內頁滑軸
 .memberList {
+    background: $mainBG_1;
     width: 100%;
     height: auto;
 
     ul {
         width: 100%;
         height: auto;
-        @include listStyle_1;
+        display: flex;
 
         li {
             width: 50%;
             height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            border-bottom: solid 2px transparent;
+            font-size: 3.4vw;
+            font-weight: bold;
+            color: $choose_Word;
+
+            &:active,&.active {
+                color: $choose_ActiveWord;
+                border-color: $choose_Border;
+            }
         }
     }
 }
 
 //會員中心內頁基本情報
 .memberInfo {
-    width: 100%;
-    height: calc(100vh - 135px);
-    background: $mainBG_2;
-    padding: 10px 0;
     overflow-y: auto;
+    width: 100%;
+    height: calc(100vh - 136px);
+    padding: 10px 0;
+    box-sizing: border-box;
+    background: $mainBG_2;
 
     form {
         width: 100%;
@@ -416,7 +448,7 @@
                         align-items: center;
                         font-size: 14px;
                         font-weight: bold;
-                        color: $title_2;
+                        color: $optionColor;
                         margin-left: 10px;
 
                         i {

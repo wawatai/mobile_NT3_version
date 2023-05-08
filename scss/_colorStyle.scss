@@ -1,20 +1,13 @@
 //主色系
 $mainBG_1: #ffffff;
-$mainBG_2: #f2f3f3;
-@mixin bgStyle_1 {
-    width: 100%;
-    min-height: calc(100vh - 95px);
-    height: auto;
-    background: $mainBG_2;
-    padding-bottom: 10px;
-}
+$mainBG_2: #f8f8f8;
 
 //主要字色
 $mainWord_1: #000000;
 
 //主要邊框色
 $mainBorder_1: #cccccc;
-$mainBorder_2: #957222;
+$mainBorder_2: #b18e56;
 
 //金額色
 $money: #000000;
@@ -27,38 +20,40 @@ $click: #af8c50;
 $remind: #e11515;
 $remind_Sp: #009245;
 
+//大選項字色
+$optionColor: #4d4d4d;
+
 //標題字
-$title_1: #9c8018;
-$title_2: #4d4d4d;
-$title_3: #b3b3b3;
-$title_Time: #848484;
+$title_1: #c0933e;
+$title_2: #444;
+$title_3: #666;
+$title_Time: #999;
 $title_Header: #ffffff;
 
 //選擇列字色+選擇列active
 $choose_Word: #848484;
-$choose_ActiveWord: #c7a16e;
+$choose_ActiveWord: #231815;
 $choose_Border: #c7a16e;
 
 //陰影色
 $boxshadow_1: #dedede;
 $boxshadow_2: #c8c8c880;
 
-$marqueeBG: #ffffff;
+//跑馬燈字色
 $marqueeColor: #4d4d4d;
+//跑馬燈背景
 $marqueeIcon: linear-gradient(to top,#fae0af 0%,#d7b676 50%,#f8fbc0 100%);
+//跑馬燈陰影色
 $marqueeBoxshadow: #ede5d7;
 
 //彈窗背景透明底
 $filter: #00000066;
 
-//ad
-$ad_BG: #ffffff;
-
 //提示框
 @mixin remindBox {
-    background: #ffffff;
-    border: solid 1px #957222;
-    border-radius: 5px;
+    background: #fcf9f3;
+    border: 1px solid #ece0d2;
+    border-radius: 3px;
     padding: 14px 15px;
     box-sizing: border-box;
 }
@@ -94,60 +89,13 @@ $ad_BG: #ffffff;
     }
 }
 
-@mixin lang {
-    background: linear-gradient(to top,#ebca7b 11%,#c29d4e 56%,#ebca7b 95%);
-    border-radius: 3px;
-    border: solid 1px #ffffff;
-    display: flex;
-    align-items: center;
-    padding-left: 8px;
-
-    &::before {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 6px 4px 0 4px;
-        border-color: #ffffff transparent;
-        right: 8px;
-    }
-
-    select {
-        background: none;
-        border: none;
-        color: #ffffff;
-        font-size: 3.4vw;
-        font-weight: bold;
-        appearance: none;
-    }
-}
-
-@mixin listStyle_1 {
-    background: #ffffff;
-    display: flex;
-
-    li {
-        border-bottom: solid 2px transparent;
-        color: #848484;
-        font-size: 3.4vw;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &:active,&.active {
-            color: #c7a16e;
-            border-color: #c7a16e;
-        }
-    }
-}
-
 
 //頁面個別調整
 
 
 //登入頁登入區塊
+$operate_Acc: #000000;
+$operate_Money: #000000;
 @mixin operateLV {
     background: linear-gradient(120deg,#f1d7b7 0%,#cca172 50%,#f1c999 100%);
     border: solid 1px #cca172;
@@ -190,16 +138,17 @@ $gameListBtn_ActiveBG: linear-gradient(to top,#e9cc93 0%,#be9c5b 100%);
     border-radius: 5px;
 }
 @mixin gameBoxWord {
-    color: #8e5610;
+    color: #ebd495;
     font-size: 5vw;
     font-weight: bold;
     text-align: center;
+    text-shadow: 2px 3px 3px #332116, 2px -2px 3px #332116;
 }
 
 //member
 @mixin memberWallet {
     background: #f2f3f3;
-    color: #4d4d4d;
+    color: #000;
     border-color: #957222;
     display: flex;
     align-items: center;
@@ -208,7 +157,7 @@ $gameListBtn_ActiveBG: linear-gradient(to top,#e9cc93 0%,#be9c5b 100%);
     border-style: solid;
     border-width: 1px 0 1px 1px;
     border-radius: 5vw 0 0 5vw;
-    font-size: 3.4vw;
+    font-size: 15px;
     letter-spacing: 1px;
     font-weight: bold;
 }
@@ -282,6 +231,10 @@ $cardWord: #ffffff;
     text-align: center;
     border-radius: 0 0 5px 5px;
 }
+
+//綁定銀行卡特殊字色
+$card_upload:#3d4cce;
+$card_line:#3502ff;
 
 //mail
 $mailCnt_TopBG: #e0c38d;
@@ -617,20 +570,6 @@ $slotGame_Word: #4d4d4d;
         background: linear-gradient(to top,#f3dba7 0%,#a08761 100%);
     }
 }
-@mixin checkEvent_2 {
-    background: linear-gradient(to bottom, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
-    border: solid 1px #0282cc;
-    border-radius: 1vw;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: bold;
-    font-size: 3.4vw;
-    margin-left: 5px;
-
-    &:active,&.active {
-        background: linear-gradient(to top, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
-    }
-}
 
 //大灰切換按鈕
 @mixin bigGrayBtn {
@@ -729,7 +668,7 @@ button:disabled {
 
 @mixin mainSelect {
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 3px;
     appearance: none;
     font-size: 15px;
     font-weight: bold;
@@ -741,30 +680,3 @@ button:disabled {
     border: solid 1px #957222;
     padding-left: 15px;
 }
-
-
-
-//套件
-
-
-
-@mixin textHidden {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-@mixin goTop {
-    background: linear-gradient(to top, #E3C484 0%, #EEE39F 77%);
-    border-radius: 50%;
-    border: solid 1px #c5a45f;
-    box-shadow: 0 5px 6px -2px #00000034;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    &.display {
-        display: flex;
-    }
-}
-$goTop_Color: #523103;

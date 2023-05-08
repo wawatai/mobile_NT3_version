@@ -21,7 +21,7 @@
 
             .content {
                 width: 92vw;
-                height: 80px;
+                // height: 80px;
                 margin: 25px auto 16px;
                 background: $mainBG_1;
                 border-radius: 5px;
@@ -30,7 +30,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 box-sizing: border-box;
-                padding: 10px 14px;
+                padding: 12px 0 10px 15px;
                 border: solid 1px $mainBorder_2;
 
                 .title {
@@ -39,6 +39,7 @@
                     font-weight: bold;
                     display: flex;
                     align-items: center;
+                    margin: 0 0 18px;
 
                     i {
                         display: block;
@@ -66,7 +67,7 @@
                 justify-content: space-between;
 
                 p {
-                    color: $title_2;
+                    color: $title_1;
                     font-size: 14px;
                     font-weight: bold;
                     display: flex;
@@ -199,7 +200,7 @@
                         font-size: 13px;
                         letter-spacing: 1px;
                         font-weight: bold;
-                        color: $title_2;
+                        color: $optionColor;
                         display: flex;
                         align-items: center;
     
@@ -249,7 +250,7 @@
         
         .smallRemind {
             margin-top: 5px;
-            color: $remind;
+            color:$remind;
             font-size: 12px;
             font-weight: bold;
         }
