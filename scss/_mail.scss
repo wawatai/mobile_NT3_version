@@ -2,7 +2,7 @@
 .topList {
     width: 100%;
     height: auto;
-    background: $mainBG_1;
+    background: $choose_bg;
 
     ul {
         width: 100%;
@@ -13,17 +13,19 @@
             width: 50%;
             height: 40px;
             box-sizing: border-box;
-            border-bottom: solid 2px transparent;
+            border-bottom: solid 1px $choose_Border;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 14px;
             font-weight: bold;
             color: $choose_Word;
+            background: $choose_Active;
 
             &.active {
                 color: $choose_ActiveWord;
-                border-color: $choose_Border;
+                border-bottom:4px solid $choose_Border;
+                background: $choose_Active;
             }
         }
     }
@@ -44,8 +46,9 @@
             width: 100%;
             height: auto;
             box-sizing: border-box;
-            padding: 10px 15px;
-            background: $mainBG_2;
+            padding: 15px 15px;
+            border-bottom: 1px solid $mainBorder_1;
+            background: $liner-bg;
 
             ul {
                 width: 100%;
@@ -84,7 +87,7 @@
             .all {
                 display: flex;
                 align-items: center;
-                color: $title_2;
+                color: $title_3;
                 font-size: 16px;
                 font-weight: bold;
 
@@ -187,7 +190,7 @@
                             right: 30px;
                             font-size: 13px;
                             font-weight: bold;
-                            color: $title_Time;
+                            color: $title_1;
                         }
                     }
 
@@ -223,7 +226,8 @@
             height: auto;
             box-sizing: border-box;
             padding: 10px 15px;
-            background: $mainBG_2;
+            background: $liner-bg;
+            border-bottom: 1px solid $mainBorder_1;
 
             ul {
                 width: 100%;
@@ -234,6 +238,7 @@
                     width: 34%;
                     height: 10.67vw;
                     @include bigGrayBtn;
+                    font-weight: 3.2vw;
                     
                     &:nth-of-type(1) {
                         border-radius: 5px 0 0 5px;
@@ -282,7 +287,7 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
-                        color: $title_2;
+                        color:$mainWord_1;
                     }
                 }
             }
@@ -299,10 +304,9 @@
     padding: 10vw 15px;
     border-radius: 10px;
     margin: 15px auto;
-    box-shadow: 0 2px 4px 0 $boxshadow_1;
     position: relative;
     background: $mainBG_1;
-    border: solid 1px $mainBorder_2;
+    border: solid 1px $click;
 
     &::before {
         content: "";

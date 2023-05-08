@@ -19,15 +19,15 @@
         <!--content-->
         <div class="content helpPage display">
             <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
-            <div class="title">常見問題</div>
+            <div class="title">Hướng dẫn người chơi</div>
         </div>
         <div class="content helpPage q1">
             <i class="back_arrow" onclick="backToPage()"></i>
-            <div class="title">常見問題</div>
+            <div class="title">Hướng dẫn người chơi</div>
         </div>
         <div class="content helpPage q2">
             <i class="back_arrow" onclick="backToPage()"></i>
-            <div class="title">遠端協助</div>
+            <div class="title">Nạp tiền</div>
         </div>
     </header>
     <!--main-->
@@ -37,40 +37,47 @@
             <!--開頭選單-->
             <div class="helpHeader">
                 <div class="selectBox">
-                    <p>常見問題</p>
+                    <p>Hướng dẫn người chơi</p>
                     <i class="arrow_ic"></i>
                     <select onchange="window.location.href=this.options[this.selectedIndex].value">
-                        <option value="" disabled>請選擇</option>
-                        <option value="./help_new.html">新手幫助</option>
-                        <option value="./help_often.html" selected>常見問題</option>
-                        <option value="./help_about.html">關於我們</option>
-                        <option value="./app.html">APP下載</option>
+                        <!-- <option value="" disabled>請選擇</option> -->
+                        <option value="./help_new.html">Hướng dẫn người chơi</option>
+                        <!-- <option value="./help_often.html" selected>常見問題</option> -->
+                        <option value="./help_about.html">Thông tin trang</option>
+                        <option value="./app.html">Tải APP</option>
                     </select>
                 </div>
             </div>
             <!--內容-->
             <div class="helpBody">
                 <ul>
-                    <li>常見問題</li>
-                    <li>遠端協助</li>
-                    <li onclick="window.location.href='./help_often_contact.html'">聯絡我們</li>
+                    <li>Đăng ký</li>
+                    <li>Nạp tiền</li>
+                    <li onclick="window.location.href='./help_often_contact.html'">Rút tiền</li>
                 </ul>
             </div>
         </div>
         <!--幫助中心內層-->
         <div class="helpInner">
             <ul class="q1">
-                <li>
+                <li class="active">
                     <div class="title">
                         <i class="icon often"></i>
-                        <p>如何註冊帳號</p>
+                        <!-- <p>如何註冊帳號</p> -->
+                        <p>Làm cách nào để trở thành hội viên của trangVN99?</p>
                         <i class="arrow_ic"></i>
                     </div>
-                    <div class="textBox">
-                        <p>加入通博(tb588)娛樂城，您必須年滿18歲並且同意遵守 條款及條件和 隱私權政策。大多數國家於於法律上對於線上遊戲都有訂定相關的詳細規範，請您務必詳細閱讀並遵守您所在當地的法律條文。</p>
+                    <div class="textBox textBoder">
+                        <!-- <h2>Làm cách nào để trở thành hội viên của trangVN99?</h2> -->
+                        <p>Để trở thành hội viên của trang [VN99] , bạn vui lòng chọn mục Trang chủ , sau đó chọn ô 
+                            <a href="#/register">Đăng ký</a>
+                            để tiến hành đăng ký. Tên tài khoản đăng ký phải có ít nhất 6 ~ 10 ký tự ( bao gồm chữ và số ) , sau khi điền đầy đủ thông tin yêu
+                            cầu gồm Họ tên thật, Số điện thoại, Line , mã giới thiệu ( nếu có ) bạn vui lòng tích vào ô Đồng ý với các điều khoản và chính
+                            sách bảo mật của trang, sau đó tiến hành bấm vào ô Xác nhận để tạo tài khoản thành công.
+                        </p>
                     </div>
                 </li>
-                <li>
+                <!-- <li>
                     <div class="title">
                         <i class="icon often"></i>
                         <p>我該如何存款?</p>
@@ -144,26 +151,26 @@
                     <div class="textBox">
                         <p>通博(tb588)娛樂城提供24小時，全年無休點數出售交易，並將於您提出交易需求後30分鐘內快速完成。</p>
                     </div>
-                </li>
+                </li> -->
             </ul>
             <ul class="q2">
                 <li class="active">
                     <div class="title">
                         <i class="icon often"></i>
-                        <p>遠端協助</p>
+                        <p>Nạp tiền</p>
                         <i class="arrow_ic"></i>
                     </div>
-                    <div class="textBox">
-                        <p>步驟一 : 前往<a href="#">Team-Viewer</a> 官網,下載遠端協助網址。</p>
-                        <p>下載後並執行</p>
-                        <div class="img tv"></div>
-                        <p>步驟二 : 進行安裝，安裝教學流程可參照,遠端協助程式安裝教學。</p>
-                        <p>步驟三 : 將您的【遠端協助ID】與【密碼】，提交給客服人員即可爲您進行遠端協助服務。</p>
-                        <div class="img remote"></div>
-                        <p class="smallTitle">遠端協助</p>
+                    <div class="textBox textBoder">
+                        <p>1. Để nạp tiền vào tài khoản, vui lòng chọn mục Nạp tiền và chọn hình thức thanh toán bạn muốn để tiến hành Nạp tiền. </p>
+                        <!-- <p>下載後並執行</p> -->
+                        <p>2. Trang hỗ trợ việc Nạp tiền qua thẻ ngân hàng bằng ứng dụng điện thoại, thanh toán trực tiếp tại cây ATM và thanh toán tại tại
+                            cửa hàng tiện lợi, hội viên có thể lựa chọn phương thức nạp tiền thuận tiện nhất để Nạp tiền cho tài khoản của mình. </p>
+                        <p>3. Sau khi chuyển tiền thành công hệ thống sẽ tiến hành xác minh khoản nạp và lên điểm cho hội viên.</p>
+                        <!-- <div class="img remote"></div> -->
+                        <!-- <p class="smallTitle">遠端協助</p>
                         <p>1.下載無需任何費用</p>
                         <p>2.遠端協助程式使用完畢後即可關閉與卸載，無須擔心安全性問題。</p>
-                        <p>3.可由客服或電腦工程人員爲您遠端操作電腦，妥善協助您查看並解決當前電腦或軟體問題。</p>
+                        <p>3.可由客服或電腦工程人員爲您遠端操作電腦，妥善協助您查看並解決當前電腦或軟體問題。</p> -->
                     </div>
                 </li>
             </ul>
@@ -174,23 +181,23 @@
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
                 <i class="menu_ic"></i>
-                <p>首頁</p>
+                <p>TRANG CHỦ</p>
             </li>
             <li onclick="window.location.href='./event.html'">
                 <i class="event_ic"></i>
-                <p>優惠</p>
+                <p>Khuyến mãi</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
                 <i class="wallet_ic"></i>
-                <p>存轉提</p>
+                <p>VÍ TIỀN</p>
             </li>
             <li class="active" onclick="window.location.href='./help_often_contact.html'">
                 <i class="service_ic"></i>
-                <p>客服</p>
+                <p></p>
             </li>
             <li onclick="window.location.href='./member.html'">
                 <i class="center_ic"></i>
-                <p>會員中心</p>
+                <p></p>
             </li>
         </ul>
     </footer>

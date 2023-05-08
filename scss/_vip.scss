@@ -3,24 +3,31 @@
     width: 100%;
     height: calc(100vh - 94px);
     overflow-y: auto;
-    background: $mainBG_2;
+    // background: $mainBG_3;
+
+    .vip_info {
+        height: calc(354vw);
+        margin: 5%;
+    }
 
     //上部
     .topBox {
         width: 100%;
         height: auto;
         padding-bottom: 20px;
-        background: $mainBG_1;
+        background: $maingoldBG;
+        border-bottom: 1px solid $mainBorder_1;
 
         .board {
             width: 100%;
             height: auto;
             box-sizing: border-box;
             padding: 0 4vw 7.46vw;
-            border-radius: 0 0 40px 40px;
-            box-shadow: 0 0 13px 2px $boxshadow_1;
-            background: $mainBG_1;
+            border-bottom: 1px solid $mainBorder_1;
+            background: $liner-bg;
+            border-radius: 0 0 20px 20px;
             margin-bottom: 6.66vw;
+            box-shadow: $boxshadow_1;
 
             .content {
                 position: relative;
@@ -34,14 +41,14 @@
                     margin-bottom: 12px;
                     letter-spacing: 2px;
                     font-weight: bold;
-                    color: $title_1;
+                    color: $title_3;
                 }
 
                 .textBox {
                     margin-bottom: 12px;
                     font-size: 13px;
                     letter-spacing: 1px;
-                    color: $title_2;
+                    color: $title_3;
                     font-weight: bold;
 
                     span {
@@ -55,7 +62,7 @@
                     height: 30.13vw;
                     position: absolute;
                     top: 0;
-                    right: 5.6vw;
+                    right: 0vw;
                 }
             }
 
@@ -77,7 +84,7 @@
                         color: $title_2;
 
                         &.cur {
-                            color: $title_1;
+                            color:$title_2;
                         }
                     }
                 }
@@ -151,7 +158,7 @@
 
                 hr {
                     width: 100%;
-                    border: solid 1px $mainBorder_1;
+                    border: solid 1px $vip_LevelBG;
                 }
             }
 
@@ -215,6 +222,7 @@
                 width: 87.27vw;
                 height: 47.46vw;
                 overflow-x: auto;
+                border-radius: 22px;
                 
                 ul {
                     display: flex;
@@ -267,14 +275,16 @@
         box-sizing: border-box;
         padding: 15px 12px 12px;
         margin: 10px 0;
-        background: $mainBG_1;
+        background: $maingoldBG;
+        border-top: 1px solid $mainBorder_1;
+        border-bottom: 1px solid $mainBorder_1;
 
         .title {
             margin-bottom: 15px;
             font-size: 17px;
             font-weight: bold;
             letter-spacing: 2px;
-            color: $title_1;
+            color: $title_2;
             box-sizing: border-box;
             padding-left: 1vw;
         }
@@ -282,22 +292,22 @@
         ul {
             width: 100%;
             height: auto;
-            display: flex;
-            flex-wrap: wrap;
+            display: block;
             justify-content: center;
 
             li {
-                width: 45.4vw;
+                width: 92.4vw;
                 min-height: 51px;
+                @include normalBtn;
                 height: auto;
                 padding: 6px 12px;
                 margin: 0 1.6vw 1.6vw 0;
-                border: solid 1px $mainBorder_2;
                 border-radius: 3px;
                 font-size: 13px;
                 font-weight: bold;
-                color: $title_2;
+                color: $title_1;
                 box-sizing: border-box;
+                display: block;
 
                 &:nth-of-type(2n) {
                     margin-right: 0;
@@ -305,8 +315,8 @@
 
                 p {
                     font-size: 22px;
-                    color: $mainWord_1;
-                    margin-top: 8px;
+                    color: $title_2;
+                    margin-top: 3px;
                 }
             }
 
@@ -318,9 +328,13 @@
     
     //查看VIP詳情
     .checkBtn {
-        width: 92%;
+        width: 70%;
         height: 50px;
-        @include longBtn;
+        @include normalBtn2;
+        letter-spacing: 2px;
+        justify-content: left;
+        border-radius: 10vw;
+        border: 1px solid $mainBorder_2;
         padding: 0 20px;
         margin: 0 auto 10px;
 
@@ -328,7 +342,7 @@
             display: block;
             width: 2vw;
             height: 3.4vw;
-            transform: scaleX(-1);
+            margin-left: 155px;
         }
     }
 }
@@ -338,16 +352,16 @@
     width: 100%;
     height: calc(100vh - 94px);
     overflow-y: auto;
-    padding: 5px 0;
 
     .lvWrap {
         margin: 10px 0;
-        padding: 5px 18px;
+        padding: 10px 18px;
         width: 100%;
         height: auto;
-        background: $mainBG_1;
+        background: $liner-bg;
         box-sizing: border-box;
         position: relative;
+        border-bottom: 1px solid $mainBorder_1;
 
         &:last-child {
             margin-bottom: 0;
@@ -356,7 +370,7 @@
         .title {
             font-size: 17px;
             font-weight: bold;
-            color: $title_1;
+            color: $title_2;
             margin: 7px 0 12px;
         }
 
@@ -364,12 +378,11 @@
             width: 100%;
             height: auto;
             display: flex;
-            box-shadow: 0 0 5px 0 $boxshadow_2;
-            border-radius: 5px;
+            border-radius: 3px;
             overflow: hidden;
             margin-bottom: 15px;
             position: relative;
-            border: solid 1px $mainBorder_2;
+            border: solid 1px $mainBorder_1;
 
             i {
                 display: flex;
@@ -379,7 +392,6 @@
                 height: 40px;
                 position: absolute;
                 top: 0;
-                background: $mainBG_1;
                 z-index: 1;
 
                 &.prev {
@@ -388,8 +400,14 @@
                     &::before {
                         content: "";
                         position: absolute;
-                        width: 7px;
-                        height: 14px;
+                        width: 0;
+                        height: 0;
+                        top: 50%;
+                        left: 23vw;
+                        transform: translate(-50%,-50%);
+                        border-color: transparent #fd1111;
+                        border-style: solid;
+                        border-width: 6px 8px 6px 0;
                         z-index: 1;
                     }
                 }
@@ -400,56 +418,70 @@
                     &::before {
                         content: "";
                         position: absolute;
-                        width: 7px;
-                        height: 14px;
-                        z-index: 1;
-                        transform: scaleX(-1);
+                        width: 0;
+                        height: 0;
+                        top: 50%;
+                        left: 50%;
+                        transform: scaleX(-1) translate(50%,-50%);
+                        border-color: transparent #fd1111;
+                        border-style: solid;
+                        border-width: 6px 8px 6px 0;
                     }
                 }
             }
 
             .left {
-                width: 20%;
+                width: 85%;
                 height: auto;
 
                 li {
                     height: 40px;
                     display: flex;
                     align-items: center;
+                    background: $vipDetail_SecondBG;
+                    // border-bottom: 1px solid $mainBorder_1;
+
+                    &:nth-of-type(1) {
+                        background: $vipDetail_titleBG;
+                    }
+
+                    &:nth-last-of-type(1) {
+                        border: none;
+                    }
 
                     &:nth-of-type(2n) {
-                        background: $vipDetail_SecondBG;
+                        background: $vipDetail_onceBG;
                     }
 
                     &.smallTitle {
                         border-bottom: solid 1px $mainBorder_1;
 
                         p {
-                            color: $title_2;
+                            color: $title_3;
                         }
                     }
 
                     p {
                         width: 100%;
                         box-sizing: border-box;
-                        border-right: solid 1px $mainBorder_1;
+                        border-right: solid 1px $remind;
                         font-weight: bold;
                         text-align: center;
                         font-size: 14px;
-                        color: $mainWord_1;
+                        color: $title_2;
                     }
                 }
             }
 
             .right{
-                width: 80%;
+                width: 85%;
                 height: auto;
                 display: flex;
                 overflow-x: auto;
                 position: relative;
 
                 ul {
-                    width: auto;
+                    width: 85%;
                     height: auto;
                     flex-shrink: 0;
 
@@ -468,23 +500,37 @@
                         height: 40px;
                         display: flex;
                         align-items: center;
+                        // border-bottom: 1px solid $mainBorder_1;
+                        background: $vipDetail_SecondBG;
+                        
+                        &:nth-of-type(1) {
+                            background: $vipDetail_titleBG;
+                        }
+
+                        &:nth-last-of-type(1) {
+                            border: none;
+                        }
+
+                        // &:nth-of-type(1n) {
+                        //     background: $vipDetail_SecondBG;
+                        // }
 
                         &:nth-of-type(2n) {
-                            background: $vipDetail_SecondBG;
+                            background: $vipDetail_onceBG;
                         }
     
                         &.smallTitle {
                             border-bottom: solid 1px $mainBorder_1;
     
                             p {
-                                color: $title_2;
+                                color: $title_3;
                             }
                         }
     
                         p {
                             width: 100%;
                             box-sizing: border-box;
-                            border-right: solid 1px $mainBorder_1;
+                            border-right: solid 1px $remind;
                             font-weight: bold;
                             text-align: center;
                             font-size: 14px;
@@ -513,7 +559,7 @@
                     width: 0;
                     height: 0;
                     border-style: solid;
-                    border-color: transparent $remind;
+                    border-color: transparent $remind_Sp;
                     border-width: 6px 8px 6px 0;
                     animation: moveL 2s ease 0s infinite;
                 }
@@ -526,7 +572,7 @@
                     width: 0;
                     height: 0;
                     border-style: solid;
-                    border-color: transparent $remind;
+                    border-color: transparent $remind_Sp;
                     border-width: 6px 0 6px 8px;
                     animation: moveR 2s ease 0s infinite;
                 }
@@ -577,6 +623,23 @@
                     transform: translateX(0);
                 }
             }
+        }
+    }
+    .notice {
+        width: 100%;
+        height: auto;
+        padding: 10px 18px;
+        box-sizing: border-box;
+        color: $title_2;
+        font-weight: bold;
+        font-size: 3.6vw;
+        line-height: 6vw;
+        background: $maingoldBG;
+
+        h2 {
+            color: $remind_Sp;
+            font-weight: bold;
+            font-size: 4vw;
         }
     }
 }

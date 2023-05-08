@@ -1,4 +1,5 @@
 //彈窗
+
 .filter {
     width: 100%;
     height: 100%;
@@ -17,14 +18,15 @@
 
     .title {
         width: 100%;
-        height: 50px;
+        height: 12vw;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 21px;
+        font-size: 5vw;
         letter-spacing: 2px;
         font-weight: bold;
         color: $title_Header;
+        background: $jumpWindow_header;
         position: relative;
 
         i {
@@ -44,6 +46,7 @@
         border-radius: 5px;
         overflow: hidden;
         display: none;
+        border: 1px solid $mainBorder_1;
 
         &.display {
             display: block;
@@ -51,13 +54,13 @@
 
         .content {
             font-size: 14px;
-            color: $mainWord_1;
+            color: $title_2;
             letter-spacing: 1px;
             font-weight: bold;
             width: 100%;
             height: auto;
             box-sizing: border-box;
-            padding: 24px 80px 0;
+            padding: 24px 30px 0;
             text-align: center;
 
             p {
@@ -140,6 +143,10 @@
 
         .title {
             height: 18.67vw;
+            font-size: 4vw;
+            font-size: 4vw;
+            letter-spacing: 0px;
+            font-weight: 400;
 
             .icon {
                 width: 8.6vw;
@@ -160,14 +167,44 @@
                 height: auto;
                 position: relative;
 
+                 &::before {
+                        content: "";
+                        position: absolute;
+                        top: 2vw;
+                        left: 1.5vw;
+                        width: 5.2vw;
+                        height: 7vw;
+                        // label:nth-of-type(2):before {
+                        //     background-position-x: -20px;
+                        // }
+                        // &:nth-of-type(3) {
+                        //     background-position-x: -20px;
+                        // }
+                        // &:nth-of-type(4) {
+                        //     background-position-x: -60px;
+                        // }
+                        // &:nth-of-type(5) {
+                        //     background-position-x: -40px;
+                        // }
+                        // &:nth-of-type(6) {
+                        //     background-position-x: -40px;
+                        // }
+                    }
+
                 &:nth-of-type(1) {
                     margin: 9vw 0 8vw;
+                }
+                &:nth-of-type(2) {
+                    &:nth-of-type(2)::before {
+                        background-position-x: -5vw;
+                    }
                 }
 
                 input {
                     width: 77.6vw;
                     height: 9.87vw;
                     @include mainInput;
+                    padding-left: 35px;
                 }
 
                 .eye {
@@ -190,7 +227,7 @@
                 p {
                     font-size: 12px;
                     font-weight: bold;
-                    color: $click;
+                    color: $remind_Sp;
 
                     span {
                         margin: 0 2px;
@@ -214,10 +251,14 @@
             display: flex;
             justify-content: center;
             font-weight: bold;
+            display: block;
+            margin: 0 auto 10px;
+            text-align: center;
+
 
             p {
-                margin-left: 10px;
-                color: $click;
+                margin: 10px 0 0;
+                color: $remind_Sp;
             }
         }
     }
@@ -241,7 +282,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 15px;
+           padding: 0 2vw;
 
             input {
                 width: 77.6vw;
@@ -307,10 +348,54 @@
                 position: relative;
                 margin-bottom: 5.06vw;
 
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    left: 10px;
+                    width: 20px;
+                    height: 24px;
+                }
+
+                &:nth-of-type(2) {
+                    &:nth-of-type(2)::before {
+                        background-position-x: -20px;
+                    }
+                }
+                &:nth-of-type(3) {
+                    &:nth-of-type(3)::before {
+                        background-position-x: -20px;
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    &:nth-of-type(4)::before {
+                        background-position-x: -60px;
+                    }
+                }
+                &:nth-of-type(5) {
+                    &:nth-of-type(5)::before {
+                        background-position-x: -40px;
+                    }
+                }
+                &:nth-of-type(6) {
+                    &:nth-of-type(6)::before {
+                        background-position-x: -40px;
+                    }
+                }
+
+                &:nth-of-type(7) {
+                    &:nth-of-type(7)::before {
+                        display: none;
+                    }
+                }
+
+
                 input {
                     width: 77.33vw;
                     height: 9.6vw;
                     @include mainInput;
+                    padding-left: 35px;
                 }
 
                 &.hasRemind {
@@ -332,7 +417,7 @@
                     }
 
                     p {
-                        color: $click;
+                        color: $remind_Sp;
                     }
                 }
 
@@ -346,13 +431,16 @@
                 }
 
                 .cellphoneCheck {
-                    width: 23.2vw;
-                    height: 8vw;
+                    width: 30vw;
+                    height: 7.4vw;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
                     right: 10px;
-                    @include noBgBtn_Normal;
+                    border: 1px solid $remind_Sp;
+                    color: $remind_Sp;
+                    background: none;
+                    border-radius: 3px;
                 }
             }
 
@@ -360,7 +448,7 @@
                 width: 77.33vw;
                 margin: 5px 0;
                 font-size: 12px;
-                color: $remind;
+                color: $title_2;
                 font-weight: bold;
             }
 
@@ -400,7 +488,7 @@
                     padding: 10px 5px;
                     font-weight: bold;
                     line-height: 1.8;
-                    color: $title_1;
+                    color: $title_2;
                 }
 
                 p {
@@ -449,12 +537,14 @@
 
     //最新公告
     .news {
-        width: 87.2vw;
+        width: 92.27vw;
         height: auto;
         padding-bottom: 8vw;
         background: $mainBG_1;
         border-radius: 5px;
         overflow: hidden;
+        border-radius: 3vw;
+        border: 1px solid $jumpWindow_border;
         display: none;
 
         &.display {
@@ -463,9 +553,9 @@
 
         .typeList {
             width: 100%;
-            height: auto;
+            height: 15vw;
             display: flex;
-            border-bottom: dotted 1px $mainBorder_1;
+            border-bottom: solid 1px $newsborder;
             box-sizing: border-box;
             padding: 0 5%;
 
@@ -475,13 +565,24 @@
                 width: auto;
                 height: 14.4vw;
                 align-items: center;
-                margin-right: 10px;
+                margin-top: 2vw;
+
+                &:nth-of-type(2) {
+                    p {
+                       width: 20vw;
+                    }              
+                }
+
+                &:nth-of-type(3) {
+                    p {
+                       width: 36vw;
+                    }              
+                }
 
                 p {
-                    width: 22.67vw;
+                    width: 27vw;
                     height: 10vw;
-                    @include changeBtn;
-                    border-radius: 8px;
+                    @include newsBtn;
                 }
             }
         }
@@ -493,7 +594,6 @@
             overflow-y: auto;
             display: none;
             box-sizing: border-box;
-            padding: 0 5%;
 
             &.display {
                 display: block;
@@ -506,13 +606,12 @@
                 height: auto;
                 box-sizing: border-box;
                 margin-top: 10px;
-                border-radius: 5px;
-                border: dotted 1px $mainBorder_2;
+                border-bottom: solid 1px$newsborder;
 
                 .date {
                     font-size: 12px;
                     letter-spacing: 1px;
-                    color: $title_Time;
+                    color: $title_2;
                     font-weight: bold;
                     margin-bottom: 6px;
                 }
@@ -532,11 +631,12 @@
     .gameWindow {
         width: 91.94vw;
         height: auto;
-        background: $mainBG_1;
+        background: $jumpWindow_bg;
         border-radius: 5px;
         overflow: hidden;
         padding-bottom: 8vw;
         display: none;
+        border: 1px solid $jumpWindow_border;
 
         &.display {
             display: block;
@@ -553,17 +653,23 @@
                 align-items: center;
                 margin-bottom: 8.53vw;
 
+                &:nth-of-type(2) {
+                    display: block;
+                }
+
                 &.btnBox {
                     flex-wrap: wrap;
                     justify-content: space-between;
-                    margin: 0 0 7vw 20vw;
+                    margin: 0 0 1vw 0vw;
 
                     button {
-                        width: 19vw;
-                        height: 35px;
+                        width: 26.5vw;
+                        height: 9vw;
                         margin-bottom: 5px;
-                        @include noBgBtn_Normal;
-                        font-size: 3.4vw;
+                        @include mailWrap;
+                        color: $title_2;
+                        font-weight: bold;
+                        font-size: 3.9vw;
                     }
                 }
 
@@ -590,12 +696,13 @@
                     font-size: 18px;
                     letter-spacing: 1px;
                     font-weight: bold;
-                    color: $money;
+                    color: $money_Sp;
                 }
 
                 input {
-                    width: 59.2vw;
+                    width: 81vw;
                     height: 9.86vw;
+                    margin-top: 2vw;
                     @include mainInput;
                 }
             }
@@ -646,13 +753,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 5.06vw;
+            padding-top: 2.06vw;
             max-height: 140vw;
             overflow: auto;
 
             label {
                 position: relative;
-                margin-bottom: 5.06vw;
+                margin-bottom: 11.5vw;
+                display: block;
 
                 input {
                     width: 77.33vw;
@@ -661,10 +769,11 @@
                 }
 
                 .cellphoneCheck {
-                    width: 23.2vw;
+                    width: 33vw;
                     height: 8vw;
                     position: absolute;
-                    top: 50%;
+                    top: 15vw;
+                    left: 0;
                     transform: translateY(-50%);
                     right: 10px;
                     @include noBgBtn_Normal;
@@ -676,15 +785,16 @@
                 text-align: center;
                 margin: 20px 0 0;
                 font-size: 4vw;
-                color: $remind;
+                color: $remind_Sp;
                 font-weight: bold;
             }
 
             .checkBtn {
                 width: 77.33vw;
                 height: 9.6vw;
-                margin-bottom: 10px;
+                margin-bottom: 1vw;
                 @include mainBtn;
+                margin-top: -7vw;
             }
         }
     }
@@ -745,13 +855,13 @@
             max-height: 76vh;
             overflow-y: auto;
             box-sizing: border-box;
-            padding: 24px 63px 0;
+            padding: 24px 18px 0;
 
             p {
                 font-size: 14px;
                 letter-spacing: 1px;
                 font-weight: bold;
-                color: $mainWord_1;
+                color: $title_2;
                 line-height: 18px;
                 margin-bottom: 8px;
             }
@@ -1074,6 +1184,7 @@
         border-radius: 5px;
         overflow: hidden;
         display: none;
+        border: 1px solid $mainBorder_2;
 
         &.display {
             display: block;
@@ -1098,23 +1209,33 @@
                     font-size: 14px;
                     font-weight: bold;
                     color: $mainWord_1;
-                    background: $mainBG_2;
+                    background:  $vipDetail_onceBG;
                     border-bottom: solid 1px $point_Border;
                     display: flex;
                     align-items: center;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 8vw;
+                        background: $mainBorder_2;
+                        left: 51%;
+                    }
 
                     &:last-child {
                         border: none;
                     }
 
                     &.title {
-                        background: $point_BG;
+                        background: $vipDetail_SecondBG;
                         font-size: 16px;
                     }
 
                     p {
                         width: 50%;
                         text-align: center;
+                        font-size: 2vw;
                     }
                 }
             }

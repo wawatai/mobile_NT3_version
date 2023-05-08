@@ -19,7 +19,7 @@
         <!--content-->
         <div class="content">
             <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
-            <div class="title">個人資料</div>
+            <div class="title">Thông tin tài </div>
         </div>
     </header>
     <!--main-->
@@ -27,8 +27,8 @@
         <!--會員中心內頁滑軸-->
         <div class="memberList">
             <ul>
-                <li class="active">基本資料</li>
-                <li onclick="window.location.href='./member_platform.html'">平臺帳號密碼</li>
+                <li class="active">Thông tin cá nhân</li>
+                <li onclick="window.location.href='./member_platform.html'">Tài khoản nền tảng</li>
             </ul>
         </div>
         <!--會員中心內頁基本情報-->
@@ -37,41 +37,63 @@
                 <ul class="inputList">
                     <li>
                         <em></em>
-                        <span>真實姓名</span>
+                        <span>Họ tên thật </span>
                         <input class="userName" type="text" placeholder="請輸入真實姓名需持卡人姓名一致" value="user898">
                     </li>
                     <li>
                         <em></em>
-                        <span>生日</span>
+                        <span>Sinh nhật</span>
                         <input type="date">
                     </li>
                     <li class="active">
                         <em></em>
                         <span>Email</span>
-                        <input type="text" placeholder="請填選Email" value="opp1211@gmail.com">
-                        <button type="button" class="chBtn">變更</button>
+                        <input type="text" placeholder="Vui lòng điền Email" value="opp1211@gmail.com">
+                        <button type="button" class="chBtn">Lưu thông tin</button>
                     </li>
                     <li>
-                        <span>住所</span>
-                        <input type="text" placeholder="請填選地址">
-                        <button type="button" class="chBtn">變更</button>
+                        <span>Địa chỉ</span>
+                        <input type="text" placeholder="Vui lòng điền địa chỉ,Địa chỉ vui lòng không nhập khoảng trắng, các kí hiệu đặc biệt, v.v">
+                        <button type="button" class="chBtn">Lưu thông tin</button>
                     </li>
                     <li class="active">
                         <em></em>
                         <span>Line</span>
-                        <input type="text" placeholder="Line 與 WeChat 擇一填寫即可" value="999ddd">
-                        <button type="button" class="chBtn">變更</button>
+                        <input type="text" placeholder="Vui lòng điền Line ID của bạn." value="999ddd">
+                        <button type="button" class="chBtn">Lưu thông tin</button>
                     </li>
                     <li>
                         <em></em>
                         <span>WeChat</span>
-                        <input type="text" placeholder="Line 與 WeChat 擇一填寫即可">
-                        <button type="button" class="chBtn">變更</button>
+                        <input type="text" placeholder="Vui lòng điền WeChat ID của bạn.">
+                        <button type="button" class="chBtn">Lưu thông tin</button>
                     </li>
-                    <button class="saveBtn">保存資料</button>
+                    <button class="saveBtn">Lưu thông tin</button>
+                    <li>
+                        <span>Tên tài khoản </span>
+                        <input class="userName" type="text" placeholder="請輸入真實姓名需持卡人姓名一致" value="opp121">
+                    </li>
+                    <li>
+                        <span>Mã giới thiệu</span>
+                        <div class="li_box">
+                            <p>m931042a</p>
+                            <button class="smallbutton">Sao chép</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>giới thiệu</span>
+                        <div class="li_box">
+                            <input class="userName big_name" type="text" placeholder="https://app.h8win.net/#" value="">
+                        <button class="smallbutton"> Sao chép </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>giới thiệuQRCODE</span>
+                        <div class="qr-img"></div>
+                    </li>
                 </ul>
             </form>
-            <div class="info_1">
+            <!-- <div class="info_1">
                 <ul>
                     <li>
                         <span>遊戲帳號</span>
@@ -96,31 +118,31 @@
                         <div class="qrCode"></div>
                     </li>
                 </ul> 
-            </div>
+            </div> -->
             <div class="info_2">
                 <ul>
                     <li>
                         <div class="security">
-                            帳戶安全等級:
-                            <span class="low">低</span>
+                            Mức độ bảo mật tài khoản:
+                            <span class="low">Thấp</span>
                         </div>
                     </li>
                     <li>
                         <span>
                             <i class="noCheck"></i>
-                            基本資料填寫
+                            Điền dữ liệu cơ bản 
                         </span>
-                        <span class="empty">未認證</span>
+                        <span class="empty">Chưa xác minh</span>
                     </li>
                     <li>
                         <span>
                             <i class="check"></i>
-                            綁定手機號碼
+                            Liên kết số điện thoại 
                         </span>
                         <span>
                             0987654325
                             <button class="changePhoneBtn">
-                                變更
+                                Chỉnh sửa
                                 <i class="arrow_ic"></i>
                             </button>
                         </span>
@@ -128,25 +150,25 @@
                     <li>
                         <span>
                             <i class="noCheck"></i>
-                            添加銀行卡
+                            Thêm thẻ ngân hàng  
                         </span>
-                        <span class="empty">未認證</span>
+                        <span class="empty">Chưa xác minh</span>
                     </li>
                     <li>
                         <span>
                             <i class="noCheck"></i>
-                            填寫電子郵件
+                            Thêm email 
                         </span>
-                        <span class="empty">未認證</span>
+                        <span class="empty">Chưa xác minh</span>
                     </li>
                     <li>
                         <span>
                             <i class="check"></i>
-                            修改密碼 
+                            Chỉnh sửaMật khẩu
                         </span>
                         <span>
                             <button class="changePwdBtn">
-                                變更
+                                Chỉnh sửa
                                 <i class="arrow_ic"></i>
                             </button>
                         </span>
@@ -160,23 +182,23 @@
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
                 <i class="menu_ic"></i>
-                <p>首頁</p>
+                <p> TRANG CHỦ </p>
             </li>
             <li onclick="window.location.href='./event.html'">
                 <i class="event_ic"></i>
-                <p>優惠</p>
+                <p> Khuyến mãi </p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
                 <i class="wallet_ic"></i>
-                <p>存轉提</p>
+                <p>VÍ TIỀN</p>
             </li>
             <li onclick="window.location.href='./help_often_contact.html'">
                 <i class="service_ic"></i>
-                <p>客服</p>
+                <p></p>
             </li>
             <li class="active" onclick="window.location.href='./member.html'">
                 <i class="center_ic"></i>
-                <p>會員中心</p>
+                <p></p>
             </li>
         </ul>
     </footer>
@@ -185,37 +207,37 @@
         <!--更變手機-->
         <div class="jumpWindow phoneWindow">
             <div class="title">
-                <p>更變手機</p>
+                <p>Lời nhắc</p>
                 <i class="close"></i>
             </div>
             <p class="smallTitle">
-                <span>原有號碼：</span>
+                <span>Mã số có sẵn：</span>
                 0987654325
             </p>
             <form>
                 <label>
-                    <input type="text" placeholder="新手機號碼">
-                    <button type="button" class="cellphoneCheck">取得驗證碼</button>
+                    <input type="text" placeholder="Vui lòng nhập một số điện thoại mới">
+                    <button type="button" class="cellphoneCheck"> Nhận mã xác minh  </button>
                 </label>
                 <label>
-                    <input type="text" placeholder="驗證碼">
+                    <input type="text" placeholder="Mã xác minh">
                 </label>
-                <button class="checkBtn">確認</button>
-                <p class="remind">送出驗證碼後，請立即連繫在線客服</p>
+                <button class="checkBtn">Xác nhận</button>
+                <p class="remind">Sau khi gửi mã xác minh, vui lòng liên hệ ngay với dịch vụ khách hàng trực tuyến.</p>
             </form>
         </div>
         <!--更變密碼-->
         <div class="jumpWindow passwordWindow">
             <div class="title">
-                修改密碼
+                Đổi mật khẩu 
                 <i class="close"></i>
             </div>
             <div class="content">
                 <form>
-                    <input type="text" placeholder="舊登入密碼">
-                    <input type="text" placeholder="新登入密碼">
-                    <input type="text" placeholder="確認新密碼">
-                    <button type="button" class="close">確認</button>
+                    <input type="text" placeholder="Mật khẩu đăng nhập cũ">
+                    <input type="text" placeholder="Mật khẩu đăng nhập mới">
+                    <input type="text" placeholder="Xác nhận mật khẩu mới">
+                    <button type="button" class="close">Xác nhận</button>
                 </form>
             </div>
         </div>

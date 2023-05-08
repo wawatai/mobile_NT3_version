@@ -14,11 +14,12 @@
     <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="bg"></div>
     <!--header-->
     <header>
         <!--content-->
         <div class="content">
-            <div class="title">綁定銀行卡</div>
+            <div class="title">Liên kết thẻ ngân hàng </div>
             <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
         </div>
     </header>
@@ -28,24 +29,24 @@
         <div class="cardList">
             <div class="cardBox">
                 <p class="title">
-                    卡片數量<span> 0</span> / 5
+                    Số lượng thẻ<span> 0</span> / 5
                 </p>
                 <ul>
                     <li class="empty">
                         <div class="add"></div>
-                        <p class="status">請先綁定一張銀行卡，用於收款</p>
+                        <p class="status"> Vui lòng liên kết một thẻ ngân hàng để nhận tiền </p>
                     </li>
                     <li class="wait">
-                        <p class="innerTitle">中央信託</p>
+                        <p class="innerTitle">ngân hàng</p>
                         <p class="smallTitle">010</p>
                         <p class="account">0002220003</p>
-                        <div class="ing">審核中</div>
+                        <div class="ing">đang xem xét</div>
                     </li>
                     <li>
-                        <p class="innerTitle">中央信託</p>
+                        <p class="innerTitle">ngân hàng</p>
                         <p class="smallTitle">010</p>
                         <p class="account">0002220003</p>
-                        <div class="ing">審核中</div>
+                        <div class="ing">đang xem xét</div>
                     </li>
                 </ul>
             </div>
@@ -54,29 +55,39 @@
         <div class="cardContent">
             <ul>
                 <li>
-                    <p class="title">銀行名稱</p>
+                    <p class="title">Tên ngân hàng</p>
                     <input type="text" name="" id="">
-                    <p class="remind">輸入一個相關字，產生銀行選單</p>
+                    <p class="remind">Nhập một từ có liên quan để xem danh sách ngân hàng</p>
                 </li>
                 <li>
-                    <p class="title">分行名稱</p>
+                    <p class="title">Tên chi nhánh</p>
                     <input type="text" name="" id="">
                 </li>
                 <li>
-                    <p class="title">開戶姓名</p>
+                    <p class="title">Tên tài khoản</p>
                     <input type="text" name="" id="" value="美術一">
                 </li>
                 <li>
-                    <p class="title">銀行帳號</p>
+                    <p class="title">Tên tài khoản ngân hàng</p>
                     <input type="text" name="" id="">
-                    <p class="remind">請認真校對銀行帳號，帳號錯誤資金將無法到賬!</p>
+                    <p class="remind">Vui lòng xác nhận kỹ tài khoản ngân hàng của bạn, nếu số tài khoản sai tiền sẽ không vào được tài khoản.</p>
                 </li>
                 <li>
-                    <p class="title">確認帳號</p>
+                    <p class="title">Số tài khoản ngân hàng</p>
                     <input type="text" name="" id="">
-                    <p class="remind">請認真校對銀行帳號，帳號錯誤資金將無法到賬!</p>
+                    <p class="remind">Vui lòng xác nhận kỹ tài khoản ngân hàng của bạn, nếu số tài khoản sai tiền sẽ không vào được tài khoản.</p>
+                    <!-- <span class="red">最後實名步驟-加入官方line與客服認證會員帳號後才算完成✅</span> -->
+                    <!-- <p>上傳圖檔(非必填)</p>
+                    <label class="upload-btn">
+                        <input type="file" multiple="" hidden="" accept="image/jpg,image/jpeg,image/png"> 點擊上傳， 已選取: 0 
+                    </label>
+                    <span class="gray"> 僅接受格式: jpg, jpeg, png <br> 圖檔大小限制: 5MB <br> 可上傳圖檔數量: 1~2 </span>
+                    <div class="err"> *請上傳正拍身分證及綁定銀行簿子</div>
+                    <div class="err" style="padding: 0 0 0 5px;"> 如為電子存摺需上傳影片，請聯繫Line客服 </div> -->
+                    <!-- <div class="err" style="padding: 0 0 0 5px;"> Line客服ID：<a target="_blank" href="https://lin.ee/JO0eqlL">＠986kqsuu</a></div> -->
+                    <div class="id_sampleimg"></div>
                 </li>
-                <button>確認</button>
+                <button>Xác nhận</button>
             </ul>
         </div>
     </main>
@@ -85,40 +96,40 @@
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
                 <i class="menu_ic"></i>
-                <p>首頁</p>
+                <p>TRANG CHỦ</p>
             </li>
             <li onclick="window.location.href='./event.html'">
                 <i class="event_ic"></i>
-                <p>優惠</p>
+                <p>Khuyến mãi</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
                 <i class="wallet_ic"></i>
-                <p>存轉提</p>
+                <p>VÍ TIỀN</p>
             </li>
             <li onclick="window.location.href='./help_often_contact.html'">
                 <i class="service_ic"></i>
-                <p>客服</p>
+                <p></p>
             </li>
             <li onclick="window.location.href='./member.html'">
                 <i class="center_ic"></i>
-                <p>會員中心</p>
+                <p></p>
             </li>
         </ul>
     </footer>
     <!--彈窗-->
     <div class="filter display">
         <div class="jumpWindow plsGo display">
-            <div class="title">提示</div>
-            <div class="content">請至個人頁面綁定資料</div>
+            <div class="title">Lời nhắc</div>
+            <div class="content">Vui lòng vào mục Thông tin tài khoản để để thêm thông tin cá nhân</div>
             <div class="btnBox">
-                <button class="close">確認</button>
+                <button class="close"> Đồng ý </button>
             </div>
         </div>
         <div class="jumpWindow plsGo2">
-            <div class="title">提示</div>
-            <div class="content">已有資料審核中</div>
+            <div class="title"> Lời nhắc </div>
+            <div class="content">Vui lòng nhấp vào danh sách chọn để điền thông tin tên ngân hàng nhằm đảm bảo thông tin là chính xác</div>
             <div class="btnBox">
-                <button class="close">確認</button>
+                <button class="close">Đồng ý</button>
             </div>
         </div>
     </div>

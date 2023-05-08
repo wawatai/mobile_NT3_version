@@ -1,4 +1,4 @@
-// //iPhone6~8 Plus
+//iPhone6~8 Plus
 // @media only screen and (max-width: 414px){
 
 //     //版面伸展
@@ -10,7 +10,7 @@
 //     }
 // }
 
-// //iPhone6~8
+//iPhone6~8
 // @media only screen and (max-width: 375px){
 
 //     //版面伸展
@@ -22,7 +22,7 @@
 //     }
 // }
 
-// //Galaxy S5 + Moto G4
+//Galaxy S5 + Moto G4
 // @media only screen and (max-width: 360px){
 
 //     //版面伸展
@@ -35,7 +35,7 @@
 // }
 
 //iPhone5
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 320px){
 
     //版面伸展
     // .homeCenter {
@@ -45,44 +45,33 @@
     //     }
     // }
 
-    // .homeCenter {
-
-    //     .gameList {
-
-    //         ol {
-
-    //             li {
-
-    //                 div {
-                        
-    //                     i {
-    //                         display: none;
-    //                     }
-
-    //                     p {
-    //                         margin: 0;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-
-    //首頁轉存提+vip大小調整
+    //TRANG CHỦ轉存提+vip大小調整
     .operate {
         
         .btnBox {
-            // padding: 0 3% !important;
+            padding: 0 3% !important;
 
             button {
-                width: 36px !important;
+                width: 55px !important;
                 height: 36px !important;
+            }
+        }
+    }
+
+    footer {
+        ul {
+            li {
+                p {
+                    transform: scale(.8);
+                    white-space: nowrap;
+                }
+               
             }
         }
     }
 }
 
-// //iPhone10
+//iPhone10
 // @media only screen and (height: 812px){
 
 //     //版面伸展
@@ -94,7 +83,7 @@
 //     }
 // }
 
-// //Pixel2
+//Pixel2
 // @media only screen and (height: 731px){
 
 //     //版面伸展
@@ -106,7 +95,7 @@
 //     }
 // }
 
-// //Pixel2 XL
+//Pixel2 XL
 // @media only screen and (height: 823px){
 
 //     //版面伸展
