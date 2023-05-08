@@ -1,22 +1,22 @@
-//優惠選擇列
+//Khuyến mãi選擇列
 .eventType {
     width: 100%;
     height: auto;
     overflow-x: auto;
-    background: $mainBG_1;
+    background: transparent;
 
     ul {
         display: flex;
 
         li {
-            width: 22.4vw;
+            width: 28.4vw;
             height: 72px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             box-sizing: border-box;
-            border-bottom: solid 2px transparent;
+            background: $memberArea;
 
             &:active,&.active {
                 border-color: $choose_Border;
@@ -41,14 +41,14 @@
     }
 }
 
-//優惠列表
+//Khuyến mãi列表
 .eventList {
     width: 100%;
     height: calc(100vh - 168px);
     overflow-y: auto;
     box-sizing: border-box;
-    padding: 10px 14px 0;
-    background: $mainBG_2;
+    padding: 10px 0px 0;
+    background: transparent;
 
     ul {
         display: flex;
@@ -62,56 +62,31 @@
             .eventBox {
                 width: 100%;
                 height: auto;
-                background: $mainBG_1;
-                border-radius: 1.5vw;
+                background: $maingoldBG;
                 overflow: hidden;
-                border: solid 1px $mainBorder_2;
+                border-bottom: solid 1px $mainBorder_1;
 
                 .eventImg {
                     background: $mainBG_2;
-                    margin: 6px auto 0;
-                    border-radius: 5px;
+                    margin: 3px auto 5px;
                     overflow: hidden;
                 }
 
-                .textBox {
+                p {
                     width: 100%;
-                    height: 36px;
+                    height: 12vw;
                     display: flex;
                     align-items: center;
                     box-sizing: border-box;
-                    padding: 0 10px;
-                    justify-content: space-between;
+                    padding: 0 3vw;
+                    justify-content: flex-end;
 
-                    p {
-                        color: $mainWord_1;
-                        font-size: 4vw;
-                        font-weight: bold;
-                        width: 50%;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-
-                    div {
-                        display: flex;
-                        align-items: center;
-
-                        button {
-                            width: 74px;
-                            height: 27px;
-                            @include checkEvent;
-
-                            &:last-child {
-                                display: none;
-                                margin-left: 5px;
-                                @include checkEvent_2;
-
-                                &.display {
-                                    display: block;
-                                }
-                            }
-                        }
+                    button {
+                        width: 17vw;
+                        min-height: 6.5vw;
+                        line-height: 6.5vw;
+                        @include mainBtn;
+                        font-size: 2.6vw;
                     }
                 }
             }
@@ -119,7 +94,7 @@
     }
 }
 
-//優惠內頁
+//Khuyến mãi內頁
 .eventDetail {
     width: 100%;
     height: calc(100vh - 110px);
@@ -127,25 +102,25 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 15px;
-    background: $mainBG_2;
+    background: transparent;
     overflow-y: auto;
 
     .eventImg {
         box-sizing: border-box;
-        padding: 6px;
     }
 
     .detailContent {
-        width: 94.13vw;
+        width: 100vw;
         height: auto;
         box-sizing: border-box;
-        padding: 10px 15px 15px;
+        padding: 10px 0px 15px;
         margin-top: 10px;
-        background: $mainBG_1;
-        border-radius: 5px;
-        box-shadow: 0 0 5px 0 $boxshadow_2;
+        background: $maingoldBG;
+        border-bottom: 1px solid $mainBorder_1;
 
         ul {
+
+            padding: 0 8px;
 
             .title {
                 width: 100%;
@@ -156,20 +131,25 @@
                 font-size: 16px;
                 font-weight: bold;
                 margin-bottom: 10px;
-                color: $title_1;
+                color: $title_2;
             }
 
             ul {
                 list-style: disc;
-                width: 90%;
+                width: 96%;
                 margin: 0 auto;
 
+                p {
+                    font-weight: bold;
+                    color: $mainWord_1;
+                    font-size: 4.3vw;
+                }
+
                 li {
-                    font-size: 14px;
+                    font-size: 16px;
                     font-weight: bold;
                     color: $mainWord_1;
                     margin-top: 20px;
-                    color: $title_2;
                     line-height: 18px;
 
                     &:nth-of-type(1) {
@@ -183,9 +163,10 @@
                     ul {
                         list-style: decimal;
     
-                        li {
+                        p {
                             color: $mainWord_1;
                             margin-top: 10px;
+                            font-weight: bold;
 
                             &.sp {
                                 color: $remind;

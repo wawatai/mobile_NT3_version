@@ -14,32 +14,33 @@
     <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="bg"></div>
     <!--header-->
     <header>
         <!--content-->
         <div class="content">
             <i class="back_arrow" onclick="window.location.href='./wallet.html'"></i>
-            <div class="title">存款專區</div>
-            <button class="detailBtn" onclick="window.location.href='./help_new_deposit.html'">教學</button>
+            <div class="title">Mục nạp tiền</div>
+            <button class="detailBtn" onclick="window.location.href='./help_new_deposit.html'">Hướng dẫn</button>
         </div>
     </header>
     <!--main-->
     <main>
-        <div class="marqueeBox">
+        <!-- <div class="marqueeBox">
             <i class="marquee_ic"></i>
             <div class="marquee">
-                <pre>公告測試公告測試公告測試</pre>
+                <pre>test test test test</pre>
             </div>
-        </div>
+        </div> -->
         <!--存款-->
         <div class="depositWrap">
             <div class="depList display">
-                <p class="title">選擇支付方式</p>
+                <p class="title">Chọn phương thức thanh toán</p>
                 <div class="listWrap">
                     <ul>
                         <li class="active">
                             <i class="card_ic"></i>
-                            <p>銀行卡轉帳</p>
+                            <p> CHUYỂN KHOẢN QUA THẺ NGÂN HÀNG </p>
                         </li>
                         <li>
                             <i class="atm_ic"></i>
@@ -47,102 +48,124 @@
                         </li>
                         <li>
                             <i class="shop_ic"></i>
-                            <p>超商代碼</p>
+                            <p>THANH TOÁN QUA CỬA HÀNG TIỆN LỢI</p>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="depContent card display">
                 <p class="title">
-                    選擇銀行
-                    <span class="remind">僅接受綁定銀行轉入之款項</span>
+                    <span>※ </span>
+                    Chọn ngân hàng
+                    <span class="remind"> Chỉ chấp nhận tiền được chuyển từ ngân hàng đã liên kết</span>
                 </p>
                 <select>
-                    <option value="">上海銀行</option>
-                    <option value="">上海銀行</option>
-                    <option value="">上海銀行</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
                 </select>
+                <!-- <select>
+                    <option value="">永豐銀行Bank SinoPac</option>
+                    <option value="">國泰銀行Cathay Bank</option>
+                    <option value="">台新銀行Taishin Bank</option>
+                    <option value="">中信銀行CTBC Bank</option>
+                </select> -->
                 <span class="remind">
-                    尾號:
+                    Vui lòng chọn ngân hàng thụ hưởng: 
                     <span class="num">41879</span>
                 </span>
-                <p class="title">存款金額</p>
-                <input type="text" placeholder="請輸入存款金額">
-                <span class="remind">單筆存款金額需介於 0 - 不限制</span>
-                <button class="check">立即存款</button>
+                <p class="title">
+                    <span>※ </span>
+                    Số tiền nạp 
+                    <!-- <span class="remind">僅接受綁定銀行轉入之款項</span> -->
+                </p>
+                <input type="text" placeholder="Vui lòng nhập số tiền gửi">
+                <span class="remind"> Số tiền nạp phải nằm trong khoảng {{min}}~$200,000 </span>
+                <button class="check">Xác nhận nạp tiền</button>
             </div>
             <div class="depContent atm">
                 <p class="title">
                     <span>※ </span>
-                    選擇帳號
+                    chọn tài khoản
                 </p>
                 <select>
-                    <option value="">虛擬銀行</option>
-                    <option value="">虛擬銀行</option>
-                    <option value="">虛擬銀行</option>
+                    <option value="">ngân hàng ảo</option>
+                    <option value="">ngân hàng ảo</option>
+                    <option value="">ngân hàng ảo</option>
+                </select>
+                <select>
+                    <option value="">Bank SinoPac</option>
+                    <option value="">Cathay Bank</option>
+                    <option value="">Taishin Bank</option>
+                    <option value="">CTBC Bank</option>
                 </select>
                 <p class="title">
                     <span>※ </span>
-                    存款金額
+                   Số tiền đặt cọc
                 </p>
-                <input type="text" placeholder="請輸入存款金額">
-                <span class="remind">單筆存款金額需介於 0 - 不限制</span>
-                <button class="check">立即存款</button>
+                <input type="text" placeholder="Vui lòng nhập số tiền gửi">
+                <span class="remind">Một số tiền gửi phải từ 0 - không giới hạn</span>
+                <button class="check">Gửi tiền ngay bây giờ</button>
             </div>
             <div class="depContent shop">
                 <p class="title">
                     <span>※ </span>
-                    選擇帳號
+                    chọn tài khoản
                 </p>
                 <select>
-                    <option value="">線上商店</option>
-                    <option value="">線上商店</option>
-                    <option value="">線上商店</option>
+                    <option value="">cửa hàng trực tuyến</option>
+                    <option value="">cửa hàng trực tuyến</option>
+                    <option value="">cửa hàng trực tuyến</option>
+                </select>
+                <select>
+                    <option value="">FamilyMart</option>
+                    <option value="">Seven-Eleven</option>
+                    <option value="">Hi-Life</option>
                 </select>
                 <p class="title">
                     <span>※ </span>
-                    存款金額
+                   Số tiền đặt cọc
                 </p>
-                <input type="text" placeholder="請輸入存款金額">
-                <span class="remind">單筆存款金額需介於 0 - 不限制</span>
-                <button class="check">立即存款</button>
+                <input type="text" placeholder="Nhập số tiền gửi">
+                <span class="remind">Một số tiền gửi phải từ 0 - không giới hạn</span>
+                <button class="check">Gửi tiền ngay bây giờ</button>
             </div>
             <div class="depContent already">
                 <ul>
                     <li>
-                        <p class="title">存款到下列帳號</p>
+                        <p class="title">Vui lòng gửi tiền vào tài khoản sau</p>
                     </li>
                     <li>
-                        <p class="smallTitle">銀行</p>
-                        <p>測試銀行-分行</p>
+                        <p class="smallTitle">Ngân hàng</p>
+                        <p>Ngân hàng Kiểm tra - Chi nhánh</p>
                     </li>
                     <li>
-                        <p class="smallTitle">銀行帳號</p>
+                        <p class="smallTitle">Tài khoản</p>
                         <p>
                             852852
-                            <button class="copy">複製</button>
+                            <button class="copy">bản sao</button>
                         </p>
                     </li>
                     <li>
                         <div class="checkBox">
                             <p>
                                 $50000
-                                <button class="copy">複製</button>
-                                <button class="change">修改</button>
+                                <button class="copy">bản sao</button>
+                                <!-- <button class="change">Tôi đã chuyển khoản</button> -->
                             </p>
-                            <p class="remind">(轉帳金額務必與訂單金額一致唷!!)</p>
+                            <p class="remind">(Số tiền chuyển khoản phải giống với số tiền đặt hàng !!)</p>
                         </div>
                     </li>
                     <li>
-                        <button class="check">確認轉帳</button>
+                        <button class="check">Tôi đã chuyển khoản</button>
                     </li>
                 </ul>
             </div>
             <div class="remindBox">
-                <p class="title">重要提醒</p>
-                <p>1.系統將發配一組專屬交易單號，請至您選擇的超商門市進行繳費。</p>
-                <p><span class="sp">2.繳費完成後請妥善保管交易收據，以便查證。</span></p>
-                <p>3.為了加快上分速度，請至交易紀錄上傳交易成功的明細。</p>
+                <p class="title"> Nhắc nhở quan trọng </p>
+                <p>1.Tài khoản nạp tiền phải là tài khoản ngân hàng của chính chủ, nếu không phải là tài khoản chính chủ sẽ không thể nạp tiền thành công.</p>
+                <p><span class="sp">  2.Số tiền nạp phải trùng khớp với số tiền đăng ký lệnh nạp, nếu không trùng khớp sẽ lấy số tiền thực tế nạp vào tài khoản làm chuẩn.  </span></p>
+                <!-- <p>3.為了加快上分速度，請至交易紀錄上傳交易成功的明細。</p> -->
             </div>
         </div>
     </main>
@@ -151,23 +174,23 @@
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
                 <i class="menu_ic"></i>
-                <p>首頁</p>
+                <p>TRANG CHỦ</p>
             </li>
             <li onclick="window.location.href='./event.html'">
                 <i class="event_ic"></i>
-                <p>優惠</p>
+                <p>Khuyến mãi</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
                 <i class="wallet_ic"></i>
-                <p>存轉提</p>
+                <p>VÍ TIỀN</p>
             </li>
             <li onclick="window.location.href='./help_often_contact.html'">
                 <i class="service_ic"></i>
-                <p>客服</p>
+                <p></p>
             </li>
             <li onclick="window.location.href='./member.html'">
                 <i class="center_ic"></i>
-                <p>會員中心</p>
+                <p></p>
             </li>
         </ul>
     </footer>
@@ -175,18 +198,18 @@
     <div class="filter display">
         <!--無信用卡提示-->
         <div class="jumpWindow plsGo display">
-            <div class="title">提示</div>
+            <div class="title">Lời nhắc</div>
             <div class="content">
-                <p>無可使用的銀行卡，</p>
-                <p>請前往綁定銀行卡</p>
+                <p>Không có ngân hàng nào, vui lòng đi</p>
+                <p>đến liên kết thẻ ngân hàng</p>
             </div>
             <div class="btnBox">
-                <button class="close">確認</button>
+                <button class="close">Đồng ý</button>
             </div>
         </div>
         <!--loading-->
         <div class="jumpWindow loading">
-            <div class="title">提示</div>
+            <div class="title">Lời nhắc</div>
             <div class="content">
                 <div class="img"></div>
                 <p>loading...</p>

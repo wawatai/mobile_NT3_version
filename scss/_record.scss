@@ -2,7 +2,7 @@
 .bettingWrap {
     width: 100%;
     height: calc(100vh - 95px);
-    background: $mainBG_2;
+    // background: $mainBG_2;
     overflow-y: auto;
     box-sizing: border-box;
 
@@ -10,9 +10,10 @@
         width: 100%;
         height: auto;
         box-sizing: border-box;
-        padding: 13px 14px;
-        background: $mainBG_1;
-        margin-bottom: 10px;
+        padding: 0px 14px 10px 14px;
+        background: $liner-bg;
+        margin:0px 0 10px 0;
+        border-bottom: 1px solid $mainBorder_1;
 
         .top {
             width: 100%;
@@ -28,11 +29,11 @@
                     font-size: 14px;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    color: $title_2;
+                    color: $title_3;
                 }
     
                 button {
-                    width: 44vw;
+                    width: 93vw;
                     height: 42px;
                     @include fakeSelect;
                 }
@@ -46,20 +47,19 @@
                     font-size: 14px;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    color: $title_2;
+                    color: $title_3;
                 }
 
                 .inputBox {
-                    width: 100%;
+                    // width: 100%;
                     height: 42px;
-                    border: solid 1px $mainBorder_2;
-                    border-radius: 3px;
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
-                    color: $mainWord_1;
                     font-size: 16px;
                     font-weight: bold;
+                    @include fakeSelect;
+                    padding: none;
 
                     input {
                         width: auto;
@@ -95,6 +95,7 @@
                 width: 25%;
                 height: 38px;
                 @include changeBtn;
+                font-size: 3.5vw;
 
                 &:nth-of-type(1) {
                     border-radius: 5px 0 0 5px;
@@ -128,7 +129,7 @@
             color: $title_3;
             font-weight: bold;
             text-align: center;
-            font-size: 14px;
+            font-size: 2vw;
 
             &.display {
                 display: block;
@@ -140,8 +141,8 @@
             width: 100%;
             height: auto;
             border-radius: 5px;
-            border: solid 1px $mainBorder_2;
-            background: $mainBG_1;
+            border: solid 1px $mainBorder_1;
+            background: $mainBG_3;
             margin-bottom: 10px;
 
             &.display {
@@ -152,7 +153,7 @@
                 width: 100%;
                 height: 38px;
                 border-bottom: solid 1px $mainBorder_1;
-                color: $title_1;
+                color: $title_2;
                 font-size: 14px;
                 font-weight: bold;
                 display: flex;
@@ -163,12 +164,13 @@
                 
                 .date {
                     font-size: 13px;
-                    color: $title_Time;
+                    color: $title_2;
                 }
 
                 button {
-                    width: 80px;
-                    height: 26px;
+                    width: 41vw;
+                    height: auto;
+                    padding: 0.5vw 1.5vw;
                     @include noBgBtn_Normal;
                 }
             }
@@ -191,6 +193,7 @@
 
                     p {
                         font-size: 13px;
+                        color: $money_Sp;
 
                         &.num {
                             color: $mainWord_1;
@@ -203,6 +206,10 @@
                                 color: $remind_Sp;
                             }
                         }
+                    }
+
+                    span {
+                        color:$money_Sp;
                     }
                 }
             }
@@ -220,7 +227,6 @@
     width: 100%;
     height: auto;
     background: $mainBG_1;
-    margin-bottom: 10px;
 
     ul {
         width: 100%;
@@ -231,17 +237,19 @@
             width: 50%;
             height: 40px;
             box-sizing: border-box;
-            border-bottom: solid 2px transparent;
+            border-bottom: solid 1px $mainBorder_1;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 14px;
             font-weight: bold;
             color: $choose_Word;
+            background: $choose_Active;
 
             &.active {
                 color: $choose_ActiveWord;
-                border-color: $choose_Border;
+                border-bottom: solid 4px $choose_Border;
+                background: $choose_Active;
             }
         }
     }
@@ -293,8 +301,8 @@
                 font-size: 14px;
 
                 &.title {
-                    color: $title_1;
-                    border-bottom: solid 1px $mainBorder_1;
+                    color: $title_2;
+                    border-bottom: solid 1px $mainBorder_2;
                 }
 
                 span {
