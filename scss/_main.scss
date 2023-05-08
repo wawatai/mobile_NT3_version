@@ -6,12 +6,11 @@ html {
     body {
         width: 100%;
         height: 100%;
-        box-sizing: border-box;
 
         main {
             width: 100%;
             height: 100%;
-            box-sizing: border-box;
+            background: $BG;
             padding: 45px 0 50px;
             overflow-y: auto;
 
@@ -19,15 +18,6 @@ html {
                 display: flex;
                 flex-direction: column;
             }
-        }
-
-        .bg {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -999;
         }
 
         @import "./header";
@@ -40,8 +30,6 @@ html {
         @import "./event";
         @import "./wallet";
         @import "./member";
-        @import "./app";
-        @import "./joinUs";
         @import "./help";
         @import "./eventApply";
         @import "./vip";

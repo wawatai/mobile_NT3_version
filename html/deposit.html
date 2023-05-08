@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
     <script src="../js/javascript.js"></script>
     <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
@@ -25,14 +21,16 @@
     </header>
     <!--main-->
     <main>
-        <div class="marqueeBox">
-            <i class="marquee_ic"></i>
-            <div class="marquee">
-                <pre>公告測試公告測試公告測試</pre>
-            </div>
-        </div>
         <!--存款-->
         <div class="depositWrap">
+            <div class="marqueeBox">
+                <div class="marquee">
+                    <i class="marquee_ic"></i>
+                    <div>
+                        <p>我是跑馬燈.......testABC123123</p>
+                    </div>
+                </div>
+            </div>
             <div class="depList display">
                 <p class="title">選擇支付方式</p>
                 <div class="listWrap">
@@ -175,12 +173,13 @@
     <div class="filter display">
         <!--無信用卡提示-->
         <div class="jumpWindow plsGo display">
-            <div class="title">提示</div>
+            <div class="title">
+                提示
+                <i class="close_ic"></i>
+            </div>
             <div class="content">
                 <p>無可使用的銀行卡，</p>
                 <p>請前往綁定銀行卡</p>
-            </div>
-            <div class="btnBox">
                 <button class="close">確認</button>
             </div>
         </div>

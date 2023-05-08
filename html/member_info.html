@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
     <script src="../js/javascript.js"></script>
     <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
@@ -37,62 +33,72 @@
                 <ul class="inputList">
                     <li>
                         <em></em>
-                        <span>真實姓名</span>
+                        <p>真實姓名</p>
                         <input class="userName" type="text" placeholder="請輸入真實姓名需持卡人姓名一致" value="user898">
                     </li>
                     <li>
                         <em></em>
-                        <span>生日</span>
+                        <p>生日</p>
                         <input type="date">
                     </li>
                     <li class="active">
                         <em></em>
-                        <span>Email</span>
+                        <p>Email</p>
                         <input type="text" placeholder="請填選Email" value="opp1211@gmail.com">
-                        <button type="button" class="chBtn">變更</button>
+                        <div class="btnBox">
+                            <button type="button" class="chBtn">變更</button>
+                        </div>
                     </li>
                     <li>
-                        <span>住所</span>
+                        <p>住所</p>
                         <input type="text" placeholder="請填選地址">
-                        <button type="button" class="chBtn">變更</button>
+                        <div class="btnBox">
+                            <button type="button" class="chBtn">變更</button>
+                        </div>
                     </li>
                     <li class="active">
                         <em></em>
-                        <span>Line</span>
+                        <p>Line</p>
                         <input type="text" placeholder="Line 與 WeChat 擇一填寫即可" value="999ddd">
-                        <button type="button" class="chBtn">變更</button>
+                        <div class="btnBox">
+                            <button type="button" class="chBtn">變更</button>
+                        </div>
                     </li>
                     <li>
                         <em></em>
-                        <span>WeChat</span>
+                        <p>WeChat</p>
                         <input type="text" placeholder="Line 與 WeChat 擇一填寫即可">
-                        <button type="button" class="chBtn">變更</button>
+                        <div class="btnBox">
+                            <button type="button" class="chBtn">變更</button>
+                        </div>
                     </li>
-                    <button class="saveBtn">保存資料</button>
+                    <li class="active">
+                        <button class="saveBtn">保存資料</button>
+                    </li>
                 </ul>
             </form>
             <div class="info_1">
                 <ul>
                     <li>
-                        <span>遊戲帳號</span>
-                        <span>user898</span>
+                        <p>遊戲帳號</p>
+                        <p>user898</p>
                     </li>
                     <li>
-                        <span>邀請碼</span>
-                        <span>
+                        <p>邀請碼</p>
+                        <p>
                             M54ea858
                             <button class="copy">複製</button>
-                        </span>
+                        </p>
                     </li>
                     <li>
-                        <span>推廣網址</span>
-                        <span>
+                        <p>推廣網址</p>
+                        <p>
                             <input type="text" value="https://mbfe.op8899.net/#/register?code=M54ea858">
                             <button class="copy">複製</button>
-                        </span>
+                        </p>
                     </li>
                     <li class="forQR">
-                        <span>推廣網址QR code</span>
+                        <p>推廣網址QR code</p>
                         <div class="qrCode"></div>
                     </li>
                 </ul> 
@@ -106,50 +112,44 @@
                         </div>
                     </li>
                     <li>
-                        <span>
+                        <p>
                             <i class="noCheck"></i>
                             基本資料填寫
-                        </span>
-                        <span class="empty">未認證</span>
+                        </p>
+                        <p class="empty">未認證</p>
                     </li>
                     <li>
-                        <span>
+                        <p>
                             <i class="check"></i>
                             綁定手機號碼
-                        </span>
-                        <span>
+                        </p>
+                        <p>
                             0987654325
-                            <button class="changePhoneBtn">
-                                變更
-                                <i class="arrow_ic"></i>
-                            </button>
-                        </span>
+                            <button class="changePhoneBtn">變更</button>
+                        </p>
                     </li>
                     <li>
-                        <span>
+                        <p>
                             <i class="noCheck"></i>
                             添加銀行卡
-                        </span>
-                        <span class="empty">未認證</span>
+                        </p>
+                        <p class="empty">未認證</p>
                     </li>
                     <li>
-                        <span>
+                        <p>
                             <i class="noCheck"></i>
                             填寫電子郵件
-                        </span>
-                        <span class="empty">未認證</span>
+                        </p>
+                        <p class="empty">未認證</p>
                     </li>
                     <li>
-                        <span>
+                        <p>
                             <i class="check"></i>
                             修改密碼 
-                        </span>
-                        <span>
-                            <button class="changePwdBtn">
-                                變更
-                                <i class="arrow_ic"></i>
-                            </button>
-                        </span>
+                        </p>
+                        <p>
+                            <button class="changePwdBtn">變更</button>
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -186,13 +186,13 @@
         <div class="jumpWindow phoneWindow">
             <div class="title">
                 <p>更變手機</p>
-                <i class="close"></i>
+                <i class="close_ic"></i>
             </div>
-            <p class="smallTitle">
-                <span>原有號碼：</span>
-                0987654325
-            </p>
             <form>
+                <p class="smallTitle">
+                    <span>原有號碼：</span>
+                    0987654325
+                </p>
                 <label>
                     <input type="text" placeholder="新手機號碼">
                     <button type="button" class="cellphoneCheck">取得驗證碼</button>
@@ -208,7 +208,7 @@
         <div class="jumpWindow passwordWindow">
             <div class="title">
                 修改密碼
-                <i class="close"></i>
+                <i class="close_ic"></i>
             </div>
             <div class="content">
                 <form>
@@ -220,6 +220,5 @@
             </div>
         </div>
     </div>
-    <div class="bg"></div>
 </body>
 </html>
