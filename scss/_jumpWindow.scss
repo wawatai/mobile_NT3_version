@@ -1,4 +1,5 @@
 //彈窗
+
 .filter {
     width: 100%;
     height: 100%;
@@ -25,6 +26,7 @@
         letter-spacing: 2px;
         font-weight: bold;
         color: $title_Header;
+        background: $jumpWindow_header;
         position: relative;
 
         i {
@@ -44,6 +46,7 @@
         border-radius: 5px;
         overflow: hidden;
         display: none;
+        border: 1px solid $mainBorder_1;
 
         &.display {
             display: block;
@@ -51,7 +54,7 @@
 
         .content {
             font-size: 14px;
-            color: $mainWord_1;
+            color: $title_2;
             letter-spacing: 1px;
             font-weight: bold;
             width: 100%;
@@ -160,14 +163,44 @@
                 height: auto;
                 position: relative;
 
+                 &::before {
+                        content: "";
+                        position: absolute;
+                        top: 8px;
+                        left: 10px;
+                        width: 20px;
+                        height: 24px;
+                        // label:nth-of-type(2):before {
+                        //     background-position-x: -20px;
+                        // }
+                        // &:nth-of-type(3) {
+                        //     background-position-x: -20px;
+                        // }
+                        // &:nth-of-type(4) {
+                        //     background-position-x: -60px;
+                        // }
+                        // &:nth-of-type(5) {
+                        //     background-position-x: -40px;
+                        // }
+                        // &:nth-of-type(6) {
+                        //     background-position-x: -40px;
+                        // }
+                    }
+
                 &:nth-of-type(1) {
                     margin: 9vw 0 8vw;
+                }
+                &:nth-of-type(2) {
+                    &:nth-of-type(2)::before {
+                        background-position-x: -20px;
+                    }
                 }
 
                 input {
                     width: 77.6vw;
                     height: 9.87vw;
                     @include mainInput;
+                    padding-left: 35px;
                 }
 
                 .eye {
@@ -190,7 +223,7 @@
                 p {
                     font-size: 12px;
                     font-weight: bold;
-                    color: $click;
+                    color: $remind_Sp;
 
                     span {
                         margin: 0 2px;
@@ -217,7 +250,8 @@
 
             p {
                 margin-left: 10px;
-                color: $click;
+                color: $remind_Sp;
+                text-decoration: underline;
             }
         }
     }
@@ -307,10 +341,54 @@
                 position: relative;
                 margin-bottom: 5.06vw;
 
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    left: 10px;
+                    width: 20px;
+                    height: 24px;
+                }
+
+                &:nth-of-type(2) {
+                    &:nth-of-type(2)::before {
+                        background-position-x: -20px;
+                    }
+                }
+                &:nth-of-type(3) {
+                    &:nth-of-type(3)::before {
+                        background-position-x: -20px;
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    &:nth-of-type(4)::before {
+                        background-position-x: -60px;
+                    }
+                }
+                &:nth-of-type(5) {
+                    &:nth-of-type(5)::before {
+                        background-position-x: -40px;
+                    }
+                }
+                &:nth-of-type(6) {
+                    &:nth-of-type(6)::before {
+                        background-position-x: -40px;
+                    }
+                }
+
+                &:nth-of-type(7) {
+                    &:nth-of-type(7)::before {
+                        display: none;
+                    }
+                }
+
+
                 input {
                     width: 77.33vw;
                     height: 9.6vw;
                     @include mainInput;
+                    padding-left: 35px;
                 }
 
                 &.hasRemind {
@@ -332,7 +410,7 @@
                     }
 
                     p {
-                        color: $click;
+                        color: $remind_Sp;
                     }
                 }
 
@@ -347,12 +425,15 @@
 
                 .cellphoneCheck {
                     width: 23.2vw;
-                    height: 8vw;
+                    height: 7.4vw;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
                     right: 10px;
-                    @include noBgBtn_Normal;
+                    border: 1px solid $remind_Sp;
+                    color: $remind_Sp;
+                    background: none;
+                    border-radius: 3px;
                 }
             }
 
@@ -360,7 +441,7 @@
                 width: 77.33vw;
                 margin: 5px 0;
                 font-size: 12px;
-                color: $remind;
+                color: $remind_Sp;
                 font-weight: bold;
             }
 
@@ -400,7 +481,7 @@
                     padding: 10px 5px;
                     font-weight: bold;
                     line-height: 1.8;
-                    color: $title_1;
+                    color: $title_2;
                 }
 
                 p {
@@ -480,8 +561,8 @@
                 p {
                     width: 22.67vw;
                     height: 10vw;
-                    @include changeBtn;
-                    border-radius: 8px;
+                    @include newsBtn;
+                    border-radius: 3px;
                 }
             }
         }
@@ -532,11 +613,12 @@
     .gameWindow {
         width: 91.94vw;
         height: auto;
-        background: $mainBG_1;
+        background: $jumpWindow_bg;
         border-radius: 5px;
         overflow: hidden;
         padding-bottom: 8vw;
         display: none;
+        border: 1px solid $jumpWindow_border;
 
         &.display {
             display: block;
@@ -556,13 +638,13 @@
                 &.btnBox {
                     flex-wrap: wrap;
                     justify-content: space-between;
-                    margin: 0 0 7vw 20vw;
+                    margin: 0 0 1vw 20vw;
 
                     button {
                         width: 19vw;
                         height: 35px;
                         margin-bottom: 5px;
-                        @include noBgBtn_Normal;
+                        @include jumpWindow_box;
                         font-size: 3.4vw;
                     }
                 }
@@ -590,7 +672,7 @@
                     font-size: 18px;
                     letter-spacing: 1px;
                     font-weight: bold;
-                    color: $money;
+                    color: $title_2;
                 }
 
                 input {
@@ -676,7 +758,7 @@
                 text-align: center;
                 margin: 20px 0 0;
                 font-size: 4vw;
-                color: $remind;
+                color: $remind_Sp;
                 font-weight: bold;
             }
 
@@ -1074,6 +1156,7 @@
         border-radius: 5px;
         overflow: hidden;
         display: none;
+        border: 1px solid $mainBorder_2;
 
         &.display {
             display: block;
@@ -1098,17 +1181,26 @@
                     font-size: 14px;
                     font-weight: bold;
                     color: $mainWord_1;
-                    background: $mainBG_2;
+                    background:  $vipDetail_onceBG;
                     border-bottom: solid 1px $point_Border;
                     display: flex;
                     align-items: center;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 8vw;
+                        background: $mainBorder_2;
+                        left: 51%;
+                    }
 
                     &:last-child {
                         border: none;
                     }
 
                     &.title {
-                        background: $point_BG;
+                        background: $vipDetail_SecondBG;
                         font-size: 16px;
                     }
 

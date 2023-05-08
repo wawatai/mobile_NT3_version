@@ -4,7 +4,7 @@
     height: 220px;
     box-sizing: border-box;
     padding: 10px 0;
-    background: $mainBG_2;
+    // background: $mainBG_2;
 
     .cardBox {
         width: 100%;
@@ -15,6 +15,8 @@
         display: flex;
         align-items: flex-end;
         position: relative;
+        border-top: 1px solid $mainBorder_1;
+        border-bottom: 1px solid $mainBorder_1;
 
         .title {
             font-size: 15px;
@@ -44,6 +46,7 @@
 
                 &.empty {
                     background: $cardLinear_Empty;
+                    border: 1px solid $mainBorder_2;
                 }
 
                 &.wait {
@@ -71,7 +74,7 @@
                     padding-left: 21px;
                     font-size: 21px;
                     font-weight: bold;
-                    color: $cardWord;
+                    color: $money;
                 }
 
                 .smallTitle {
@@ -79,7 +82,7 @@
                     font-size: 14px;
                     font-weight: bold;
                     padding-left: 23px;
-                    color: $cardWord;
+                    color: $remind_Sp;
                 }
 
                 .account {
@@ -87,7 +90,7 @@
                     font-size: 16px;
                     font-weight: bold;
                     padding-left: 21px;
-                    color: $cardWord;
+                    color: $money;
                 }
 
                 .ing {
@@ -107,6 +110,8 @@
     height: auto;
     box-sizing: border-box;
     padding: 0 4vw;
+    border-top: 1px solid $mainBorder_1;
+    background: $mainBG_1;
 
     ul {
         width: 100%;
@@ -118,8 +123,8 @@
 
             .title {
                 margin: 15px 0 6px;
-                font-size: 15px;
-                color: $title_2;
+                font-size: 14px;
+                color: $title_3;
                 font-weight: bold;
             }
 
@@ -135,14 +140,61 @@
                 box-sizing: border-box;
                 font-size: 12px;
                 font-weight: bold;
-                color: $remind;
+                color: $remind_Sp;
             }
+
+            span {
+                font-size: 12px;
+                color: $remind;
+                padding-left: 3px;
+                display: flex;
+                margin-top: 10px;
+                line-height: 16px;
+            }
+
+            .gray {
+                color: $title_Time;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 14px;
+                color: $click;
+                margin: 10px 0 15px 0;
+            }
+
+            .upload-btn {
+                @include upload;
+                border-radius: 3px;
+                padding: 4px 10px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            .err {
+                font-size: 12px;
+                line-height: 20px;
+                color: $remind;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a {
+                text-decoration: none;
+                color: $card_line;
+            }
+
+            // .id_sampleimg {
+            //     margin: 1%;
+            //     height: calc(78vw);
+            //     width: calc(60vw);
+            // }
         }
 
         button {
             width: 100%;
             height: 42px;
-            margin: 25px 0;
+            margin: 20px 0 35px 0;
             @include mainBtn;
         }
     }

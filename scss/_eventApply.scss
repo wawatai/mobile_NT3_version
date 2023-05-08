@@ -7,7 +7,7 @@
     top: 45px;
     left: 0px;
     z-index: 10;
-    background: $mainBG_1;
+    background: $mainBG_3;
 
     ul {
         display: flex;
@@ -20,14 +20,15 @@
             justify-content: center;
             align-items: center;
             box-sizing: border-box;
-            border-bottom: solid 2px transparent;
+            border-bottom: solid 1px $mainBorder_1;
             font-size: 3.4vw;
             font-weight: bold;
             color: $choose_Word;
 
             &:active,&.active {
-                border-color: $choose_Border;
+                border-bottom:2px solid $choose_Border;
                 color: $choose_ActiveWord;
+                background: $choose_Active;
             }
         }
     }
@@ -38,7 +39,7 @@
     display: none;
     width: 100%;
     height: calc(100vh - 132px);
-    background: $mainBG_2;
+    // background: $mainBG_2;
     overflow-y: scroll;
     margin-top: 40px;
 
@@ -55,7 +56,7 @@
         .list {
             margin-bottom: 15px;
             border-radius: 5px;
-            box-shadow: 0 0 13px 2px $boxshadow_1;
+            // box-shadow: 0 0 13px 2px $boxshadow_1;
             border: solid 1px $mainBorder_2;
             background: $mainBG_1;
 
@@ -66,9 +67,10 @@
                 align-items: center;
                 justify-content: center;
                 border-bottom: solid 1px $mainBorder_1;
-                color: $title_1;
+                color: $title_2;
                 font-size: 16px;
                 font-weight: bold;
+                background: $saleTitle;
             }
 
             .tips {
@@ -100,7 +102,7 @@
                     justify-content: space-between;
                     font-size: 14px;
                     font-weight: bold;
-                    color: $title_2;
+                    color: $title_3;
                     align-items: center;
 
                     &.cur {
@@ -137,17 +139,20 @@
                 justify-content: space-between;
 
                 button {
-                    width: calc((100% - 10px) / 2);
+                    // width: calc((100% - 10px) / 2);
+                    width: 100%;
                     height: 32px;
 
                     &.applyBtn {
                         @include mainBtn;
                         font-size: 16px;
+                        width: 48%;
                     }
 
                     &.checkBtn {
                         @include noBgBtn_Normal;
                         font-size: 16px;
+                        width: 48%;
                     }
                 }
             }
@@ -159,7 +164,7 @@
 .applyRecord {
     width: 100%;
     height: calc(100vh - 132px);
-    background: $mainBG_2;
+    // background: $mainBG_2;
     overflow-y: auto;
     margin-top: 40px;
     box-sizing: border-box;
@@ -312,7 +317,7 @@
                     border-bottom: solid 1px $mainBorder_1;
 
                     p {
-                        color: $title_1;
+                        color: $title_2;
                         font-weight: bold;
                         font-size: 14px;
 
@@ -320,7 +325,7 @@
                             color: $title_2;
 
                             &.status {
-                                color: $mainWord_1;
+                                color: $title_Time;
                             }
                         }
                     }
