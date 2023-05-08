@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="bg"></div>
     <!--header-->
     <header>
         <!--content-->
@@ -75,6 +76,16 @@
                     <p class="title">確認帳號</p>
                     <input type="text" name="" id="">
                     <p class="remind">請認真校對銀行帳號，帳號錯誤資金將無法到賬!</p>
+                    <!-- <span class="red">最後實名步驟-加入官方line與客服認證會員帳號後才算完成✅</span> -->
+                    <p>上傳圖檔(非必填)</p>
+                    <label class="upload-btn">
+                        <input type="file" multiple="" hidden="" accept="image/jpg,image/jpeg,image/png"> 點擊上傳， 已選取: 0 
+                    </label>
+                    <span class="gray"> 僅接受格式: jpg, jpeg, png <br> 圖檔大小限制: 5MB <br> 可上傳圖檔數量: 1~2 </span>
+                    <div class="err"> *請上傳正拍身分證及綁定銀行簿子</div>
+                    <div class="err" style="padding: 0 0 0 5px;"> 如為電子存摺需上傳影片，請聯繫Line客服 </div>
+                    <!-- <div class="err" style="padding: 0 0 0 5px;"> Line客服ID：<a target="_blank" href="https://lin.ee/JO0eqlL">＠986kqsuu</a></div> -->
+                    <div class="id_sampleimg"></div>
                 </li>
                 <button>確認</button>
             </ul>
@@ -93,7 +104,7 @@
             </li>
             <li onclick="window.location.href='./wallet.html'">
                 <i class="wallet_ic"></i>
-                <p>存轉提</p>
+                <p>錢包</p>
             </li>
             <li onclick="window.location.href='./help_often_contact.html'">
                 <i class="service_ic"></i>

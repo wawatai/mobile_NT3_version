@@ -2,7 +2,7 @@
 .topList {
     width: 100%;
     height: auto;
-    background: $mainBG_1;
+    background: $choose_bg;
 
     ul {
         width: 100%;
@@ -13,7 +13,7 @@
             width: 50%;
             height: 40px;
             box-sizing: border-box;
-            border-bottom: solid 2px transparent;
+            border-bottom: solid 1px $choose_Border;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -23,7 +23,8 @@
 
             &.active {
                 color: $choose_ActiveWord;
-                border-color: $choose_Border;
+                border-bottom:2px solid $choose_Border;
+                background: $choose_Active;
             }
         }
     }
@@ -45,7 +46,7 @@
             height: auto;
             box-sizing: border-box;
             padding: 10px 15px;
-            background: $mainBG_2;
+            // background: $mainBG_2;
 
             ul {
                 width: 100%;
@@ -55,6 +56,7 @@
                 li {
                     width: 50%;
                     height: 10.67vw;
+                    margin-right: 1px;
                     @include bigGrayBtn;
 
                     &:nth-of-type(1){
@@ -158,7 +160,7 @@
                         align-items: flex-end;
                         font-size: 16px;
                         font-weight: bold;
-                        color: $title_2;
+                        color: $title_3;
                     }
 
                     .textBox {
@@ -176,7 +178,7 @@
                             white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis;
-                            color: $mainWord_1;
+                            color: $remind_Sp;
                             font-size: 14px;
                             font-weight: bold;
                         }
@@ -187,7 +189,7 @@
                             right: 30px;
                             font-size: 13px;
                             font-weight: bold;
-                            color: $title_Time;
+                            color: $title_3;
                         }
                     }
 
@@ -223,7 +225,7 @@
             height: auto;
             box-sizing: border-box;
             padding: 10px 15px;
-            background: $mainBG_2;
+            // background: $mainBG_2;
 
             ul {
                 width: 100%;
@@ -233,6 +235,7 @@
                 li {
                     width: 34%;
                     height: 10.67vw;
+                    margin-right: 1px;
                     @include bigGrayBtn;
                     
                     &:nth-of-type(1) {
@@ -282,7 +285,7 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
-                        color: $title_2;
+                        color: $title_3;
                     }
                 }
             }
@@ -299,7 +302,6 @@
     padding: 10vw 15px;
     border-radius: 10px;
     margin: 15px auto;
-    box-shadow: 0 2px 4px 0 $boxshadow_1;
     position: relative;
     background: $mainBG_1;
     border: solid 1px $mainBorder_2;

@@ -2,31 +2,29 @@
 .marqueeBox {
     width: 92%;
     height: 30px;
-    background: $marqueeBG;
-    border-radius: 30px;
-    box-shadow: 0 0 5px 2px $marqueeBoxshadow;
     display: flex;
     align-items: center;
-    flex-shrink: 0;
-    margin: 10px auto;
+    box-sizing: border-box;
+    margin: 15px auto;
+    background:  $marqueeIcon;
+    border-radius: 30px;
+    border: 1px solid $marqueeBorder;
 
     .marquee_ic {
-        width: 17%;
-        height: 88%;
-        background: $marqueeIcon;
-        border-radius: 30px;
-        position: relative;
-        z-index: 1;
-        margin: 0 8px 0 2px;
+        position: absolute;
+        left: 20px;
+        width: 42px;
+        height: 42px;
+        z-index: 2;
 
         &::before {
             content: "";
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            width: 18px;
-            height: 18px;
+            width: 30px;
+            height: 44px;
+            top: -1px;
+            z-index: 3;
+            left: -15px;
         }
     }
 
@@ -53,32 +51,94 @@
             }
         }
     }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 2%;
+        margin-top: 40px;
+        width: 30px;
+        height: 44px;
+        z-index: 3;
+        background-size: 100%;
+        transform: translateY(-50%) scaleX(-1);
+    }
 }
 
 //登入區
 .memberArea {
-    width: 100%;
-    height: 55px;
+    width: 95%;
+    height: 15vh;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
+    background: $memberArea;
+    border-radius: 5px;
+
+    .member_icon {
+        width: 30px;
+        height: 30px;
+
+        &.display {
+            display: none;
+        }
+    }
+
+    .before {
+        position: absolute;
+        width: 1px;
+        height: 6.9%;
+        right: 61%;
+        background: #2f2f2f;
+    }
 
     //大登入按鈕
     .loginBtn {
-        width: 30vw;
-        height: 70%;
-        @include operateBtn;
-        border-radius: 30px;
+        display: none;
         align-items: center;
         justify-content: center;
+        width: 85px;
+        height: 38px;
         padding: 0 0 1px 3px;
         margin-right: 3vw;
-        display: none;
 
         &.display {
             display: flex;
         }
+
+        // .login_ic {
+        //     width: 25px;
+        //     height: 25px;
+        //     margin-right: 10px;
+        // }
+
+        span {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+    //註冊按鈕
+    .registerBtn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 70%;
+        @include operateBtn;
+        border-radius: 30px;
+        padding: 0 0 1px 3px;
+        margin-right: 3vw;
+
+        &.display {
+            display: flex;
+        }
+
+        // .login_ic {
+        //     width: 25px;
+        //     height: 25px;
+        //     margin-right: 10px;
+        // }
 
         span {
             font-size: 15px;
@@ -88,11 +148,13 @@
 
     //大登入按鈕登入後樣式
     .alLogin {
-        width: 37.4vw;
-        height: 100%;
         justify-content: center;
         align-items: center;
         padding: 0 1.33vw 0 2vw;
+        width: 37.4vw;
+        height: 100%;
+        border-radius: 1.5vw 0 0 1.5vw;
+        box-sizing: border-box;
         display: none;
 
         &.display {
@@ -104,9 +166,8 @@
             height: auto;
 
             li {
-                width: auto;
-                height: 20px;
                 display: flex;
+                height: 20px;
                 align-items: center;
                 margin-bottom: 5px;
 
@@ -117,27 +178,31 @@
                 &.amount {
                     width: auto;
                     max-width: 33.76vw;
-                    color: $money;
-                    font-size: 1rem;
                     font-weight: bold;
-                    @include textHidden;
+                    font-size: 1rem;
+                    color: $money;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
 
                 .name {
                     width: auto;
                     max-width: 22.7vw;
                     height: auto;
-                    color: $mainWord_1;
                     font-size: 0.8rem;
                     font-weight: bold;
-                    @include textHidden;
+                    color: $operate_Acc;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
 
                 .lv {
                     width: auto;
                     height: 20px;
                     @include operateLV;
-                    margin-left: 5px;
+                    margin-left: 15px;
                 }
             }
         }
@@ -145,6 +210,7 @@
 
     //轉存提+vip
     .operate {
+        border-radius: 0 1.5vw 1.5vw 0;
         width: 54.6vw;
         height: 100%;
         display: flex;
@@ -156,66 +222,80 @@
                 padding: 0 6%;
 
                 .vipBtn {
-                    display: block;
+                    display: inline-block;
                 }
             }
         }
 
         .btnBox {
-            width: 100%;
-            height: 100%;
+            width: 98%;
+            height: 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 9%;
+            padding: 0 7%;
+            box-sizing: border-box;
 
             button {
                 width: 40px;
                 height: 40px;
+                transform: rotate(45deg);
                 @include operateBtn;
+            }
 
-                &.vipBtn {
-                    display: none;
-                    font-size: 15px;
+            .vipBtn {
+                display: none;
+
+                &.display {
+                    display: block;
                 }
+            }
+
+            .vipWord {
+                position: absolute;
+                font-size: 4vw;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(-45deg);
+                color: $title_2;
             }
         }
     }
+
 }
 
 //遊戲區
 .homeCenter {
     width: 100%;
     height: auto;
-    // height: 100%;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
     padding: 0 15px 8px;
     margin-top: 8px;
-    // overflow: hidden;
 
     //遊戲種類選單
     .gameList {
         width: auto;
         height: auto;
-        // height: 100%;
 
         ol {
             width: auto;
-            height: auto;
-            // height: 100%;
+            height: 100%;
             @include gameListBG;
-            // overflow-y: auto;
-            flex-shrink: 0;
-            margin-right: 10px;
+            overflow-y: auto;
 
             li {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 98px;
-                height: 82px;
+                width: 24vw;
+                height: 20vw;
                 position: relative;
+
+                i {
+                    background-position-y: 100%;
+                }
     
                 &::before {
                     content: "";
@@ -226,13 +306,6 @@
                     width: 85%;
                     height: 1px;
                     background: $gameListBtn_Border;
-                }
-
-                &:last-child {
-
-                    &::before {
-                        display: none;
-                    }
                 }
     
                 &.active {
@@ -245,7 +318,7 @@
                         }
     
                         i {
-                            background-position-y: 100%;
+                            background-position-y: 0%;
                         }
                     }
                 }
@@ -260,16 +333,16 @@
                     border-radius: 3px;
     
                     p {
-                        margin-top: 8px;
-                        font-size: 14px;
+                        margin-top: 2vw;
+                        font-size: 3.4vw;
                         font-weight: bold;
                         color: $gameListBtn_Word;
                     }
     
                     i {
                         display: block;
-                        width: 32px;
-                        height: 32px;
+                        width: 8vw;
+                        height: 8vw;
     
                         &.live_ic {
                             background-position-x: 20%;
@@ -299,10 +372,10 @@
     //遊戲選擇
     .gameBox {
         flex-wrap: wrap;
-        width: 100%;
+        width: 65vw;
         height: auto;
         display: none;
-        // overflow-y: auto;
+        overflow-y: auto;
 
         &.display {
             display: flex;
@@ -312,37 +385,18 @@
             width: 100%;
             height: 45vw;
             position: relative;
-            margin-bottom: 8vw;
+            // margin-bottom: 8vw;
+
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
 
             p {
                 position: absolute;
-                width: 100%;
-                bottom: -6vw;
-                left: 0;
+                bottom: 5vw;
+                left: 25px;
                 @include gameBoxWord;
             }
         }
-    }
-}
-
-//goTop
-.goTop {
-    width: 16vw;
-    height: 16vw;
-    @include goTop;
-    position: fixed;
-    right: 10px;
-    bottom: 70px;
-
-    p {
-        color: $goTop_Color;
-        font-size: 3vw;
-        font-weight: bold;
-    }
-
-    i {
-        width: 6vw;
-        height: 6vw;
-        margin-bottom: 5px;
     }
 }

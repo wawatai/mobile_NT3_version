@@ -3,7 +3,7 @@
     width: 100%;
     min-height: calc(100vh - 92px);
     height: auto;
-    background: $mainBG_2;
+    // background: $mainBG_2;
     padding-bottom: 10px;
 
     //上半
@@ -13,32 +13,34 @@
         padding-bottom: 15px;
         margin-bottom: 10px;
         background: $mainBG_1;
+        border-bottom: solid 1px $mainBorder_1;
 
         //漸層
         .gradient {
             width: 100%;
             height: auto;
+            padding-top: 20px;
 
             .content {
                 width: 92vw;
-                height: 80px;
-                margin: 25px auto 16px;
-                background: $mainBG_1;
+                // height: 80px;
+                margin: auto;
+                background: $mainBG_3;
                 border-radius: 5px;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 box-sizing: border-box;
-                padding: 10px 14px;
+                padding: 12px 0 10px 15px;
                 border: solid 1px $mainBorder_2;
 
                 .title {
-                    color: $title_1;
+                    color: $title_2;
                     font-size: 14px;
                     font-weight: bold;
                     display: flex;
                     align-items: center;
+                    margin: 0 0 18px;
 
                     i {
                         display: block;
@@ -50,7 +52,7 @@
 
                 .amount {
                     font-size: 29px;
-                    color: $money;
+                    color: $title_3;
                     font-weight: bold;
                 }
             }
@@ -75,9 +77,11 @@
                     button {
                         width: 70px;
                         height: 23px;
-                        @include mainBtn;
+                        @include upload;
                         margin-top: 8px;
                         font-size: 12px;
+                        line-height: 21px;
+                        border-radius: 3px;
                     }
 
                     &.num {
@@ -131,6 +135,7 @@
                         margin: 0 0.26vw 0.26vw 0;
                         border: solid 1px $mainBorder_1;
                         border-radius: 1.5vw;
+                        background: $mainBG_3;
     
                         &:nth-of-type(3n) {
                             margin-right: 0;
@@ -182,7 +187,7 @@
                         p {
                             margin-top: 10px;
                             font-size: 17px;
-                            color: $mainWord_1;
+                            color: $money_Sp;
                             font-weight: bold;
                         }
                     }
@@ -199,7 +204,7 @@
                         font-size: 13px;
                         letter-spacing: 1px;
                         font-weight: bold;
-                        color: $title_2;
+                        color: $optionColor;
                         display: flex;
                         align-items: center;
     
@@ -230,6 +235,8 @@
         background: $mainBG_1;
         padding: 10px 14px;
         box-sizing: border-box;
+        border-top: solid 1px $mainBorder_1;
+        border-bottom: solid 1px $mainBorder_1;
 
         .remind {
             width: 100%;
@@ -249,7 +256,7 @@
         
         .smallRemind {
             margin-top: 5px;
-            color: $remind;
+            color:$remind_Sp;
             font-size: 12px;
             font-weight: bold;
         }
@@ -287,11 +294,11 @@
                 margin-bottom: 10px;
                 font-size: 14px;
                 letter-spacing: 1px;
-                color: $title_1;
+                color: $remind_Sp;
             }
 
             .sp {
-                color: $remind;
+                color: $mainWord_1;
             }
         }
     }

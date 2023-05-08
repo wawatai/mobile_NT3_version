@@ -3,7 +3,7 @@
     display: none;
     width: 100%;
     height: auto;
-    background: $mainBG_2;
+    // background: $mainBG_2;
 
     &.display {
         display: block;
@@ -17,6 +17,7 @@
         align-items: center;
         justify-content: center;
         border-bottom: solid 1px $mainBorder_1;
+        background: $mainBG_1;
 
         .selectBox {
             width: 92.27vw;
@@ -24,14 +25,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: $mainBG_1;
-            box-shadow: 0 0 13px 2px $boxshadow_1;
+            background: $mainBG_3;
+            // box-shadow: 0 0 13px 2px $boxshadow_1;
             position: relative;
-            border-radius: 5px;
-            border: solid 1px $mainBorder_2;
+            border-radius: 3px;
+            border: solid 1px $mainBorder_1;
 
             p {
-                color: $title_1;
+                color: $title_2;
                 font-size: 14px;
                 font-weight: bold;
             }
@@ -42,7 +43,7 @@
                 height: 3.4vw;
                 position: absolute;
                 top: 50%;
-                transform: translateY(-50%) rotate(270deg);
+                transform: translateY(-50%) rotate(90deg);
                 right: 4vw;
                 transition: 0.3s all;
             }
@@ -56,8 +57,9 @@
                 opacity: 0;
                 padding-left: 15px;
                 color: $mainWord_1;
+                background: $mainBG_3;
                 font-weight: bold;
-                font-size: 14px;
+                font-size: 15px;
             }
         }
     }
@@ -81,8 +83,7 @@
                 align-items: center;
                 justify-content: center;
                 background: $mainBG_1;
-                border-radius: 5px;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
+                // box-shadow: 0 0 5px 0 $boxshadow_2;
                 margin-bottom: 15px;
                 font-size: 14px;
                 font-weight: bold;
@@ -136,8 +137,7 @@
                 width: 92.27vw;
                 height: 52px;
                 background: $mainBG_1;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
-                border-radius: 5px;
+                // box-shadow: 0 0 5px 0 $boxshadow_2;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -146,8 +146,8 @@
 
                 .icon {
                     display: block;
-                    width: 15px;
-                    height: 15px;
+                    width: 22px;
+                    height: 25px;
                     margin: 0 4vw;
                     flex-shrink: 0;
                 }
@@ -158,7 +158,7 @@
                     height: 3.4vw;
                     margin: 0 4vw;
                     flex-shrink: 0;
-                    transform: rotate(180deg);
+                    // transform: rotate(180deg);
                     transition: 0.3s all;
                 }
 
@@ -166,7 +166,7 @@
                     width: 100%;
                     font-size: 14px;
                     font-weight: bold;
-                    color: $title_1;
+                    color: $title_2;
                 }
             }
 
@@ -179,7 +179,7 @@
                 margin: 0 auto;
                 border: solid 1px $mainBorder_2;
                 border-top: none;
-                background: $mainBG_1;
+                background: $mainBG_3;
                 border-radius: 0 0 5px 5px;
 
                 &.app {
@@ -194,19 +194,11 @@
                     color: $help_Word;
                     margin-bottom: 8px;
 
-                    &.remind {
-                        color: $remind;
-
-                        &.mar {
-                            margin-top: 40px;
-                        }
-                    }
-
                     &.smallTitle {
-                        font-size: 22px;
+                        font-size: 16px;
                         margin: 20px 0 10px;
                         color: $help_Title;
-                        text-align: center;
+                        text-align: left;
 
                         &.first {
                             margin-top: 0;
@@ -250,6 +242,41 @@
                     }
                 }
 
+                .btnBox1 {
+                    width: 100%;
+                    height: auto;
+                    margin-top: 20px;
+
+                    div {
+                        width: 100%;
+                        height: 97px;
+                        position: relative;
+                        margin-bottom: 15px;
+                        @include help_lineBtn1;
+
+                        i {
+                            display: block;
+                            position: absolute;
+                            width: 8.7vw;
+                            height: 8.7vw;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 5.5vw;
+                            
+                        }
+
+                        p {
+                            font-size: 3.4vw;
+                            font-weight: bold;
+                            margin: 0;
+
+                            &:nth-of-type(1) {
+                                font-size: 5vw;
+                            }
+                        }
+                    }
+                }
+
                 .btnBox {
                     width: 100%;
                     height: auto;
@@ -257,7 +284,7 @@
 
                     div {
                         width: 100%;
-                        height: 105px;
+                        height: 97px;
                         position: relative;
                         margin-bottom: 15px;
                         @include help_lineBtn;

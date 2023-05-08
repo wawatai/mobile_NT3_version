@@ -52,8 +52,8 @@
                         <button type="button" class="chBtn">變更</button>
                     </li>
                     <li>
-                        <span>住所</span>
-                        <input type="text" placeholder="請填選地址">
+                        <span>地址</span>
+                        <input type="text" placeholder="請填選地址,禁用空格及符號等">
                         <button type="button" class="chBtn">變更</button>
                     </li>
                     <li class="active">
@@ -69,9 +69,31 @@
                         <button type="button" class="chBtn">變更</button>
                     </li>
                     <button class="saveBtn">保存資料</button>
+                    <li>
+                        <span>會員帳號</span>
+                        <input class="userName" type="text" placeholder="請輸入真實姓名需持卡人姓名一致" value="opp121">
+                    </li>
+                    <li>
+                        <span>邀請碼</span>
+                        <div class="li_box">
+                            <p>m931042a</p>
+                            <button class="smallbutton">複製</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>推廣網址</span>
+                        <div class="li_box">
+                            <input class="userName" type="text" placeholder="https://app.h8win.net/#" value="">
+                        <button class="smallbutton">複製</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>推廣網址QRCODE</span>
+                        <div class="qr-img"></div>
+                    </li>
                 </ul>
             </form>
-            <div class="info_1">
+            <!-- <div class="info_1">
                 <ul>
                     <li>
                         <span>遊戲帳號</span>
@@ -96,7 +118,7 @@
                         <div class="qrCode"></div>
                     </li>
                 </ul> 
-            </div>
+            </div> -->
             <div class="info_2">
                 <ul>
                     <li>
@@ -120,7 +142,7 @@
                         <span>
                             0987654325
                             <button class="changePhoneBtn">
-                                變更
+                                修改
                                 <i class="arrow_ic"></i>
                             </button>
                         </span>
@@ -146,7 +168,7 @@
                         </span>
                         <span>
                             <button class="changePwdBtn">
-                                變更
+                                修改
                                 <i class="arrow_ic"></i>
                             </button>
                         </span>
@@ -168,7 +190,7 @@
             </li>
             <li onclick="window.location.href='./wallet.html'">
                 <i class="wallet_ic"></i>
-                <p>存轉提</p>
+                <p>錢包</p>
             </li>
             <li onclick="window.location.href='./help_often_contact.html'">
                 <i class="service_ic"></i>
