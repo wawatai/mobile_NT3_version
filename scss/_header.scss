@@ -1,0 +1,97 @@
+//header
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+
+    //content
+    .content {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: 0 14px;
+
+        .title {
+            width: 70%;
+            height: auto;
+            color: $title_Header;
+            font-size: 5vw;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 2px;
+            @include textHidden;
+            margin: 0 auto;
+        }
+
+        .back_arrow {
+            width: 10px;
+            height: 20px;
+            position: absolute;
+            left: 14px;
+        }
+
+        .refresh_ic {
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            right: 14px;
+        }
+
+        .detailBtn {
+            width: auto;
+            height: 27px;
+            position: absolute;
+            right: 14px;
+            @include headerBtn;
+
+            &.edit {
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+            }
+        }
+
+        .editBtn {
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            right: 14px;
+            display: none;
+
+            &.display {
+                display: block;
+            }
+        }
+
+        .inviteBtn {
+            width: 20vw;
+            height: 8vw;
+            position: absolute;
+            right: calc(20vw + 30px);
+        }
+
+        .lang {
+            width: 22vw;
+            height: 8vw;
+            @include lang;
+            position: absolute;
+            right: 14px;
+        }
+
+        &.helpPage {
+            display: none;
+
+            &.display {
+                display: flex;
+            }
+        }
+    }
+}
