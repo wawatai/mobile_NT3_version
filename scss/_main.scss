@@ -9,16 +9,7 @@ html {
         box-sizing: border-box;
 
         main {
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
-            padding: 45px 0 50px;
-            overflow-y: auto;
-
-            &.index {
-                display: flex;
-                flex-direction: column;
-            }
+            padding: 45px 0 48px;
         }
 
         .bg {
@@ -51,6 +42,6 @@ html {
         @import "./deposit";
         @import "./transfer";
         @import "./withdrawal";
-        @import "./invite";
+        @import "./invitevip";
     }
 }

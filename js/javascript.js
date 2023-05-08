@@ -15,12 +15,31 @@ $(function(){
     $('.gameList li').click(function(){
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
+    })
 
-        var n = $(this).index();
-
-        $(".gameBox:eq("+ n +")")
-        .addClass("display")
-        .siblings().removeClass("display");
+    $('.gameList .slotBtn').click(function(){
+        $('.gameBox.slotBox').addClass('display');
+        $('.gameBox.slotBox').siblings().removeClass('display');
+    })
+    $('.gameList .fishBtn').click(function(){
+        $('.gameBox.fishBox').addClass('display');
+        $('.gameBox.fishBox').siblings().removeClass('display');
+    })
+    $('.gameList .liveBtn').click(function(){
+        $('.gameBox.liveBox').addClass('display');
+        $('.gameBox.liveBox').siblings().removeClass('display');
+    })
+    $('.gameList .sportBtn').click(function(){
+        $('.gameBox.sportBox').addClass('display');
+        $('.gameBox.sportBox').siblings().removeClass('display');
+    })
+    $('.gameList .lotteryBtn').click(function(){
+        $('.gameBox.lotteryBox').addClass('display');
+        $('.gameBox.lotteryBox').siblings().removeClass('display');
+    })
+    $('.gameList .boardBtn').click(function(){
+        $('.gameBox.boardBox').addClass('display');
+        $('.gameBox.boardBox').siblings().removeClass('display');
     })
 })
 
@@ -148,16 +167,17 @@ $(function(){
 $(function(){
     $('.realLogin').click(function(){
         $('.jumpWindow,.loginBtn').removeClass('display');
+        $('.jumpWindow,.registerBtn').removeClass('display');
         $('.filter,.news,.alLogin').addClass('display');
         $('.operate').addClass("login");
         
+        $('.gameBox.slotBox li').attr('onclick',"callSlot()");
         $('.gameBox.liveBox li').attr('onclick',"callLive()");
         $('.gameBox.sportBox li').attr('onclick',"callSport()");
         $('.gameBox.lotteryBox li').attr('onclick',"callLottery()");
 
-        $('.gameBox.slotBox li').attr('onclick',"window.location.href='./html/slotPage.html'");
-        $(".gameBox.fishBox li").attr('onclick',"window.location.href='./html/fishPage.html'");
-        $(".gameBox.boardBox li").attr('onclick',"window.location.href='./html/boardPage.html'");
+        $(".gameList .fishBtn").attr('onclick',"window.location.href='./html/fishPage.html'");
+        $(".gameList .boardBtn").attr('onclick',"window.location.href='./html/boardPage.html'");
 
         $('.operate button:eq(0)').attr('onclick',"window.location.href='./html/deposit.html'");
         $('.operate button:eq(1)').attr('onclick',"window.location.href='./html/transfer.html'");

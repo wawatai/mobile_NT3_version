@@ -18,6 +18,12 @@ button:disabled {
   background-size: 100%;
 }
 
+header .inviteimg {
+  background: url("../images/icon/invite.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .filter .title {
   background: url("../images/loginTop.jpg") no-repeat top center;
   background-size: cover;
@@ -74,11 +80,6 @@ header .content {
   background-size: cover;
 }
 
-header .inviteBtn {
-  background: url("../images/invite.gif") no-repeat;
-  background-size: contain;
-}
-
 .slotHeader li .all_ic {
   background: url("../images/icon/svg/all.svg") no-repeat;
   background-size: 100%;
@@ -125,7 +126,7 @@ header .inviteBtn {
 }
 
 .eventType .all_ic {
-  background: url("../images/icon/svg/entire.svg") no-repeat;
+  background: url("../images/icon/svg/entire2.svg") no-repeat;
   background-size: 100%;
 }
 
@@ -236,37 +237,37 @@ header .inviteBtn {
 }
 
 .helpInner .img.depositWay {
-  background: url("../images/help/withdraw.png") no-repeat;
+  background: url("../images/說明圖/withdraw.png") no-repeat;
   background-size: 100%;
 }
 
 .helpInner .img.deposit_water {
-  background: url("../images/help/online01.png") no-repeat;
+  background: url("../images/說明圖/online01.png") no-repeat;
   background-size: 100%;
 }
 
 .helpInner .img.withdrawalWay {
-  background: url("../images/help/withdraw.png") no-repeat;
+  background: url("../images/說明圖/withdraw.png") no-repeat;
   background-size: 100%;
 }
 
 .helpInner .img.transferWay {
-  background: url("../images/help/transfer.png") no-repeat;
+  background: url("../images/說明圖/transfer.png") no-repeat;
   background-size: 100%;
 }
 
 .helpInner .img.tv {
-  background: url("../images/help/tv.png") no-repeat;
+  background: url("../images/說明圖/tv.png") no-repeat;
   background-size: 100%;
 }
 
 .helpInner .img.remote {
-  background: url("../images/help/remote.png") no-repeat;
+  background: url("../images/說明圖/remote.png") no-repeat;
   background-size: 100%;
 }
 
 .helpInner .img.license {
-  background: url("../images/help/license.jpg") no-repeat;
+  background: url("../images/說明圖/license.jpg") no-repeat;
   background-size: 100%;
 }
 
@@ -282,6 +283,11 @@ header .inviteBtn {
 
 .vipWrap .medal {
   background: url("../images/medal.png") no-repeat center;
+  background-size: contain;
+}
+
+.vipWrap .vip_info {
+  background: url("../images/vip_info.png") no-repeat center;
   background-size: contain;
 }
 
@@ -305,6 +311,16 @@ header .inviteBtn {
 .vipWrap .cardBox .card li.vip2 {
   background: url("../images/vip_card_3.png") no-repeat;
   background-size: 100%;
+}
+
+.inviteWrap .dividend_img {
+  background: url("../images/dividend_img.jpg") no-repeat;
+  background-size: contain;
+}
+
+.inviteWrap .qrCode {
+  background: url("../images/qrcode.png") no-repeat;
+  background-size: contain;
 }
 
 .cardList .cardBox .add {
@@ -342,6 +358,11 @@ header .inviteBtn {
   background-size: 100%;
 }
 
+.cardContent .id_sampleimg {
+  background: url("../images/id_sample.png") no-repeat;
+  background-size: 100%;
+}
+
 .withWrap .refresh_ic {
   background: url("../images/icon/svg/refresh.svg") no-repeat;
   background-size: 100%;
@@ -366,16 +387,6 @@ header .inviteBtn {
 
 .vipDetail .finger {
   background: url("../images/icon/finger.png") no-repeat center;
-  background-size: contain;
-}
-
-.inviteWrap .qr {
-  background: url("../images/qrcode.png") no-repeat;
-  background-size: contain;
-}
-
-.goTop i {
-  background: url("../images/icon/arrow_goTop.png") no-repeat center;
   background-size: contain;
 }
 
@@ -450,12 +461,6 @@ header .logo {
   height: auto;
 }
 
-.inviteWrap img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -479,8 +484,6 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -524,32 +527,18 @@ button {
 
 select, input {
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "微軟正黑體";
-}
-
-i {
-  display: block;
-}
-
-a {
-  display: block;
-  text-decoration: none;
 }
 
 main {
   display: block;
 }
 
-input[type=date]::-webkit-inner-spin-button,
-input[type=date]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-          appearance: none;
+html, body {
+  width: 100%;
+  height: auto;
 }
 
 html {
@@ -564,21 +553,7 @@ html body {
           box-sizing: border-box;
 }
 html body main {
-  width: 100%;
-  height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 45px 0 50px;
-  overflow-y: auto;
-}
-html body main.index {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  padding: 45px 0 48px;
 }
 html body .bg {
   position: fixed;
@@ -597,35 +572,50 @@ html body header {
   height: auto;
 }
 html body header .content {
-  width: 100%;
-  height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 45px;
+  padding: 0 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  padding: 0 14px;
+}
+html body header .content .invite {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+}
+html body header .content .invite .inviteimg {
+  width: 85px;
+  height: 40px;
 }
 html body header .content .title {
   width: 70%;
   height: auto;
-  color: #ffffff;
-  font-size: 5vw;
-  font-weight: bold;
   text-align: center;
+  font-size: 20px;
   letter-spacing: 2px;
+  color: #ffffff;
+  font-weight: bold;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   margin: 0 auto;
 }
 html body header .content .back_arrow {
+  position: absolute;
   width: 10px;
   height: 20px;
-  position: absolute;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 14px;
 }
 html body header .content .refresh_ic {
@@ -633,11 +623,17 @@ html body header .content .refresh_ic {
   height: 21px;
   position: absolute;
   right: 14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 html body header .content .detailBtn {
   width: auto;
   height: 27px;
   position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 14px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6));
   background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
@@ -658,54 +654,14 @@ html body header .content .editBtn {
   width: 21px;
   height: 21px;
   position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 14px;
   display: none;
 }
 html body header .content .editBtn.display {
   display: block;
-}
-html body header .content .inviteBtn {
-  width: 20vw;
-  height: 8vw;
-  position: absolute;
-  right: calc(20vw + 30px);
-}
-html body header .content .lang {
-  width: 22vw;
-  height: 8vw;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(11%, #ebca7b), color-stop(56%, #c29d4e), color-stop(95%, #ebca7b));
-  background: linear-gradient(to top, #ebca7b 11%, #c29d4e 56%, #ebca7b 95%);
-  border-radius: 3px;
-  border: solid 1px #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 8px;
-  position: absolute;
-  right: 14px;
-}
-html body header .content .lang::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 6px 4px 0 4px;
-  border-color: #ffffff transparent;
-  right: 8px;
-}
-html body header .content .lang select {
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 3.4vw;
-  font-weight: bold;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 html body header .content.helpPage {
   display: none;
@@ -724,8 +680,6 @@ html body .ad {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 html body .ad .single-item {
   margin: 0;
@@ -793,29 +747,30 @@ html body .ad .single-item .slick-next::before {
 html body .marqueeBox {
   width: 92%;
   height: 30px;
-  background: #ffffff;
-  border-radius: 30px;
-  -webkit-box-shadow: 0 0 5px 2px #ede5d7;
-          box-shadow: 0 0 5px 2px #ede5d7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 10px auto;
+  background: #ffffff;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 5px 2px #ede5d7;
+          box-shadow: 0 0 5px 2px #ede5d7;
 }
 html body .marqueeBox .marquee_ic {
+  display: block;
   width: 17%;
   height: 88%;
+  border-radius: 30px;
+  margin: 0 8px 0 2px;
+  z-index: 1;
+  position: relative;
   background: -webkit-gradient(linear, left bottom, left top, from(#fae0af), color-stop(50%, #d7b676), to(#f8fbc0));
   background: linear-gradient(to top, #fae0af 0%, #d7b676 50%, #f8fbc0 100%);
-  border-radius: 30px;
-  position: relative;
-  z-index: 1;
-  margin: 0 8px 0 2px;
 }
 html body .marqueeBox .marquee_ic::before {
   content: "";
@@ -872,11 +827,16 @@ html body .memberArea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 html body .memberArea .loginBtn {
-  width: 30vw;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
   height: 70%;
   background: -webkit-gradient(linear, left bottom, left top, from(#943c06), to(#ffd1af));
   background: linear-gradient(to top, #943c06 0%, #ffd1af 100%);
@@ -890,15 +850,8 @@ html body .memberArea .loginBtn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 0 0 1px 3px;
   margin-right: 3vw;
-  display: none;
 }
 html body .memberArea .loginBtn.display {
   display: -webkit-box;
@@ -909,9 +862,41 @@ html body .memberArea .loginBtn span {
   font-size: 15px;
   font-weight: bold;
 }
+html body .memberArea .registerBtn {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 70%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#943c06), to(#ffd1af));
+  background: linear-gradient(to top, #943c06 0%, #ffd1af 100%);
+  -webkit-box-shadow: inset 0 2px 1px 0 #d3a047, inset 0 -2px 0 0 #dfb988, inset -2px -1px 0 0 #ffecbd, 0 -2px 0 0 #ffebba, 0 1px 0 0 #d3a047, 2px 2px 2px 0 #bbbbbb;
+          box-shadow: inset 0 2px 1px 0 #d3a047, inset 0 -2px 0 0 #dfb988, inset -2px -1px 0 0 #ffecbd, 0 -2px 0 0 #ffebba, 0 1px 0 0 #d3a047, 2px 2px 2px 0 #bbbbbb;
+  color: #ffffff;
+  padding: 0 1px 3px 0;
+  font-size: 21px;
+  border-radius: 50%;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 30px;
+  padding: 0 0 1px 3px;
+  margin-right: 3vw;
+}
+html body .memberArea .registerBtn.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .memberArea .registerBtn span {
+  font-size: 15px;
+  font-weight: bold;
+}
 html body .memberArea .alLogin {
-  width: 37.4vw;
-  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -919,6 +904,11 @@ html body .memberArea .alLogin {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1.33vw 0 2vw;
+  width: 37.4vw;
+  height: 100%;
+  border-radius: 1.5vw 0 0 1.5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: none;
 }
 html body .memberArea .alLogin.display {
@@ -931,11 +921,10 @@ html body .memberArea .alLogin ul {
   height: auto;
 }
 html body .memberArea .alLogin ul li {
-  width: auto;
-  height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -947,23 +936,23 @@ html body .memberArea .alLogin ul li:last-child {
 html body .memberArea .alLogin ul li.amount {
   width: auto;
   max-width: 33.76vw;
-  color: #000000;
-  font-size: 1rem;
   font-weight: bold;
+  font-size: 1rem;
+  color: #000000;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 html body .memberArea .alLogin ul li .name {
   width: auto;
   max-width: 22.7vw;
   height: auto;
-  color: #000000;
   font-size: 0.8rem;
   font-weight: bold;
+  color: #000000;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 html body .memberArea .alLogin ul li .lv {
   width: auto;
@@ -982,9 +971,10 @@ html body .memberArea .alLogin ul li .lv {
       -ms-flex-align: center;
           align-items: center;
   white-space: nowrap;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 html body .memberArea .operate {
+  border-radius: 0 1.5vw 1.5vw 0;
   width: 54.6vw;
   height: 100%;
   display: -webkit-box;
@@ -998,11 +988,11 @@ html body .memberArea .operate.login .btnBox {
   padding: 0 6%;
 }
 html body .memberArea .operate.login .btnBox .vipBtn {
-  display: block;
+  display: inline-block;
 }
 html body .memberArea .operate .btnBox {
   width: 100%;
-  height: 100%;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1012,7 +1002,9 @@ html body .memberArea .operate .btnBox {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 9%;
+  padding: 0 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 html body .memberArea .operate .btnBox button {
   width: 40px;
@@ -1030,7 +1022,6 @@ html body .memberArea .operate .btnBox button {
           box-sizing: border-box;
 }
 html body .memberArea .operate .btnBox button.vipBtn {
-  display: none;
   font-size: 15px;
 }
 html body .homeCenter {
@@ -1042,6 +1033,8 @@ html body .homeCenter {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0 15px 8px;
   margin-top: 8px;
 }
@@ -1051,16 +1044,14 @@ html body .homeCenter .gameList {
 }
 html body .homeCenter .gameList ol {
   width: auto;
-  height: auto;
+  height: 100%;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(36%, #ffffff), to(#f5f5f5));
   background: linear-gradient(to top, #ffffff 36%, #f5f5f5 100%);
   border: solid 1px #b69761;
-  -webkit-box-shadow: inset 1px 1px 3px 0 #ffffff, inset -2px -2px 3px 0 rgba(90, 90, 90, 0.5019607843);
-          box-shadow: inset 1px 1px 3px 0 #ffffff, inset -2px -2px 3px 0 rgba(90, 90, 90, 0.5019607843);
+  -webkit-box-shadow: inset 1px 1px 3px 0 #ffffff, inset -2px -2px 3px 0 #5a5a5a80;
+          box-shadow: inset 1px 1px 3px 0 #ffffff, inset -2px -2px 3px 0 #5a5a5a80;
   border-radius: 5px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin-right: 10px;
+  overflow-y: auto;
 }
 html body .homeCenter .gameList ol li {
   display: -webkit-box;
@@ -1072,8 +1063,8 @@ html body .homeCenter .gameList ol li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 98px;
-  height: 82px;
+  width: 24vw;
+  height: 20vw;
   position: relative;
 }
 html body .homeCenter .gameList ol li::before {
@@ -1086,9 +1077,6 @@ html body .homeCenter .gameList ol li::before {
   width: 85%;
   height: 1px;
   background: #b7a25f;
-}
-html body .homeCenter .gameList ol li:last-child::before {
-  display: none;
 }
 html body .homeCenter .gameList ol li.active div {
   background: -webkit-gradient(linear, left bottom, left top, from(#e9cc93), to(#be9c5b));
@@ -1119,15 +1107,15 @@ html body .homeCenter .gameList ol li div {
   border-radius: 3px;
 }
 html body .homeCenter .gameList ol li div p {
-  margin-top: 8px;
-  font-size: 14px;
+  margin-top: 2vw;
+  font-size: 3.4vw;
   font-weight: bold;
   color: #4d4d4d;
 }
 html body .homeCenter .gameList ol li div i {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 8vw;
+  height: 8vw;
 }
 html body .homeCenter .gameList ol li div i.live_ic {
   background-position-x: 20%;
@@ -1147,9 +1135,10 @@ html body .homeCenter .gameList ol li div i.board_ic {
 html body .homeCenter .gameBox {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  width: 65vw;
   height: auto;
   display: none;
+  overflow-y: auto;
 }
 html body .homeCenter .gameBox.display {
   display: -webkit-box;
@@ -1160,56 +1149,19 @@ html body .homeCenter .gameBox li {
   width: 100%;
   height: 45vw;
   position: relative;
-  margin-bottom: 8vw;
+}
+html body .homeCenter .gameBox li:nth-of-type(2n) {
+  margin-right: 0;
 }
 html body .homeCenter .gameBox li p {
   position: absolute;
-  width: 100%;
-  bottom: -6vw;
-  left: 0;
-  color: #8e5610;
+  bottom: 5vw;
+  left: 25px;
+  color: #ebd495;
   font-size: 5vw;
   font-weight: bold;
   text-align: center;
-}
-html body .goTop {
-  width: 16vw;
-  height: 16vw;
-  background: -webkit-gradient(linear, left bottom, left top, from(#E3C484), color-stop(77%, #EEE39F));
-  background: linear-gradient(to top, #E3C484 0%, #EEE39F 77%);
-  border-radius: 50%;
-  border: solid 1px #c5a45f;
-  -webkit-box-shadow: 0 5px 6px -2px rgba(0, 0, 0, 0.2039215686);
-          box-shadow: 0 5px 6px -2px rgba(0, 0, 0, 0.2039215686);
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: fixed;
-  right: 10px;
-  bottom: 70px;
-}
-html body .goTop.display {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-html body .goTop p {
-  color: #523103;
-  font-size: 3vw;
-  font-weight: bold;
-}
-html body .goTop i {
-  width: 6vw;
-  height: 6vw;
-  margin-bottom: 5px;
+  text-shadow: 2px 3px 3px #332116, 2px -2px 3px #332116;
 }
 html body footer {
   width: 100%;
@@ -1259,6 +1211,7 @@ html body footer ul li.active i {
   background-position-y: 100%;
 }
 html body footer ul li i {
+  display: block;
   width: 20px;
   height: 21px;
 }
@@ -1287,7 +1240,7 @@ html body .filter {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: #00000066;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1549,7 +1502,7 @@ html body .filter .loginWindow form .realLogin:active, html body .filter .loginW
   color: #ffffff;
 }
 html body .filter .loginWindow .registerBtn {
-  color: #4d4d4d;
+  color: #444;
   letter-spacing: 1px;
   font-size: 14px;
   display: -webkit-box;
@@ -1731,7 +1684,7 @@ html body .filter .registerWindow form label.isCheck {
   display: flex;
   font-size: 14px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1818,7 +1771,7 @@ html body .filter .ruleWindow .content .ruleBody h2 {
   padding: 10px 5px;
   font-weight: bold;
   line-height: 1.8;
-  color: #9c8018;
+  color: #c0933e;
 }
 html body .filter .ruleWindow .content .ruleBody p {
   font-size: 3.4vw;
@@ -1952,12 +1905,12 @@ html body .filter .news .content li {
           box-sizing: border-box;
   margin-top: 10px;
   border-radius: 5px;
-  border: dotted 1px #957222;
+  border: dotted 1px #b18e56;
 }
 html body .filter .news .content li .date {
   font-size: 12px;
   letter-spacing: 1px;
-  color: #848484;
+  color: #999;
   font-weight: bold;
   margin-bottom: 6px;
 }
@@ -2043,7 +1996,7 @@ html body .filter .gameWindow form .row .smallTitle {
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
   white-space: nowrap;
 }
 html body .filter .gameWindow form .row .moneyText {
@@ -2124,7 +2077,7 @@ html body .filter .phoneWindow .smallTitle {
   text-align: center;
 }
 html body .filter .phoneWindow .smallTitle span {
-  color: #4d4d4d;
+  color: #444;
 }
 html body .filter .phoneWindow form {
   display: -webkit-box;
@@ -2420,7 +2373,7 @@ html body .filter .checkPoint .total {
           flex-direction: column;
 }
 html body .filter .checkPoint .total .smallTitle {
-  color: #4d4d4d;
+  color: #444;
   font-weight: bold;
   font-size: 16px;
 }
@@ -2468,7 +2421,7 @@ html body .filter .checkPoint ul li .name {
   border-right: solid 1px #cccccc;
   font-size: 14px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .filter .checkPoint ul li .point {
   font-size: 14px;
@@ -2659,7 +2612,7 @@ html body .filter .pointWindow .content {
 html body .filter .pointWindow .content ul {
   width: 100%;
   height: auto;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -2669,7 +2622,7 @@ html body .filter .pointWindow .content ul li {
   font-size: 14px;
   font-weight: bold;
   color: #000000;
-  background: #f2f3f3;
+  background: #f8f8f8;
   border-bottom: solid 1px #957222;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2689,10 +2642,46 @@ html body .filter .pointWindow .content ul li p {
   width: 50%;
   text-align: center;
 }
+@media only screen and (max-width: 414px) {
+  html body .homeCenter .gameList, html body .homeCenter .gameBox {
+    height: 45vh;
+  }
+}
 @media only screen and (max-width: 375px) {
+  html body .homeCenter .gameList, html body .homeCenter .gameBox {
+    height: 42vh;
+  }
+}
+@media only screen and (max-width: 360px) {
+  html body .homeCenter .gameList, html body .homeCenter .gameBox {
+    height: 41vh;
+  }
+}
+@media only screen and (max-width: 320px) {
+  html body .homeCenter .gameList, html body .homeCenter .gameBox {
+    height: 36vh;
+  }
+  html body .operate .btnBox {
+    padding: 0 3% !important;
+  }
   html body .operate .btnBox button {
     width: 36px !important;
     height: 36px !important;
+  }
+}
+@media only screen and (height: 812px) {
+  html body .homeCenter .gameList, html body .homeCenter .gameBox {
+    height: 52vh;
+  }
+}
+@media only screen and (height: 731px) {
+  html body .homeCenter .gameList, html body .homeCenter .gameBox {
+    height: 45vh;
+  }
+}
+@media only screen and (height: 823px) {
+  html body .homeCenter .gameList, html body .homeCenter .gameBox {
+    height: 51vh;
   }
 }
 html body .slotWrap {
@@ -2751,7 +2740,7 @@ html body .slotWrap .slotHeader .listBox ul li {
   border-bottom: solid 2px transparent;
 }
 html body .slotWrap .slotHeader .listBox ul li.active {
-  color: #c7a16e;
+  color: #231815;
   border-color: #c7a16e;
 }
 html body .slotWrap .slotHeader .listBox ul li i {
@@ -2827,7 +2816,7 @@ html body .slotWrap .gameList {
   overflow-y: auto;
 }
 html body .slotWrap .gameList .gameBox {
-  width: calc((96vw - 30px) / 2);
+  width: calc((96vw - 30px)/2);
   height: 175px;
   margin: 0 1vw 8px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(67%, #fcfcfc), to(#d8d8d8));
@@ -2939,7 +2928,7 @@ html body .eventType ul li:active, html body .eventType ul li.active {
   border-color: #c7a16e;
 }
 html body .eventType ul li:active span, html body .eventType ul li.active span {
-  color: #c7a16e;
+  color: #231815;
 }
 html body .eventType ul li .all_ic {
   width: 25px;
@@ -2958,7 +2947,7 @@ html body .eventList {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 14px 0;
-  background: #f2f3f3;
+  background: #f8f8f8;
 }
 html body .eventList ul {
   display: -webkit-box;
@@ -2978,15 +2967,15 @@ html body .eventList ul li .eventBox {
   background: #ffffff;
   border-radius: 1.5vw;
   overflow: hidden;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
 }
 html body .eventList ul li .eventBox .eventImg {
-  background: #f2f3f3;
-  margin: 6px auto 0;
+  background: #f8f8f8;
+  margin: 6px auto 10px;
   border-radius: 5px;
   overflow: hidden;
 }
-html body .eventList ul li .eventBox .textBox {
+html body .eventList ul li .eventBox p {
   width: 100%;
   height: 36px;
   display: -webkit-box;
@@ -2997,31 +2986,14 @@ html body .eventList ul li .eventBox .textBox {
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 0 15px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
-html body .eventList ul li .eventBox .textBox p {
-  color: #000000;
-  font-size: 4vw;
-  font-weight: bold;
-  width: 50%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-html body .eventList ul li .eventBox .textBox div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-html body .eventList ul li .eventBox .textBox div button {
-  width: 74px;
-  height: 27px;
+html body .eventList ul li .eventBox p button {
+  width: 82px;
+  min-height: 21px;
   background: -webkit-gradient(linear, left bottom, left top, from(#f3dba7), color-stop(50%, #a88754), to(#f0d8a4));
   background: linear-gradient(to top, #f3dba7 0%, #a88754 50%, #f0d8a4 100%);
   border: solid 1px #957222;
@@ -3030,29 +3002,9 @@ html body .eventList ul li .eventBox .textBox div button {
   font-size: 12px;
   font-weight: bold;
 }
-html body .eventList ul li .eventBox .textBox div button:active, html body .eventList ul li .eventBox .textBox div button.active {
+html body .eventList ul li .eventBox p button:active, html body .eventList ul li .eventBox p button.active {
   background: -webkit-gradient(linear, left bottom, left top, from(#f3dba7), to(#a08761));
   background: linear-gradient(to top, #f3dba7 0%, #a08761 100%);
-}
-html body .eventList ul li .eventBox .textBox div button:last-child {
-  display: none;
-  margin-left: 5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9ddbec), color-stop(50%, #0282cc), to(#82aeeb));
-  background: linear-gradient(to bottom, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
-  border: solid 1px #0282cc;
-  border-radius: 1vw;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  font-size: 3.4vw;
-  margin-left: 5px;
-}
-html body .eventList ul li .eventBox .textBox div button:last-child:active, html body .eventList ul li .eventBox .textBox div button:last-child.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#9ddbec), color-stop(50%, #0282cc), to(#82aeeb));
-  background: linear-gradient(to top, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
-}
-html body .eventList ul li .eventBox .textBox div button:last-child.display {
-  display: block;
 }
 html body .eventDetail {
   width: 100%;
@@ -3068,7 +3020,7 @@ html body .eventDetail {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 15px;
-  background: #f2f3f3;
+  background: #f8f8f8;
   overflow-y: auto;
 }
 html body .eventDetail .eventImg {
@@ -3085,8 +3037,8 @@ html body .eventDetail .detailContent {
   margin-top: 10px;
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
-          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
+          box-shadow: 0 0 5px 0 #c8c8c880;
 }
 html body .eventDetail .detailContent ul .title {
   width: 100%;
@@ -3103,7 +3055,7 @@ html body .eventDetail .detailContent ul .title {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #9c8018;
+  color: #c0933e;
 }
 html body .eventDetail .detailContent ul ul {
   list-style: disc;
@@ -3115,7 +3067,7 @@ html body .eventDetail .detailContent ul ul li {
   font-weight: bold;
   color: #000000;
   margin-top: 20px;
-  color: #4d4d4d;
+  color: #444;
   line-height: 18px;
 }
 html body .eventDetail .detailContent ul ul li:nth-of-type(1) {
@@ -3150,13 +3102,10 @@ html body .eventDetail .detailContent .contentFooter {
 }
 html body .walletWrap {
   width: 100%;
-  height: calc(100vh - 95px);
+  min-height: calc(100vh - 92px);
   height: auto;
-  background: #f2f3f3;
+  background: #f8f8f8;
   padding-bottom: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-y: auto;
 }
 html body .walletWrap .walletBox {
   width: 100%;
@@ -3175,10 +3124,10 @@ html body .walletWrap .walletBox .gradient .content {
   height: auto;
   margin: 0 auto 30px;
   background: #ffffff;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   border-radius: 5px;
-  -webkit-box-shadow: 0 10px 12px -2px rgba(200, 200, 200, 0.5019607843);
-          box-shadow: 0 10px 12px -2px rgba(200, 200, 200, 0.5019607843);
+  -webkit-box-shadow: 0 10px 12px -2px #c8c8c880;
+          box-shadow: 0 10px 12px -2px #c8c8c880;
 }
 html body .walletWrap .walletBox .gradient .content .amount {
   width: 100%;
@@ -3203,7 +3152,7 @@ html body .walletWrap .walletBox .gradient .content .amount .half .title {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 10px;
-  color: #9c8018;
+  color: #c0933e;
   font-size: 15px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -3247,7 +3196,7 @@ html body .walletWrap .walletBox .gradient .content .details .items:nth-of-type(
 html body .walletWrap .walletBox .gradient .content .details .items p {
   font-size: 15px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
   white-space: nowrap;
 }
 html body .walletWrap .walletBox .gradient .content .details .items p:nth-of-type(1) {
@@ -3329,7 +3278,7 @@ html body .walletWrap .walletList .forPlatform .title {
   margin-bottom: 11px;
   font-size: 13px;
   letter-spacing: 1px;
-  color: #848484;
+  color: #999;
   font-weight: bold;
 }
 html body .walletWrap .walletList .forPlatform .title button {
@@ -3373,7 +3322,7 @@ html body .walletWrap .walletList .forPlatform ul li {
           box-sizing: border-box;
   padding: 10px 0 0 11px;
   margin: 0 1.9vw 1.9vw 0;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   border-radius: 5px;
 }
 html body .walletWrap .walletList .forPlatform ul li:nth-of-type(3n) {
@@ -3382,7 +3331,7 @@ html body .walletWrap .walletList .forPlatform ul li:nth-of-type(3n) {
 html body .walletWrap .walletList .forPlatform ul li div {
   font-size: 12px;
   letter-spacing: 1px;
-  color: #4d4d4d;
+  color: #444;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3550,21 +3499,19 @@ html body .walletWrap .options .arrow_ic {
 }
 html body .memberWrap {
   width: 100%;
-  min-height: calc(100vh - 95px);
   height: auto;
-  background: #f2f3f3;
+  min-height: calc(100% - 92px);
+  background: #f8f8f8;
   padding-bottom: 10px;
 }
 html body .memberWrap .user {
   width: 100%;
   height: auto;
+  margin-bottom: 10px;
   background: #ffffff;
   padding-bottom: 13px;
-  margin-bottom: 10px;
 }
 html body .memberWrap .user .info {
-  width: 100%;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3576,12 +3523,12 @@ html body .memberWrap .user .info {
           justify-content: space-between;
   position: relative;
   padding: 20px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: auto;
 }
 html body .memberWrap .user .info div .account {
-  color: #000000;
-  font-weight: bold;
-  font-size: 4vw;
-  letter-spacing: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3589,10 +3536,15 @@ html body .memberWrap .user .info div .account {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 6px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #000000;
+  font-weight: bold;
 }
 html body .memberWrap .user .info div .account .lv {
   width: auto;
   height: 18px;
+  margin-right: 9px;
   background: linear-gradient(120deg, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
   border: solid 1px #cca172;
   color: #ffffff;
@@ -3607,13 +3559,12 @@ html body .memberWrap .user .info div .account .lv {
       -ms-flex-align: center;
           align-items: center;
   white-space: nowrap;
-  margin-right: 9px;
 }
 html body .memberWrap .user .info div .date {
-  color: #848484;
   font-size: 13px;
-  font-weight: bold;
   letter-spacing: 1px;
+  font-weight: bold;
+  color: #999;
 }
 html body .memberWrap .user .info .infoBtn {
   width: auto;
@@ -3626,7 +3577,7 @@ html body .memberWrap .user .info .infoBtn {
   color: #7c5625;
   border-radius: 3px;
   letter-spacing: 1px;
-  font-size: 3.4vw;
+  font-size: 14px;
   padding: 3px 15px;
 }
 html body .memberWrap .user .info .infoBtn:active, html body .memberWrap .user .info .infoBtn.active {
@@ -3647,7 +3598,7 @@ html body .memberWrap .user .wallet p {
   width: 64.53vw;
   height: 8.27vw;
   background: #f2f3f3;
-  color: #4d4d4d;
+  color: #000;
   border-color: #957222;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3661,7 +3612,7 @@ html body .memberWrap .user .wallet p {
   border-style: solid;
   border-width: 1px 0 1px 1px;
   border-radius: 5vw 0 0 5vw;
-  font-size: 3.4vw;
+  font-size: 15px;
   letter-spacing: 1px;
   font-weight: bold;
 }
@@ -3677,6 +3628,7 @@ html body .memberWrap .user .wallet button {
   border-radius: 3px;
   letter-spacing: 1px;
   border-radius: 0 5vw 5vw 0;
+  font-size: 15px;
 }
 html body .memberWrap .user .wallet button:active, html body .memberWrap .user .wallet button.active {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e8cb8e), to(#a17d44));
@@ -3684,15 +3636,15 @@ html body .memberWrap .user .wallet button:active, html body .memberWrap .user .
   color: #ffffff;
 }
 html body .memberWrap .user .btnBox {
-  width: 92.26vw;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 92.26vw;
+  height: auto;
+  margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 auto;
 }
 html body .memberWrap .user .btnBox button {
   width: 49%;
@@ -3718,41 +3670,40 @@ html body .memberWrap .user .btnBox button:active, html body .memberWrap .user .
   background: linear-gradient(to top, #ffffff 40%, #f4f4f4 100%);
 }
 html body .memberWrap .user .btnBox button .wallet_ic {
+  display: block;
   width: 8.8vw;
   height: 8.8vw;
 }
 html body .memberWrap .user .btnBox button .vip_ic {
+  display: block;
   width: 8.8vw;
   height: 8.8vw;
   background-position-x: 100%;
 }
 html body .memberWrap .user .btnBox button .text {
-  color: #9c8018;
-  font-size: 5vw;
+  margin-left: 3.47vw;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 2px;
-  margin-left: 3.47vw;
+  color: #c0933e;
 }
 html body .memberWrap .user .btnBox button .text p {
-  color: #b3b3b3;
   font-size: 12px;
   letter-spacing: 1px;
+  color: #666;
   text-align: left;
 }
 html body .memberWrap .user ul {
-  width: 92.26vw;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 92.26vw;
   margin: 15px auto 0;
 }
 html body .memberWrap .user ul li {
-  width: 20.53vw;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3766,9 +3717,12 @@ html body .memberWrap .user ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 20.53vw;
+  height: auto;
   position: relative;
 }
 html body .memberWrap .user ul li i {
+  display: block;
   width: 10.4vw;
   height: 9.33vw;
 }
@@ -3782,11 +3736,11 @@ html body .memberWrap .user ul li i.card_ic {
   background-position-x: -31.2vw;
 }
 html body .memberWrap .user ul li p {
-  color: #4d4d4d;
   font-size: 13px;
   font-weight: bold;
   letter-spacing: 1px;
   margin-top: 5px;
+  color: #4d4d4d;
 }
 html body .memberWrap .user ul li .bubble {
   min-width: 20px;
@@ -3865,9 +3819,10 @@ html body .memberWrap .options:active i.point_ic, html body .memberWrap .options
   background-position-y: calc(100% - 1px);
 }
 html body .memberWrap .options i {
+  display: block;
+  margin-right: 2vw;
   width: 8vw;
   height: 8vw;
-  margin-right: 2vw;
 }
 html body .memberWrap .options i.point_ic {
   width: 6vw;
@@ -3891,28 +3846,27 @@ html body .memberWrap .options i.logout_ic {
   background-position-x: -48vw;
 }
 html body .memberWrap .options .arrow_ic {
+  display: block;
   width: 2vw;
   height: 3.4vw;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 html body .memberList {
+  background: #ffffff;
   width: 100%;
   height: auto;
 }
 html body .memberList ul {
   width: 100%;
   height: auto;
-  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 html body .memberList ul li {
-  border-bottom: solid 2px transparent;
-  color: #848484;
-  font-size: 3.4vw;
-  font-weight: bold;
+  width: 50%;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3922,21 +3876,25 @@ html body .memberList ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: solid 2px transparent;
+  font-size: 3.4vw;
+  font-weight: bold;
+  color: #848484;
 }
 html body .memberList ul li:active, html body .memberList ul li.active {
-  color: #c7a16e;
+  color: #231815;
   border-color: #c7a16e;
 }
-html body .memberList ul li {
-  width: 50%;
-  height: 40px;
-}
 html body .memberInfo {
-  width: 100%;
-  height: calc(100vh - 135px);
-  background: #f2f3f3;
-  padding: 10px 0;
   overflow-y: auto;
+  width: 100%;
+  height: calc(100vh - 136px);
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f8f8f8;
 }
 html body .memberInfo form {
   width: 100%;
@@ -3987,7 +3945,7 @@ html body .memberInfo form ul li span {
   width: 20vw;
   font-weight: bold;
   font-size: 14px;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .memberInfo form ul li input {
   width: 64vw;
@@ -4108,7 +4066,7 @@ html body .memberInfo .info_1 ul li.forQR span:nth-of-type(1), html body .member
 html body .memberInfo .info_1 ul li span, html body .memberInfo .info_2 ul li span {
   font-size: 14px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .memberInfo .info_1 ul li span.empty, html body .memberInfo .info_2 ul li span.empty {
   color: #e11515;
@@ -4203,14 +4161,14 @@ html body .memberPlatform {
   padding: 10px 4vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #f2f3f3;
+  background: #f8f8f8;
 }
 html body .memberPlatform .platformBox {
   width: 100%;
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   border-radius: 5px;
   background: #ffffff;
   margin-bottom: 10px;
@@ -4222,7 +4180,7 @@ html body .memberPlatform .platformBox .title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 17px;
-  color: #9c8018;
+  color: #c0933e;
   font-size: 14px;
   font-weight: bold;
   display: -webkit-box;
@@ -4253,7 +4211,7 @@ html body .memberPlatform .platformBox .content li {
           justify-content: space-between;
 }
 html body .memberPlatform .platformBox .content li p {
-  color: #4d4d4d;
+  color: #444;
   font-size: 14px;
   font-weight: bold;
 }
@@ -4280,7 +4238,7 @@ html body .helpWrap {
   display: none;
   width: 100%;
   height: auto;
-  background: #f2f3f3;
+  background: #f8f8f8;
 }
 html body .helpWrap.display {
   display: block;
@@ -4316,10 +4274,10 @@ html body .helpWrap .helpHeader .selectBox {
           box-shadow: 0 0 13px 2px #dedede;
   position: relative;
   border-radius: 5px;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
 }
 html body .helpWrap .helpHeader .selectBox p {
-  color: #9c8018;
+  color: #c0933e;
   font-size: 14px;
   font-weight: bold;
 }
@@ -4373,13 +4331,13 @@ html body .helpWrap .helpBody ul li {
           justify-content: center;
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
-          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
+          box-shadow: 0 0 5px 0 #c8c8c880;
   margin-bottom: 15px;
   font-size: 14px;
   font-weight: bold;
-  color: #4d4d4d;
-  border: solid 1px #957222;
+  color: #444;
+  border: solid 1px #b18e56;
 }
 html body .helpInner {
   display: none;
@@ -4414,8 +4372,8 @@ html body .helpInner ul li .title {
   width: 92.27vw;
   height: 52px;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
-          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
+          box-shadow: 0 0 5px 0 #c8c8c880;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4427,7 +4385,7 @@ html body .helpInner ul li .title {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
 }
 html body .helpInner ul li .title .icon {
   display: block;
@@ -4453,7 +4411,7 @@ html body .helpInner ul li .title p {
   width: 100%;
   font-size: 14px;
   font-weight: bold;
-  color: #9c8018;
+  color: #c0933e;
 }
 html body .helpInner ul li .textBox {
   display: none;
@@ -4463,7 +4421,7 @@ html body .helpInner ul li .textBox {
           box-sizing: border-box;
   padding: 10px;
   margin: 0 auto;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   border-top: none;
   background: #ffffff;
   border-radius: 0 0 5px 5px;
@@ -4479,17 +4437,11 @@ html body .helpInner ul li .textBox p {
   color: #4d4d4d;
   margin-bottom: 8px;
 }
-html body .helpInner ul li .textBox p.remind {
-  color: #e11515;
-}
-html body .helpInner ul li .textBox p.remind.mar {
-  margin-top: 40px;
-}
 html body .helpInner ul li .textBox p.smallTitle {
-  font-size: 22px;
+  font-size: 18px;
   margin: 20px 0 10px;
   color: #171717;
-  text-align: center;
+  text-align: left;
 }
 html body .helpInner ul li .textBox p.smallTitle.first {
   margin-top: 0;
@@ -4630,13 +4582,13 @@ html body .eventApplyType ul li {
 }
 html body .eventApplyType ul li:active, html body .eventApplyType ul li.active {
   border-color: #c7a16e;
-  color: #c7a16e;
+  color: #231815;
 }
 html body .applyList {
   display: none;
   width: 100%;
   height: calc(100vh - 132px);
-  background: #f2f3f3;
+  background: #f8f8f8;
   overflow-y: scroll;
   margin-top: 40px;
 }
@@ -4655,7 +4607,7 @@ html body .applyList .listBox .list {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 13px 2px #dedede;
           box-shadow: 0 0 13px 2px #dedede;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   background: #ffffff;
 }
 html body .applyList .listBox .list .title {
@@ -4671,7 +4623,7 @@ html body .applyList .listBox .list .title {
       -ms-flex-pack: center;
           justify-content: center;
   border-bottom: solid 1px #cccccc;
-  color: #9c8018;
+  color: #c0933e;
   font-size: 16px;
   font-weight: bold;
 }
@@ -4732,7 +4684,7 @@ html body .applyList .listBox .list ul li {
           justify-content: space-between;
   font-size: 14px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -4801,7 +4753,7 @@ html body .applyList .listBox .list .btnBox button.checkBtn {
 html body .applyRecord {
   width: 100%;
   height: calc(100vh - 132px);
-  background: #f2f3f3;
+  background: #f8f8f8;
   overflow-y: auto;
   margin-top: 40px;
   -webkit-box-sizing: border-box;
@@ -4836,14 +4788,14 @@ html body .applyRecord .searchContain form ul li {
 html body .applyRecord .searchContain form ul li p {
   font-size: 14px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
   margin-bottom: 10px;
 }
 html body .applyRecord .searchContain form ul li select {
   width: 100%;
   height: 42px;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -4861,7 +4813,7 @@ html body .applyRecord .searchContain form ul li .inputBox {
   width: 100%;
   height: 42px;
   border-radius: 5px;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -4958,7 +4910,7 @@ html body .applyRecord .reviewBody .noData {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 80px;
-  color: #b3b3b3;
+  color: #666;
   font-weight: bold;
   text-align: center;
   font-size: 14px;
@@ -4973,9 +4925,9 @@ html body .applyRecord .reviewBody .recordBox {
   margin-bottom: 10px;
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
-          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
-  border: solid 1px #957222;
+  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
+          box-shadow: 0 0 5px 0 #c8c8c880;
+  border: solid 1px #b18e56;
 }
 html body .applyRecord .reviewBody .recordBox.display {
   display: block;
@@ -5002,12 +4954,12 @@ html body .applyRecord .reviewBody .recordBox ul .title {
   border-bottom: solid 1px #cccccc;
 }
 html body .applyRecord .reviewBody .recordBox ul .title p {
-  color: #9c8018;
+  color: #c0933e;
   font-weight: bold;
   font-size: 14px;
 }
 html body .applyRecord .reviewBody .recordBox ul .title p span {
-  color: #4d4d4d;
+  color: #444;
 }
 html body .applyRecord .reviewBody .recordBox ul .title p span.status {
   color: #000000;
@@ -5037,7 +4989,7 @@ html body .applyRecord .reviewBody .recordBox ul ul li:last-child {
 html body .applyRecord .reviewBody .recordBox ul ul li p {
   font-size: 14px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .applyRecord .reviewBody .recordBox ul ul li p:last-child {
   color: #000000;
@@ -5046,7 +4998,11 @@ html body .vipWrap {
   width: 100%;
   height: calc(100vh - 94px);
   overflow-y: auto;
-  background: #f2f3f3;
+  background: #f8f8f8;
+}
+html body .vipWrap .vip_info {
+  height: calc(354vw);
+  margin: 5%;
 }
 html body .vipWrap .topBox {
   width: 100%;
@@ -5078,13 +5034,13 @@ html body .vipWrap .topBox .board .content .account {
   margin-bottom: 12px;
   letter-spacing: 2px;
   font-weight: bold;
-  color: #9c8018;
+  color: #c0933e;
 }
 html body .vipWrap .topBox .board .content .textBox {
   margin-bottom: 12px;
   font-size: 13px;
   letter-spacing: 1px;
-  color: #4d4d4d;
+  color: #444;
   font-weight: bold;
 }
 html body .vipWrap .topBox .board .content .textBox span {
@@ -5117,10 +5073,10 @@ html body .vipWrap .topBox .board .exBar .level p {
   letter-spacing: 1px;
   font-weight: bold;
   font-size: 14px;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .vipWrap .topBox .board .exBar .level p.cur {
-  color: #9c8018;
+  color: #c0933e;
 }
 html body .vipWrap .topBox .board .exBar .bar {
   width: 100%;
@@ -5298,7 +5254,7 @@ html body .vipWrap .enjoyBox .title {
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #9c8018;
+  color: #c0933e;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 1vw;
@@ -5321,11 +5277,11 @@ html body .vipWrap .enjoyBox ul li {
   height: auto;
   padding: 6px 12px;
   margin: 0 1.6vw 1.6vw 0;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   border-radius: 3px;
   font-size: 13px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -5411,7 +5367,7 @@ html body .vipDetail .lvWrap:last-child {
 html body .vipDetail .lvWrap .title {
   font-size: 17px;
   font-weight: bold;
-  color: #9c8018;
+  color: #c0933e;
   margin: 7px 0 12px;
 }
 html body .vipDetail .lvWrap .list {
@@ -5420,13 +5376,13 @@ html body .vipDetail .lvWrap .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
-          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
+          box-shadow: 0 0 5px 0 #c8c8c880;
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 15px;
   position: relative;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
 }
 html body .vipDetail .lvWrap .list i {
   display: -webkit-box;
@@ -5487,7 +5443,7 @@ html body .vipDetail .lvWrap .list .left li.smallTitle {
   border-bottom: solid 1px #cccccc;
 }
 html body .vipDetail .lvWrap .list .left li.smallTitle p {
-  color: #4d4d4d;
+  color: #444;
 }
 html body .vipDetail .lvWrap .list .left li p {
   width: 100%;
@@ -5534,7 +5490,7 @@ html body .vipDetail .lvWrap .list .right ul li.smallTitle {
   border-bottom: solid 1px #cccccc;
 }
 html body .vipDetail .lvWrap .list .right ul li.smallTitle p {
-  color: #4d4d4d;
+  color: #444;
 }
 html body .vipDetail .lvWrap .list .right ul li p {
   width: 100%;
@@ -5700,7 +5656,7 @@ html body .topList ul li {
   color: #848484;
 }
 html body .topList ul li.active {
-  color: #c7a16e;
+  color: #231815;
   border-color: #c7a16e;
 }
 html body .mailBody.normal {
@@ -5715,7 +5671,7 @@ html body .mailBody.normal .subClass {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 15px;
-  background: #f2f3f3;
+  background: #f8f8f8;
 }
 html body .mailBody.normal .subClass ul {
   width: 100%;
@@ -5778,7 +5734,7 @@ html body .mailBody.normal .editBox .all {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #4d4d4d;
+  color: #444;
   font-size: 16px;
   font-weight: bold;
 }
@@ -5901,7 +5857,7 @@ html body .mailBody.normal .mailBox ul li .title {
           align-items: flex-end;
   font-size: 16px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .mailBody.normal .mailBox ul li .textBox {
   width: 100%;
@@ -5933,7 +5889,7 @@ html body .mailBody.normal .mailBox ul li .textBox .date {
   right: 30px;
   font-size: 13px;
   font-weight: bold;
-  color: #848484;
+  color: #999;
 }
 html body .mailBody.normal .mailBox ul li .inputBox {
   display: none;
@@ -5991,7 +5947,7 @@ html body .mailBody.post .subClass {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 15px;
-  background: #f2f3f3;
+  background: #f8f8f8;
 }
 html body .mailBody.post .subClass ul {
   width: 100%;
@@ -6080,7 +6036,7 @@ html body .mailBody.post .mailBox ul li p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .mailContent {
   width: 90%;
@@ -6095,7 +6051,7 @@ html body .mailContent {
           box-shadow: 0 2px 4px 0 #dedede;
   position: relative;
   background: #ffffff;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
 }
 html body .mailContent::before {
   content: "";
@@ -6111,7 +6067,7 @@ html body .mailContent .title {
   margin: 20px 0;
   font-size: 17px;
   font-weight: bold;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .mailContent .msg {
   line-height: 20px;
@@ -6125,7 +6081,7 @@ html body .cardList {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 0;
-  background: #f2f3f3;
+  background: #f8f8f8;
 }
 html body .cardList .cardBox {
   width: 100%;
@@ -6147,7 +6103,7 @@ html body .cardList .cardBox .title {
   top: 10px;
   left: 10px;
   position: absolute;
-  color: #4d4d4d;
+  color: #444;
   font-weight: bold;
 }
 html body .cardList .cardBox ul {
@@ -6244,8 +6200,8 @@ html body .cardContent ul li {
 }
 html body .cardContent ul li .title {
   margin: 15px 0 6px;
-  font-size: 15px;
-  color: #4d4d4d;
+  font-size: 14px;
+  color: #444;
   font-weight: bold;
 }
 html body .cardContent ul li input {
@@ -6285,10 +6241,53 @@ html body .cardContent ul li .remind {
   font-weight: bold;
   color: #e11515;
 }
+html body .cardContent ul li span {
+  font-size: 12px;
+  color: #e11515;
+  padding-left: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  line-height: 16px;
+}
+html body .cardContent ul li .gray {
+  color: #999;
+  font-weight: bold;
+}
+html body .cardContent ul li p {
+  font-size: 14px;
+  color: #af8c50;
+  margin: 10px 0 10px 0;
+}
+html body .cardContent ul li .upload-btn {
+  color: #c0933e;
+  border: 1px solid #b18e56;
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+html body .cardContent ul li .err {
+  font-size: 12px;
+  line-height: 20px;
+  color: #3d4cce;
+  text-decoration: none;
+  font-weight: bold;
+}
+html body .cardContent ul li a {
+  text-decoration: none;
+  color: #3502ff;
+}
+html body .cardContent ul li .id_sampleimg {
+  margin: 1%;
+  height: calc(78vw);
+  width: calc(60vw);
+}
 html body .cardContent ul button {
   width: 100%;
   height: 42px;
-  margin: 25px 0;
+  margin: 20px 0 35px 0;
   background: -webkit-gradient(linear, left bottom, left top, from(#d8be86), color-stop(92%, #f0e4ad));
   background: linear-gradient(to top, #d8be86 0%, #f0e4ad 92%);
   border: solid 1px #957222;
@@ -6306,7 +6305,7 @@ html body .cardContent ul button:active, html body .cardContent ul button.active
 html body .bettingWrap {
   width: 100%;
   height: calc(100vh - 95px);
-  background: #f2f3f3;
+  background: #f8f8f8;
   overflow-y: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6337,7 +6336,7 @@ html body .bettingWrap .searchContent .top .helf p {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .bettingWrap .searchContent .top .helf button {
   width: 44vw;
@@ -6376,12 +6375,12 @@ html body .bettingWrap .searchContent .top .full p {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #4d4d4d;
+  color: #444;
 }
 html body .bettingWrap .searchContent .top .full .inputBox {
   width: 100%;
   height: 42px;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6412,7 +6411,7 @@ html body .bettingWrap .searchContent .top .full .selectBox select {
   width: 100%;
   height: 42px;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -6497,7 +6496,7 @@ html body .bettingWrap .list .noData {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 80px;
-  color: #b3b3b3;
+  color: #666;
   font-weight: bold;
   text-align: center;
   font-size: 14px;
@@ -6510,7 +6509,7 @@ html body .bettingWrap .list .recordBox {
   width: 100%;
   height: auto;
   border-radius: 5px;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   background: #ffffff;
   margin-bottom: 10px;
 }
@@ -6521,7 +6520,7 @@ html body .bettingWrap .list .recordBox .title {
   width: 100%;
   height: 38px;
   border-bottom: solid 1px #cccccc;
-  color: #9c8018;
+  color: #c0933e;
   font-size: 14px;
   font-weight: bold;
   display: -webkit-box;
@@ -6539,7 +6538,7 @@ html body .bettingWrap .list .recordBox .title {
 }
 html body .bettingWrap .list .recordBox .title .date {
   font-size: 13px;
-  color: #848484;
+  color: #999;
 }
 html body .bettingWrap .list .recordBox .title button {
   width: 80px;
@@ -6570,7 +6569,7 @@ html body .bettingWrap .list .recordBox ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #4d4d4d;
+  color: #444;
   font-size: 14px;
   font-weight: bold;
 }
@@ -6622,7 +6621,7 @@ html body .recordTop ul li {
   color: #848484;
 }
 html body .recordTop ul li.active {
-  color: #c7a16e;
+  color: #231815;
   border-color: #c7a16e;
 }
 html body .waterBox {
@@ -6639,7 +6638,7 @@ html body .waterBox .noData {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 80px;
-  color: #b3b3b3;
+  color: #666;
   font-weight: bold;
   text-align: center;
   font-size: 14px;
@@ -6656,7 +6655,7 @@ html body .waterBox ul li {
   height: auto;
   border-radius: 5px;
   background: #ffffff;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
   margin-bottom: 10px;
 }
 html body .waterBox ul li p {
@@ -6678,7 +6677,7 @@ html body .waterBox ul li p {
   font-size: 14px;
 }
 html body .waterBox ul li p.title {
-  color: #9c8018;
+  color: #c0933e;
   border-bottom: solid 1px #cccccc;
 }
 html body .waterBox ul li p span {
@@ -6686,7 +6685,7 @@ html body .waterBox ul li p span {
   font-weight: bold;
 }
 html body .waterBox ul li p span:nth-of-type(1) {
-  color: #4d4d4d;
+  color: #444;
 }
 html body .waterBox ul li p span:last-child {
   color: #000000;
@@ -6772,7 +6771,7 @@ html body .waterBox ul li .btnBox button:last-child:active, html body .waterBox 
 html body .depositWrap {
   width: 100%;
   height: calc(100vh - 125px);
-  background: #f2f3f3;
+  background: #f8f8f8;
   overflow-y: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6794,7 +6793,7 @@ html body .depositWrap .depList.display {
 html body .depositWrap .depList .title {
   font-size: 15px;
   letter-spacing: 1px;
-  color: #4d4d4d;
+  color: #444;
   font-weight: bold;
 }
 html body .depositWrap .depList .listWrap {
@@ -6883,8 +6882,8 @@ html body .depositWrap .depContent.display {
   display: block;
 }
 html body .depositWrap .depContent .title {
-  font-size: 15px;
-  color: #4d4d4d;
+  font-size: 14px;
+  color: #444;
   font-weight: bold;
   margin-bottom: 8px;
 }
@@ -6895,13 +6894,13 @@ html body .depositWrap .depContent .title .remind {
   margin-left: 10px;
 }
 html body .depositWrap .depContent .title span {
-  color: #e11515;
+  color: #444;
 }
 html body .depositWrap .depContent select {
   width: 100%;
   height: 42px;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -6914,6 +6913,7 @@ html body .depositWrap .depContent select {
   background-repeat: no-repeat;
   border: solid 1px #957222;
   padding-left: 15px;
+  margin-bottom: 15px;
 }
 html body .depositWrap .depContent .remind {
   font-size: 12px;
@@ -6971,7 +6971,7 @@ html body .depositWrap .depContent .check:active, html body .depositWrap .depCon
   color: #ffffff;
 }
 html body .depositWrap .depContent.already .title {
-  color: #9c8018;
+  color: #c0933e;
 }
 html body .depositWrap .depContent.already ul {
   width: 100%;
@@ -6996,7 +6996,7 @@ html body .depositWrap .depContent.already ul li p {
   color: #000000;
 }
 html body .depositWrap .depContent.already ul li p.smallTitle {
-  color: #4d4d4d;
+  color: #444;
   margin-right: 30px;
 }
 html body .depositWrap .depContent.already ul li p button {
@@ -7087,16 +7087,16 @@ html body .depositWrap .remindBox {
   width: 92.27vw;
   height: auto;
   margin: 0 auto;
-  background: #ffffff;
-  border: solid 1px #957222;
-  border-radius: 5px;
+  background: #fcf9f3;
+  border: 1px solid #ece0d2;
+  border-radius: 3px;
   padding: 14px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 html body .depositWrap .remindBox p {
   font-size: 12px;
-  color: #000000;
+  color: #666;
   font-weight: bold;
   line-height: 18px;
   margin-bottom: 8px;
@@ -7105,16 +7105,16 @@ html body .depositWrap .remindBox p.title {
   margin-bottom: 10px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #9c8018;
+  color: #c0933e;
 }
 html body .depositWrap .remindBox p .sp {
-  color: #e11515;
+  color: #666;
 }
 html body .transWrap {
   width: 100%;
   height: calc(100vh - 95px);
   overflow-y: auto;
-  background: #f2f3f3;
+  background: #f8f8f8;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 0;
@@ -7127,13 +7127,13 @@ html body .transWrap .wallet {
   padding: 12px 15px 10px;
   border-radius: 5px;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
-          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
+          box-shadow: 0 0 5px 0 #c8c8c880;
   margin: 0 auto 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid 1px #957222;
+  border: solid 1px #b18e56;
 }
 html body .transWrap .wallet .helf {
   width: 100%;
@@ -7159,7 +7159,7 @@ html body .transWrap .wallet .helf .title {
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #9c8018;
+  color: #c0933e;
 }
 html body .transWrap .wallet .helf .title i {
   width: 4.27vw;
@@ -7208,7 +7208,7 @@ html body .transWrap .transBox .selectBox select {
   width: 100%;
   height: 42px;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -7225,7 +7225,7 @@ html body .transWrap .transBox .selectBox select {
   font-size: 14px;
 }
 html body .transWrap .transBox .selectBox .smallWord {
-  color: #9c8018;
+  color: #c0933e;
   font-size: 12px;
   font-weight: bold;
   position: absolute;
@@ -7307,7 +7307,7 @@ html body .transWrap .forPlatform .title {
   margin-bottom: 11px;
   font-size: 13px;
   letter-spacing: 1px;
-  color: #848484;
+  color: #999;
   font-weight: bold;
 }
 html body .transWrap .forPlatform ul {
@@ -7327,14 +7327,15 @@ html body .transWrap .forPlatform ul.active {
   max-height: none;
 }
 html body .transWrap .forPlatform ul li {
-  width: 30.66vw;
+  width: 29.66vw;
   min-height: 16.53vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 0 0 11px;
   margin: 0 0.26vw 0.26vw 0;
-  border: solid 1px #cccccc;
+  border: solid 1px #b18e56;
   border-radius: 1.5vw;
+  margin: 0 1.9vw 12px 0;
 }
 html body .transWrap .forPlatform ul li:nth-of-type(3n) {
   margin-right: 0;
@@ -7342,7 +7343,7 @@ html body .transWrap .forPlatform ul li:nth-of-type(3n) {
 html body .transWrap .forPlatform ul li div {
   font-size: 12px;
   letter-spacing: 1px;
-  color: #4d4d4d;
+  color: #444;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7450,7 +7451,7 @@ html body .withWrap {
   width: 100%;
   min-height: calc(100vh - 92px);
   height: auto;
-  background: #f2f3f3;
+  background: #f8f8f8;
   padding-bottom: 10px;
 }
 html body .withWrap .walletBox {
@@ -7466,12 +7467,11 @@ html body .withWrap .walletBox .gradient {
 }
 html body .withWrap .walletBox .gradient .content {
   width: 92vw;
-  height: 80px;
   margin: 25px auto 16px;
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
-          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
+          box-shadow: 0 0 5px 0 #c8c8c880;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7484,11 +7484,11 @@ html body .withWrap .walletBox .gradient .content {
           justify-content: space-between;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px 14px;
-  border: solid 1px #957222;
+  padding: 12px 0 10px 15px;
+  border: solid 1px #b18e56;
 }
 html body .withWrap .walletBox .gradient .content .title {
-  color: #9c8018;
+  color: #c0933e;
   font-size: 14px;
   font-weight: bold;
   display: -webkit-box;
@@ -7497,6 +7497,7 @@ html body .withWrap .walletBox .gradient .content .title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 0 18px;
 }
 html body .withWrap .walletBox .gradient .content .title i {
   display: block;
@@ -7527,7 +7528,7 @@ html body .withWrap .walletBox .gradient .detail {
           justify-content: space-between;
 }
 html body .withWrap .walletBox .gradient .detail p {
-  color: #4d4d4d;
+  color: #c0933e;
   font-size: 14px;
   font-weight: bold;
   display: -webkit-box;
@@ -7625,7 +7626,7 @@ html body .withWrap .walletBox .walletDetail .detailBox ul li:nth-of-type(3n) {
 html body .withWrap .walletBox .walletDetail .detailBox ul li div {
   font-size: 12px;
   letter-spacing: 1px;
-  color: #4d4d4d;
+  color: #444;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7776,7 +7777,7 @@ html body .withWrap .withContent select {
   width: 100%;
   height: 42px;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -7847,9 +7848,9 @@ html body .withWrap .remindBox {
   width: 92.27vw;
   height: auto;
   margin: 10px auto 0;
-  background: #ffffff;
-  border: solid 1px #957222;
-  border-radius: 5px;
+  background: #fcf9f3;
+  border: 1px solid #ece0d2;
+  border-radius: 3px;
   padding: 14px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7865,32 +7866,30 @@ html body .withWrap .remindBox p.title {
   margin-bottom: 10px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #9c8018;
+  color: #c0933e;
 }
 html body .withWrap .remindBox p .sp {
   color: #e11515;
 }
 html body .inviteWrap {
   width: 100%;
-  height: calc(100vh - 96px);
-  overflow-y: auto;
-  background: #f2f3f3;
-  padding-bottom: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
-html body .inviteWrap ul {
+html body .inviteWrap .info_1 {
   width: 100%;
   height: auto;
   margin: 10px 0;
 }
-html body .inviteWrap ul li {
+html body .inviteWrap .info_1 ul {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+}
+html body .inviteWrap .info_1 ul li {
   width: 100%;
   height: 50px;
-  border-bottom: solid 1px #cccccc;
-  color: #9c8018;
-  font-size: 14px;
-  font-weight: bold;
+  padding: 0px 17px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7900,56 +7899,120 @@ html body .inviteWrap ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 16px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  border-bottom: solid 1px #cccccc;
 }
-html body .inviteWrap ul li.qrCode {
+html body .inviteWrap .info_1 ul li.forQR {
   height: auto;
-  padding: 10px 16px;
+  padding: 0 17px;
 }
-html body .inviteWrap ul li p {
-  color: #000000;
-  display: block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-html body .inviteWrap ul li p button {
+html body .inviteWrap .info_1 ul li.forQR span:nth-of-type(1) {
   width: auto;
-  height: 28px;
+}
+html body .inviteWrap .info_1 ul li span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+html body .inviteWrap .info_1 ul li span.empty {
+  color: #e11515;
+}
+html body .inviteWrap .info_1 ul li span:nth-of-type(1) {
+  width: 20vw;
+}
+html body .inviteWrap .info_1 ul li span input {
+  background: none;
+  border: none;
+}
+html body .inviteWrap .info_1 ul li span .copy {
+  width: 47px;
+  height: 29px;
   background: #ffffff;
   border: solid 1px #a7854d;
   font-size: 13px;
   font-weight: bold;
   color: #a7854d;
   border-radius: 3px;
-  padding: 0 10px;
+  margin-left: 15px;
+}
+html body .inviteWrap .info_1 ul li span .check, html body .inviteWrap .info_1 ul li span .noCheck {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+}
+html body .inviteWrap .info_1 ul li span .changePhoneBtn, html body .inviteWrap .info_1 ul li span .changePwdBtn {
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4d4d4d;
   margin-left: 10px;
 }
-html body .inviteWrap ul li .qr {
+html body .inviteWrap .info_1 ul li span .changePhoneBtn i, html body .inviteWrap .info_1 ul li span .changePwdBtn i {
+  display: block;
+  width: 2vw;
+  height: 3.4vw;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  margin-left: 8px;
+}
+html body .inviteWrap .info_1 ul li .qrCode {
   width: 100px;
   height: 100px;
 }
-html body .inviteWrap .imgBox {
+html body .inviteWrap .info_1 ul li .security {
   width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-html body .inviteWrap .textBox {
-  width: 100%;
-  height: auto;
-  padding: 0 16px;
+  height: 40px;
+  background: #fffcf5;
+  border: solid 1px #ffe5cd;
+  color: #4d4d4d;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-html body .inviteWrap .textBox p {
-  color: #000000;
-  font-size: 14px;
+  padding: 0 20px;
+  border-radius: 5px;
   font-weight: bold;
-  line-height: 20px;
-  margin-bottom: 10px;
 }
-html body .inviteWrap .textBox p:last-child {
-  margin: 0;
+html body .inviteWrap .info_1 ul li .security .low {
+  color: #ff0000;
+}
+html body .inviteWrap .info_1 ul li .security .middle {
+  color: #ff8600;
+}
+html body .inviteWrap .info_1 ul li .security .high {
+  color: #009245;
+}
+html body .inviteWrap .info_1 ul li .security span {
+  margin-left: 5px;
+}
+html body .inviteWrap .dividend_img {
+  height: calc(110vw);
+  margin: 4%;
+}
+html body .inviteWrap .devidend_box {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 3%;
+  margin-bottom: 45px;
+}
+html body .inviteWrap .devidend_box .title {
+  color: #c0933e;
+  margin-bottom: 8px;
+}
+html body .inviteWrap .devidend_box p {
+  color: #4d4d4d;
 }

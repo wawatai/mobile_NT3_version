@@ -69,49 +69,24 @@
 
                 .eventImg {
                     background: $mainBG_2;
-                    margin: 6px auto 0;
+                    margin: 6px auto 10px;
                     border-radius: 5px;
                     overflow: hidden;
                 }
 
-                .textBox {
+                p {
                     width: 100%;
                     height: 36px;
                     display: flex;
                     align-items: center;
                     box-sizing: border-box;
-                    padding: 0 10px;
-                    justify-content: space-between;
+                    padding: 0 15px;
+                    justify-content: flex-end;
 
-                    p {
-                        color: $mainWord_1;
-                        font-size: 4vw;
-                        font-weight: bold;
-                        width: 50%;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-
-                    div {
-                        display: flex;
-                        align-items: center;
-
-                        button {
-                            width: 74px;
-                            height: 27px;
-                            @include checkEvent;
-
-                            &:last-child {
-                                display: none;
-                                margin-left: 5px;
-                                @include checkEvent_2;
-
-                                &.display {
-                                    display: block;
-                                }
-                            }
-                        }
+                    button {
+                        width: 82px;
+                        min-height: 21px;
+                        @include checkEvent;
                     }
                 }
             }
