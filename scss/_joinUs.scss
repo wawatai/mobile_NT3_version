@@ -74,15 +74,15 @@
 //                                     .row {
 //                                         width: auto;
 //                                         height: auto;
-//                                         padding: 12px 0 0 11px;
-//                                         font-size: 25px;
+//                                         padding: 2.9vw 0 0 11px;
+//                                         font-size: 1.58rem;
 //                                         letter-spacing: 3px;
 //                                         color: $font-color_5;
 //                                         font-weight: bold;
 //                                         box-sizing: border-box;
 
 //                                         p {
-//                                             font-size: 12px;
+//                                             font-size: 0.85rem;
 //                                             letter-spacing: 1px;
 //                                             opacity: 0.8;
 //                                             color: $font-color_5;
@@ -99,9 +99,9 @@
 //                                     align-items: center;
 //                                     justify-content: space-between;
 //                                     box-sizing: border-box;
-//                                     padding: 0 18px 0 11px;
+//                                     padding: 0 5vw 0 11px;
 //                                     color: $font-color_5;
-//                                     font-size: 13px;
+//                                     font-size: 0.85rem;
 //                                     font-weight: bold;
 //                                     background: $backgroundColor_3;
 
@@ -129,11 +129,11 @@
 
 //                     p {
 //                         margin-top: 16px;
-//                         font-size: 18px;
+//                         font-size: 5vw;
 //                         letter-spacing: 3px;
 
 //                         &.black {
-//                             font-size: 12px;
+//                             font-size: 0.85rem;
 //                             letter-spacing: 1px;
 //                             color: $font-color_14;
 //                         }
@@ -153,16 +153,16 @@
 //                         i {
 //                             display: block;
 //                             width: 40px;
-//                             height: 40px;
+//                             height: 10.3vw;
 //                             margin: 0 auto;
 //                         }
 
 //                         p {
-//                             font-size: 13px;
+//                             font-size: 0.85rem;
 //                             letter-spacing: 1px;
 //                             color: $font-color_4;
 //                             font-weight: bold;
-//                             margin: 12px auto;
+//                             margin: 2.9vw auto;
 //                             text-align: center;
 //                         }
 
@@ -172,7 +172,7 @@
 //                             @include buttonStyle_7;
 //                             border: solid 1px $borderColor_5;
 //                             flex-direction: column;
-//                             font-size: 12px;
+//                             font-size: 0.85rem;
 
 //                             i {
 //                                 width: 8.8vw;
@@ -186,7 +186,7 @@
 //                 .photo {
 //                     width: 70.4vw;
 //                     height: 51.2vw;
-//                     margin: 15px auto;
+//                     margin: 3.65vw auto;
 //                 }
 //                 .phone {
 //                     width: 37.6vw;
@@ -200,20 +200,20 @@
 
 //                     button {
 //                         width: 84vw;
-//                         height: 40px;
+//                         height: 10.3vw;
 //                         @include buttonStyle_8;
 //                     }
 //                 }
 
 //                 .text {
-//                     font-size: 12px;
+//                     font-size: 0.85rem;
 //                     letter-spacing: 1px;
 //                     font-weight: bold;
 //                     color: $font-color_14;
 //                     width: 100%;
 //                     height: auto;
 //                     box-sizing: border-box;
-//                     line-height: 20px;
+//                     line-height: 5vw;
 
 //                     &.top {
 //                         padding: 0 13.86vw;
@@ -221,8 +221,8 @@
 
 //                     &.left {
 //                         width: 40vw;
-//                         margin-top: 5px;
-//                         line-height: 30px;
+//                         margin-top: 2vw;
+//                         line-height: 7.4vw;
 //                     }
 //                 }
 
@@ -240,9 +240,9 @@
 //                     height: auto;
 //                     box-sizing: border-box;
 //                     padding: 11px 16px;
-//                     margin: 20px auto 0;
+//                     margin: 5vw auto 0;
 //                     background: $backgroundColor_2;
-//                     font-size: 13px;
+//                     font-size: 0.85rem;
 //                     line-height: 24px;
 //                     letter-spacing: 1px;
 //                     color: $font-color_8;

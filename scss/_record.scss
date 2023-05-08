@@ -1,7 +1,7 @@
 //投注紀錄
 .bettingWrap {
     width: 100%;
-    height: calc(100vh - 95px);
+    height: 94vh;
     background: $mainBG_2;
     overflow-y: auto;
     box-sizing: border-box;
@@ -10,9 +10,16 @@
         width: 100%;
         height: auto;
         box-sizing: border-box;
-        padding: 13px 14px;
+        padding: 3.65vw 3.65vw 5.65vw;
         background: $mainBG_1;
-        margin-bottom: 10px;
+        margin-bottom: 2.5vw;
+
+        &.active {
+
+            .moreInfo {
+                display: flex;
+            }
+        }
 
         .top {
             width: 100%;
@@ -21,19 +28,23 @@
             flex-wrap: wrap;
 
             .helf {
-                width: 50%;
+                width: 49%;
+
+                &:first-child {
+                    margin-right: 2%;
+                }
 
                 p {
                     margin-bottom: 5px;
-                    font-size: 14px;
+                    font-size: 0.89rem;
                     font-weight: bold;
                     letter-spacing: 1px;
                     color: $title_2;
                 }
     
                 button {
-                    width: 44vw;
-                    height: 42px;
+                    width: 100%;
+                    height: 10.3vw;
                     @include fakeSelect;
                 }
             }
@@ -41,9 +52,16 @@
             .full {
                 width: 100%;
 
+                &:first-child {
+
+                    p {
+                        margin: 0 0 2.5vw;
+                    }
+                }
+
                 p {
-                    margin: 10px 0;
-                    font-size: 14px;
+                    margin: 2.5vw 0;
+                    font-size: 0.89rem;
                     font-weight: bold;
                     letter-spacing: 1px;
                     color: $title_2;
@@ -51,15 +69,16 @@
 
                 .inputBox {
                     width: 100%;
-                    height: 42px;
+                    height: 10.3vw;
                     border: solid 1px $mainBorder_2;
                     border-radius: 3px;
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
                     color: $mainWord_1;
-                    font-size: 16px;
+                    font-size: 0.89rem;
                     font-weight: bold;
+                    padding: 0 0.5vw;
 
                     input {
                         width: auto;
@@ -67,18 +86,33 @@
                         border: none;
                         background: none;
                         color: $mainWord_1;
-                        font-size: 14px;
+                        font-size: 0.89rem;
                         font-weight: bold;
+                    }
+
+                    span {
+                        width: 4vw;
+                        height: 4vw;
                     }
                 }
 
                 .selectBox {
                     width: 100%;
                     height: auto;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        @include arrow;
+                        position: absolute;
+                        top: 50%;
+                        right: 3.65vw;
+                        transform: skewY(-50%);
+                    }
 
                     select {
                         width: 100%;
-                        height: 42px;
+                        height: 10.3vw;
                         @include mainSelect;
                     }
                 }
@@ -89,27 +123,50 @@
             width: 100%;
             height: auto;
             display: flex;
-            margin: 20px 0;
+            justify-content: space-between;
+            margin: 5vw 0;
+
+            &.chDate {
+                width: 6vw;
+                height: 6vw;
+                display: block;
+            }
 
             button {
-                width: 25%;
-                height: 38px;
+                width: 23%;
+                height: 9.2vw;
                 @include changeBtn;
-
-                &:nth-of-type(1) {
-                    border-radius: 5px 0 0 5px;
-                }
-            
-                &:last-child {
-                    border-radius: 0 5px 5px 0;
-                }
+                border-radius: 5px;
             }
         }
 
         .check {
             width: 100%;
-            height: 42px;
-            @include mainBtn;
+            height: 10.3vw;
+            @include mainBtn_4;
+        }
+
+        .moreInfo {
+            @include wordBox;
+            width: 100%;
+            height: auto;
+            display: none;
+            margin: 3.65vw 0 0;
+            padding: 3.65vw 5vw;
+
+            .notice {
+                width: 5vw;
+                height: 5vw;
+                margin-right: 2.5vw;
+            }
+            
+            p {
+                margin-right: 1vw;
+
+                span {
+                    padding: 0 0 0 1.5vw;
+                }
+            }
         }
     }
 
@@ -117,18 +174,18 @@
         width: 100%;
         height: auto;
         box-sizing: border-box;
-        padding: 10px 14px;
+        padding: 0.5vw 3.65vw;
 
         .noData {
             display: none;
             width: 100%;
             height: auto;
             box-sizing: border-box;
-            padding: 80px;
+            padding: 15vw;
             color: $title_3;
             font-weight: bold;
             text-align: center;
-            font-size: 14px;
+            font-size: 0.89rem;
 
             &.display {
                 display: block;
@@ -139,58 +196,76 @@
             display: none;
             width: 100%;
             height: auto;
-            border-radius: 5px;
+            border-radius: 6px;
             border: solid 1px $mainBorder_2;
-            background: $mainBG_1;
-            margin-bottom: 10px;
+            margin-bottom: 2.5vw;
+            overflow: hidden;
 
             &.display {
                 display: block;
             }
 
+            &.active {
+
+                .arrow {
+                    transform: rotate(-180deg);
+                }
+            }
+
             .title {
                 width: 100%;
-                height: 38px;
-                border-bottom: solid 1px $mainBorder_1;
+                height: 9.2vw;
+                background: $mainBG_4;
+                border-bottom: solid 1px $mainBorder_2;
                 color: $title_1;
-                font-size: 14px;
+                font-size: 1rem;
                 font-weight: bold;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 box-sizing: border-box;
-                padding: 0 18px;
+                padding: 0 1vw 0 3.65vw;
                 
                 .date {
-                    font-size: 13px;
+                    font-size: 0.85rem;
                     color: $title_Time;
+                    margin-right: 3vw;
                 }
 
                 button {
-                    width: 80px;
-                    height: 26px;
-                    @include noBgBtn_Normal;
+                    width: auto;
+                    height: 7vw;
+                    @include mainBtn_2;
+                    padding: 0 3vw;
                 }
             }
 
             ul {
                 width: 100%;
                 height: auto;
+                background: $mainBG_1;
                 box-sizing: border-box;
-                padding: 0 18px;
+
+                &.active {
+
+                    .detail {
+                        display: block;
+                    }
+                }
 
                 li {
                     width: 100%;
-                    height: 38px;
+                    height: 9.2vw;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     color: $title_2;
-                    font-size: 14px;
+                    font-size: 0.96rem;
                     font-weight: bold;
+                    padding: 0 3.65vw;
 
                     p {
-                        font-size: 13px;
+                        font-size: 0.96rem;
 
                         &.num {
                             color: $mainWord_1;
@@ -202,6 +277,102 @@
                             &.lose {
                                 color: $remind_Sp;
                             }
+                        }
+                    }
+                }
+
+                .detail {
+                    display: none;
+                    width: 100%;
+                    height: auto;
+                    background: $mainBG_2;
+                    border-top: 1px solid $mainBorder_2;
+                    padding: 3.65vw;
+
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        background: $betReocrdD_BG;
+                        border-radius: 8px;
+                        border: 1px solid $mainBorder_2;
+                        overflow: hidden;
+                        padding: 0 0 1.23vw 0;
+
+                        .gameName {
+                            width: 100%;
+                            height: 9.2vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 0 2.5vw;
+                            margin: 0 0 1.23vw 0;
+                            border-bottom: 1px solid $mainBorder_2;
+                            
+                            p {
+                                width: 100%;
+                                max-width: 50%;
+                                color: $title_1;
+                                font-size: 1rem;
+                                font-weight: bold;
+                                @include textHidden;
+                            }
+
+                            .date {
+                                color: $title_3;
+                                font-size: 0.89rem;
+                                flex-shrink: 0;
+                            }
+                        }
+                        
+                        li {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 1.23vw 2.5vw;
+
+                            p {
+                                font-size: 0.89rem;
+                                flex-shrink: 0;
+
+                                &:first-child {
+                                    width: 100%;
+                                    max-width: 13%;
+                                    white-space: nowrap;
+                                }
+
+                                &:last-child {
+                                    width: 100%;
+                                    max-width: 87%;
+                                    font-size: 0.85rem;
+                                    text-align: right;
+                                    @include textHidden;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    height: 9.2vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $mainBG_1;
+                    border-top: 1px solid $mainBorder_2;
+
+                    p {
+                        color: $mainWord_3;
+                        font-size: 0.89rem;
+
+                        .arrow {
+                            width: 2.9vw;
+                            height: 2.85vw;
+                            display: inline-block;
+                            margin-left: 1.23vw;
+                            transition: transform 0.3s;
                         }
                     }
                 }
@@ -220,7 +391,7 @@
     width: 100%;
     height: auto;
     background: $mainBG_1;
-    margin-bottom: 10px;
+    margin-bottom: 2.5vw;
 
     ul {
         width: 100%;
@@ -229,13 +400,13 @@
 
         li {
             width: 50%;
-            height: 40px;
+            height: 10.3vw;
             box-sizing: border-box;
             border-bottom: solid 2px transparent;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 1rem;
             font-weight: bold;
             color: $choose_Word;
 
@@ -251,18 +422,18 @@
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    padding: 15px 4vw;
+    padding: 0.65vw 4vw 0;
 
     .noData {
         display: none;
         width: 100%;
         height: auto;
         box-sizing: border-box;
-        padding: 80px;
+        padding: 21vw;
         color: $title_3;
         font-weight: bold;
         text-align: center;
-        font-size: 14px;
+        font-size: 0.89rem;
 
         &.display {
             display: block;
@@ -279,26 +450,27 @@
             border-radius: 5px;
             background: $mainBG_1;
             border: solid 1px $mainBorder_2;
-            margin-bottom: 10px;
+            margin-bottom: 2.5vw;
 
             p {
                 width: 100%;
-                height: 40px;
+                height: 10.3vw;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 box-sizing: border-box;
-                padding: 0 14px;
+                padding: 0 3vw;
                 font-weight: bold;
-                font-size: 14px;
+                font-size: 1rem;
 
                 &.title {
+                    background: $mainBG_4;
                     color: $title_1;
-                    border-bottom: solid 1px $mainBorder_1;
+                    border-bottom: solid 1px $mainBorder_2;
                 }
 
                 span {
-                    font-size: 14px;
+                    font-size: 1rem;
                     font-weight: bold;
 
                     &:nth-of-type(1) {
@@ -309,40 +481,41 @@
                         color: $mainWord_1;
                     }
 
-                    &.sp {
-                        color: $remind_Sp;
+                    &.waterNum {
+                        color: $remind;
                     }
                 }
             }
 
             .remindBox {
-                width: calc(100% - 28px);
-                height: 42px;
+                width: 95%;
+                height: 10.3vw;
                 @include wordBox;
+                color: $title_Time;
+                font-size: 1rem;
                 margin: 0 auto;
             }
 
             .btnBox {
-                width: 100%;
+                width: 95%;
                 height: auto;
-                margin: 20px 0;
+                margin: 5vw auto;
                 box-sizing: border-box;
-                padding: 0 14px;
                 display: flex;
                 justify-content: space-between;
 
                 button {
                     width: 48%;
-                    height: 38px;
+                    height: 9.2vw;
 
                     &:nth-of-type(1) {
-                        @include noBgBtn_Normal;
-                        font-size: 14px;
+                        @include mainBtn_4;
+                        font-size: 0.89rem;
                     }
 
                     &:last-child {
-                        @include mainBtn;
-                        font-size: 14px;
+                        @include mainBtn_3;
+                        font-size: 0.89rem;
                     }
                 }
             }

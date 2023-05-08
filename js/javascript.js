@@ -35,6 +35,11 @@ $(function(){
         $('.filter,.loginWindow').addClass('display');
     })
 
+    $('.signupBtn').click(function(){
+        $('.jumpWindow').removeClass('display');
+        $('.filter,.registerWindow').addClass('display');
+    })
+
     $('.loginWindow .forget').click(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.forgetWindow').addClass('display');
@@ -149,12 +154,14 @@ $(function(){
     $('.realLogin').click(function(){
         $('.jumpWindow,.loginBtn').removeClass('display');
         $('.filter,.news,.alLogin').addClass('display');
+        $('.memberArea .loginArea.display').removeClass('display');
         $('.operate').addClass("login");
         
         $('.gameBox.liveBox li').attr('onclick',"callLive()");
         $('.gameBox.sportBox li').attr('onclick',"callSport()");
         $('.gameBox.lotteryBox li').attr('onclick',"callLottery()");
 
+        $('.gameBox.hotBox li').attr('onclick',"window.location.href='./html/slotPage.html'");
         $('.gameBox.slotBox li').attr('onclick',"window.location.href='./html/slotPage.html'");
         $(".gameBox.fishBox li").attr('onclick',"window.location.href='./html/fishPage.html'");
         $(".gameBox.boardBox li").attr('onclick',"window.location.href='./html/boardPage.html'");
@@ -280,7 +287,7 @@ function backToPage(){
     $(".helpWrap").addClass("display");
 }
 $(function(){
-    $(".helpInner li").click(function(){
+    $(".helpInner li:not(.csq3)").click(function(){
         $(this).toggleClass("active");
     })
 
@@ -386,7 +393,14 @@ $(function(){
 //個人資料頁
 $(function(){
     $(".memberInfo .chBtn").click(function(){
-        $(this).prev().toggleClass("active");
+        $(".memberInfo form ul li:not(:nth-of-type(2)) input")
+        .toggleClass("active")
+        .css("pointer-events","auto");
+
+        $(".memberInfo form ul li:nth-of-type(2)")
+        .toggleClass("active");
+
+        $('button').toggleClass("display");
     })
 })
 
@@ -455,6 +469,9 @@ $(function(){
 //bettingRecord + dealRecord
 $(function(){
     $(".searchContent .check").click(function(){
+        $(this)
+        .closest('.searchContent')
+        .addClass('active');
         $(".noData").removeClass("display");
         $(".recordBox").addClass("display");
     })
@@ -465,6 +482,16 @@ $(function(){
 
         $(".noData").addClass("display");
         $(".recordBox").removeClass("display");
+    })
+})
+
+//betRecord
+$(function(){
+    $('.bettingWrap .list .recordBox ul').click(function(){
+        $(this)
+        .toggleClass('active')
+        .parents()
+        .toggleClass('active');
     })
 })
 

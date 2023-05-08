@@ -8,7 +8,7 @@
         height: auto;
         background: $mainBG_1;
         padding-bottom: 13px;
-        margin-bottom: 10px;
+        margin-bottom: 3.65vw;
 
         .info {
             width: 100%;
@@ -17,30 +17,30 @@
             align-items: center;
             justify-content: space-between;
             position: relative;
-            padding: 20px 15px;
+            padding: 5vw 3.65vw 3.65vw;
 
             div {
 
                 .account {
                     color: $mainWord_1;
                     font-weight: bold;
-                    font-size: 4vw;
+                    font-size: 1rem;
                     letter-spacing: 2px;
                     display: flex;
                     align-items: center;
-                    margin-bottom: 6px;
+                    margin-bottom: 2vw;
 
                     .lv {
                         width: auto;
-                        height: 18px;
+                        height: 5vw;
                         @include operateLV;
-                        margin-right: 9px;
+                        margin-right: 2vw;
                     }
                 }
 
                 .date {
                     color: $title_Time;
-                    font-size: 13px;
+                    font-size: 0.85rem;
                     font-weight: bold;
                     letter-spacing: 1px;
                 }
@@ -49,28 +49,36 @@
             .infoBtn {
                 width: auto;
                 height: auto;
-                @include mainBtn;
+                @include mainBtn_3;
                 font-size: 3.4vw;
-                padding: 3px 15px;
+                padding: 1.2vw 2.5vw;
             }
         }
 
         .wallet {
+            @include memberWallet;
+            width: auto;
+            height: auto;
             display: flex;
+            align-items: center;
             justify-content: center;
-            margin-bottom: 12px;
+            margin: 0 3.65vw 2.9vw;
+            padding: 1vw 1vw 1vw 2vw;
 
             p {
-                width: 64.53vw;
-                height: 8.27vw;
-                @include memberWallet;
+                width: 100%;
+                max-width: 64.53vw;
+                font-size: 3.8vw;
+                letter-spacing: 1px;
+                font-weight: bold;
+                line-height: 3.4vw;
             }
 
             button {
+                @include mainBtn_2;
                 width: 27.73vw;
                 height: 8.27vw;
-                @include mainBtn;
-                border-radius: 0 5vw 5vw 0;
+                padding-bottom: 0.5vw;
             }
         }
 
@@ -84,7 +92,7 @@
             button {
                 width: 49%;
                 height: 18.4vw;
-                @include normalBtn;
+                @include normalBtn_2;
 
                 .wallet_ic {
                     width: 8.8vw;
@@ -98,15 +106,15 @@
                 }
 
                 .text {
-                    color: $title_1;
+                    color: $mainWord_3;
                     font-size: 5vw;
                     font-weight: bold;
-                    letter-spacing: 2px;
+                    letter-spacing: 1px;
                     margin-left: 3.47vw;
 
                     p {
                         color: $title_3;
-                        font-size: 12px;
+                        font-size: 3.5vw;
                         letter-spacing: 1px;
                         text-align: left;
                     }
@@ -119,7 +127,7 @@
             height: auto;
             display: flex;
             justify-content: space-between;
-            margin: 15px auto 0;
+            margin: 3.65vw auto 0;
 
             li {
                 width: 20.53vw;
@@ -149,17 +157,17 @@
 
                 p {
                     color: $title_2;
-                    font-size: 13px;
+                    font-size: 0.85rem;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    margin-top: 5px;
+                    margin-top: 2vw;
                 }
 
                 .bubble {
-                    min-width: 20px;
-                    min-height: 20px;
-                    top: -7px;
-                    right: 10px;
+                    min-width: 5vw;
+                    min-height: 5vw;
+                    top: -1vw;
+                    right: 2.5vw;
                     @include mailBubble;
                 }
             }
@@ -168,9 +176,9 @@
 
     //選項條
     .options {
-        width: 92vw;
-        height: 50px;
-        margin: 0 auto 17px;
+        width: 93%;
+        height: 13vw;
+        margin: 0 auto 2.5vw;
         @include longBtn;
 
         &.opLang {
@@ -195,43 +203,56 @@
             }
         }
 
-        i {
-            width: 8vw;
-            height: 8vw;
-            margin-right: 2vw;
+        p {
+            color: $mainWord_1;
 
-            &.point_ic {
-                width: 6vw;
+            i {
+                width: 8vw;
                 height: 8vw;
-                background-position-x: 100%;
-                margin: 0 3vw 0 1vw;
-            }
+                margin-right: 2vw;
 
-            &.help_ic {
-                background-position-x: -8vw;
+                &:first-child {
+                    margin-right: 3vw;
+                }
+    
+                &.point_ic {
+                    background-position-x: 12%;
+                }
+    
+                &.eventApply_ic {
+                    background-position-x: 25%;
+                }
+    
+                &.help_ic {
+                    background-position-x: 37.5%;
+                }
+    
+                &.about_ic {
+                    background-position-x: 50.5%;
+                }
+    
+                &.app_ic {
+                    background-position-x: 62.5%;
+                }
+    
+                &.lang_ic {
+                    background-position-x: 74.5%;
+                }
+    
+                &.fix_ic {
+                    background-position-x: 87.5%;
+                }
+    
+                &.logout_ic {
+                    background-position-x: 100%;
+                }
+    
+                &.arrow_ic {
+                    width: 2vw;
+                    height: 3.4vw;
+                    transform: scaleX(-1);
+                }
             }
-
-            &.about_ic {
-                background-position-x: -16vw;
-            }
-
-            &.app_ic {
-                background-position-x: -32vw;
-            }
-
-            &.lang_ic {
-                background-position-x: -40vw;
-            }
-
-            &.logout_ic {
-                background-position-x: -48vw;
-            }
-        }
-
-        .arrow_ic {
-            width: 2vw;
-            height: 3.4vw;
-            transform: scaleX(-1);
         }
     }
 }
@@ -248,7 +269,7 @@
 
         li {
             width: 50%;
-            height: 40px;
+            height: 10.3vw;
         }
     }
 }
@@ -258,7 +279,7 @@
     width: 100%;
     height: calc(100vh - 135px);
     background: $mainBG_2;
-    padding: 10px 0;
+    padding: 2.5vw 0;
     overflow-y: auto;
 
     form {
@@ -269,25 +290,44 @@
             width: 100%;
             height: auto;
             background: $mainBG_1;
-            padding-bottom: 12px;
+            padding-bottom: 2.9vw;
 
             li {
                 width: 100%;
-                height: 50px;
+                height: 13vw;
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
                 justify-content: space-between;
                 box-sizing: border-box;
-                padding: 0 17px;
-                border-bottom: solid 1px $mainBorder_1;
+                padding: 0 3.65vw;
+                border-bottom: solid 1px $mainBorder_3;
 
-                &.active {
-                    height: 103px;
+                &:nth-of-type(2) {
+                    user-select: none;
+                    position: relative;
 
-                    button {
-                        display: block;
+                    &.active {
+                        height: 13vw;
+                        display: flex;
+                        justify-content: space-between;
+
+                        input {
+                            width: 56vw;
+                            margin-right: 8vw;
+                        }
+
+                        .chDate {
+                            width: 6vw;
+                            height: 6vw;
+                            position: absolute;
+                            right: 5%;
+                        }
                     }
+                }
+
+                &:not(:nth-of-type(2)){
+                    pointer-events: none;
                 }
 
                 em {
@@ -297,39 +337,49 @@
                     &::before {
                         content: "※ ";
                         color: $remind;
-                        padding: 0 5px 0 0;
-                        font-size: 14px;
+                        padding: 0 1.5vw 0 0;
+                        font-size: 0.89rem;
                     }
                 }
 
                 span {
-                    width: 20vw;
+                    width: 24vw;
                     font-weight: bold;
-                    font-size: 14px;
+                    font-size: 0.89rem;
                     color: $title_2;
+                    white-space: nowrap;
+                    flex-shrink: 0;
+
+                    &:nth-of-type(2) {
+                        color: $mainWord_1;
+                    }
                 }
 
                 input {
                     width: 64vw;
-                    height: 42px;
+                    height: 10.3vw;
                     @include memberInput;
                 }
 
                 button {
                     display: none;
-                    @include mainBtn;
+                    @include mainBtn_1;
                     width: 100%;
-                    height: 42px;
-                    margin-bottom: 2px;
+                    height: 10.3vw;
+                    margin-bottom: 1.5vw;
                 }
             }
 
-            .saveBtn {
-                display: block;
-                width: 92vw;
-                height: 42px;
-                margin: 12px auto 0;
-                @include mainBtn;
+            .chBtn,.saveBtn {
+                display: none;
+                width: 79vw;
+                height: 10.3vw;
+                margin: 2.9vw auto 0;
+                @include mainBtn_4;
+
+                &.display {
+                    display: block;
+                }
             }
         }
     }
@@ -337,7 +387,7 @@
     .info_1,.info_2 {
         width: 100%;
         height: auto;
-        margin: 10px 0;
+        margin: 2.5vw 0 0;
 
         &.info_2 {
 
@@ -358,8 +408,8 @@
             
             li {
                 width: 100%;
-                height: 50px;
-                padding: 0px 17px;
+                height: 13vw;
+                padding: 0px 3.65vw;
                 box-sizing: border-box;
                 display: flex;
                 align-items: center;
@@ -368,7 +418,7 @@
 
                 &.forQR {
                     height: auto;
-                    padding: 10px 17px;
+                    padding: 2.5vw 3.65vw;
 
                     span {
 
@@ -379,7 +429,7 @@
                 }
 
                 span {
-                    font-size: 14px;
+                    font-size: 0.89rem;
                     font-weight: bold;
                     color: $title_2;
 
@@ -394,68 +444,91 @@
                     input {
                         background: none;
                         border: none;
+                        font-size: 0.89rem;
+                        color: $mainWord_1;
                     }
 
                     .copy {
-                        width: 47px;
-                        height: 29px;
+                        width: auto;
+                        height: 7vw;
                         @include noBgBtn_Normal;
-                        margin-left: 15px;
+                        margin-left: 3.65vw;
+                        padding: 0 2vw;
                     }
 
                     .check,.noCheck {
                         display: inline-block;
-                        width: 17px;
-                        height: 17px;
-                        margin-right: 10px;
+                        width: 3.65vw;
+                        height: 3.65vw;
+                        margin-right: 1.5vw;
                     }
 
                     .changePhoneBtn,.changePwdBtn {
                         background: none;
                         display: flex;
                         align-items: center;
-                        font-size: 14px;
+                        font-size: 0.89rem;
                         font-weight: bold;
                         color: $title_2;
-                        margin-left: 10px;
+                        margin-left: 2.5vw;
 
                         i {
                             display: block;
                             width: 2vw;
                             height: 3.4vw;
                             transform: scaleX(-1);
-                            margin-left: 8px;
+                            margin-left: 3vw;
                         }
                     }
                 }
 
                 .qrCode {
-                    width: 100px;
-                    height: 100px;
+                    width: 20vw;
+                    height: 20vw;
                 }
 
                 .security {
                     width: 100%;
-                    height: 40px;
+                    height: 10.3vw;
                     @include wordBox;
 
                     span {
-                        margin-left: 5px;
+                        margin-left: 2.3vw;
                     }
                 }
             }
         }
+    }
+
+    .info_1 {
+
+        ul {
+
+            li {
+
+                span {
+                     
+                    &:nth-of-type(2) {
+                        color: $mainWord_1;
+                    }
+                }
+            }
+        }
+    }
+
+    .info_2 {
+        margin: 0 0 2.5vw;
     }
 }
 
 //會員中心平台帳戶資訊
 .memberPlatform {
     width: 100%;
+    background: $mainBG_2;
     overflow-y: auto;
     height: calc(100vh - 136px);
-    padding: 10px 4vw;
+    padding: 2.5vw 4vw;
     box-sizing: border-box;
-    background: $mainBG_2;
 
     .platformBox {
         width: 100%;
@@ -464,16 +537,17 @@
         border: solid 1px $mainBorder_2;
         border-radius: 5px;
         background: $mainBG_1;
-        margin-bottom: 10px;
+        margin-bottom: 2.5vw;
 
         .title {
             width: 100%;
-            height: 38px;
+            height: 9.2vw;
+            background: $mainBG_4;
             border-bottom: solid 1px $mainBorder_1;
             box-sizing: border-box;
-            padding: 0 17px;
+            padding: 0 3.65vw;
             color: $title_1;
-            font-size: 14px;
+            font-size: 0.89rem;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -482,36 +556,52 @@
         .content {
             width: 100%;
             height: auto;
+            background: $mainBG_1;
             box-sizing: border-box;
-            padding: 0 17px;
+            padding: 0 3.65vw;
 
             li {
                 width: 100%;
-                height: 38px;
+                height: 9.2vw;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
 
                 p {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
                     color: $title_2;
-                    font-size: 14px;
+                    font-size: 0.89rem;
                     font-weight: bold;
+                    white-space: nowarp;
 
-                    span {
-                        font-size: 13px;
-                        color: $mainWord_1;
+                    &:first-child {
+                        width: 15vw;
+                        justify-content: flex-start;
+                        flex-shrink: 0;
                     }
 
-                    button {
-                        width: 49px;
-                        height: 28px;
-                        margin-left: 10px;
-                        @include noBgBtn_Normal;
+                    &:nth-of-type(2) {
+                        width: 100%;
+                        max-width: 50vw;
+                        font-size: 0.85rem;
+                        color: $mainWord_1;
+                        justify-content: center;
+                        @include textHidden;
+                    }
+                }
+                
+                button {
+                    width: 11vw;
+                    height: 7vw;
+                    margin-left: 2.5vw;
+                    flex-shrink: 0;
+                    @include noBgBtn_Normal;
 
-                        &.un {
-                            opacity: 0;
-                            pointer-events: none;
-                        }
+                    &.un {
+                        opacity: 0;
+                        pointer-events: none;
                     }
                 }
             }
