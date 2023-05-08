@@ -81,6 +81,7 @@ a {
 
 main {
     display: block;
+    box-sizing: border-box;
 }
 
 input[type="date"]::-webkit-inner-spin-button,

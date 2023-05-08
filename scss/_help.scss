@@ -1,9 +1,7 @@
 //幫助中心外層
 .helpWrap {
+    @include bgStyle_1;
     display: none;
-    width: 100%;
-    height: auto;
-    background: $mainBG_2;
 
     &.display {
         display: block;
@@ -13,51 +11,51 @@
     .helpHeader {
         width: 100%;
         height: 70px;
+        background: $mainBG_1;
+        border-bottom: solid 1px $mainBorder_1;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-bottom: solid 1px $mainBorder_1;
 
         .selectBox {
-            width: 92.27vw;
-            height: 42px;
+            width: 92vw;
+            height: 11vw;
+            background: $mainBG_1;
+            border-radius: 5px;
+            border: solid 1px $mainBorder_1;
+            box-shadow: 0 5px 6px -2px $mainShadow_2;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: $mainBG_1;
-            box-shadow: 0 0 13px 2px $boxshadow_1;
             position: relative;
-            border-radius: 5px;
-            border: solid 1px $mainBorder_2;
 
             p {
                 color: $title_1;
-                font-size: 14px;
+                font-size: 4vw;
                 font-weight: bold;
             }
 
             .arrow_ic {
-                display: block;
-                width: 2vw;
-                height: 3.4vw;
+                width: 3vw;
+                height: 3vw;
                 position: absolute;
                 top: 50%;
-                transform: translateY(-50%) rotate(270deg);
+                transform: translateY(-50%) rotate(90deg);
                 right: 4vw;
                 transition: 0.3s all;
             }
 
             select {
+                width: 100%;
+                height: 100%;
+                color: $mainWord_1;
+                font-size: 3.7vw;
+                font-weight: bold;
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
                 opacity: 0;
                 padding-left: 15px;
-                color: $mainWord_1;
-                font-weight: bold;
-                font-size: 14px;
             }
         }
     }
@@ -65,29 +63,27 @@
     //內容
     .helpBody {
         width: 100%;
-        height: calc(100vh - 164px);
-        overflow-y: auto;
+        height: auto;
 
         ul {
             width: 100%;
             height: auto;
-            box-sizing: border-box;
-            padding: 15px 4vw;
+            padding: 14px;
 
             li {
                 width: 100%;
-                height: 52px;
+                height: 13vw;
+                background: $mainBG_1;
+                border-radius: 5px;
+                border: solid 1px $mainBorder_2;
+                box-shadow: 0 5px 6px -2px $mainShadow_2;
+                color: $mainWord_1;
+                font-size: 4vw;
+                font-weight: bold;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: $mainBG_1;
-                border-radius: 5px;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
                 margin-bottom: 15px;
-                font-size: 14px;
-                font-weight: bold;
-                color: $title_2;
-                border: solid 1px $mainBorder_2;
             }
         }
     }
@@ -95,19 +91,17 @@
 
 //幫助中心內層
 .helpInner {
+    @include bgStyle_1;
     display: none;
-    width: 100%;
-    height: calc(100vh - 94px);
-    overflow-y: auto;
 
     &.display {
         display: block;
     }
 
     ul {
-        display: none;
         width: 100%;
         height: auto;
+        display: none;
 
         &.display {
             display: block;
@@ -121,6 +115,8 @@
             &.active {
 
                 .title {
+                    border-color: $mainBorder_1;
+                    box-shadow: none;
 
                     .arrow_ic {
                         transform: rotate(270deg);
@@ -133,66 +129,69 @@
             }
 
             .title {
-                width: 92.27vw;
-                height: 52px;
+                width: 92vw;
+                height: 13vw;
                 background: $mainBG_1;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
+                border: solid 1px $mainBorder_2;
                 border-radius: 5px;
+                box-shadow: 0 5px 6px -2px $mainShadow_2;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: relative;
                 margin: 0 auto;
-                border: solid 1px $mainBorder_2;
 
                 .icon {
-                    display: block;
-                    width: 15px;
-                    height: 15px;
+                    width: 4vw;
+                    height: 4vw;
                     margin: 0 4vw;
                     flex-shrink: 0;
                 }
 
                 .arrow_ic {
-                    display: block;
-                    width: 2vw;
-                    height: 3.4vw;
-                    margin: 0 4vw;
+                    width: 3vw;
+                    height: 3vw;
                     flex-shrink: 0;
-                    transform: rotate(180deg);
+                    transform: rotate(90deg);
                     transition: 0.3s all;
+                    margin: 0 4vw;
                 }
 
                 p {
-                    width: 100%;
-                    font-size: 14px;
-                    font-weight: bold;
                     color: $title_1;
+                    width: 100%;
+                    font-size: 3.7vw;
+                    font-weight: bold;
                 }
             }
 
             .textBox {
                 display: none;
-                width: 92.27vw;
+                width: 92vw;
                 height: auto;
-                box-sizing: border-box;
-                padding: 10px;
-                margin: 0 auto;
-                border: solid 1px $mainBorder_2;
-                border-top: none;
                 background: $mainBG_1;
-                border-radius: 0 0 5px 5px;
+                border: solid 1px $mainBorder_1;
+                border-top-width: 0;
+                border-radius: 0 0 10px 10px;
+                margin: -5px auto 0;
+                padding: 14px;
 
                 &.app {
-                    background: none;
-                    border: none;
+                    border-radius: 10px;
+                    border-top-width: 1px;
+                    border-color: $mainBorder_2;
                 }
 
                 p {
-                    line-height: 22px;
-                    font-size: 14px;
+                    color: $mainWord_1;
+                    font-size: 3.7vw;
                     font-weight: bold;
-                    color: $help_Word;
-                    margin-bottom: 8px;
+                    line-height: 5.5vw;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
 
                     &.remind {
                         color: $remind;
@@ -203,31 +202,33 @@
                     }
 
                     &.smallTitle {
-                        font-size: 22px;
+                        color: $title_1;
+                        font-size: 4vw;
                         margin: 20px 0 10px;
-                        color: $help_Title;
                         text-align: center;
 
-                        &.first {
+                        &:first-child {
                             margin-top: 0;
                         }
                     }
 
                     &.platform {
-                        font-size: 18px;
-                        color: $help_Title;
+                        color: $title_1;
+                        font-size: 5vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         margin: 15px 0;
-                        text-align: center;
 
                         .downloadBtn {
-                            width: 144px;
-                            margin-left: 10px;
+                            width: 33vw;
+                            height: 9vw;
+                            margin: 0 0 0 10px;
                         }
                     }
 
                     a {
-                        color: $click;
-                        text-decoration: none;
+                        color: $link;
                     }
                 }
 
@@ -258,15 +259,14 @@
                     div {
                         width: 100%;
                         height: 105px;
+                        @include help_lineBtn;
                         position: relative;
                         margin-bottom: 15px;
-                        @include help_lineBtn;
 
                         i {
-                            display: block;
+                            width: 8.5vw;
+                            height: 8.5vw;
                             position: absolute;
-                            width: 8.7vw;
-                            height: 8.7vw;
                             top: 50%;
                             transform: translateY(-50%);
                             left: 5.5vw;
@@ -274,6 +274,7 @@
                         }
 
                         p {
+                            color: $help_lineBtnColor;
                             font-size: 3.4vw;
                             font-weight: bold;
                             margin: 0;
@@ -286,9 +287,11 @@
                 }
 
                 .downloadBtn {
-                    width: 100%;
-                    height: 42px;
+                    width: 85%;
+                    height: 10vw;
                     @include mainBtn;
+                    display: block;
+                    margin: 0 auto;
                 }
             }
         }

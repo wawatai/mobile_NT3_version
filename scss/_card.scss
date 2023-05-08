@@ -1,149 +1,153 @@
 //銀行卡
-.cardList {
-    width: 100%;
-    height: 220px;
-    box-sizing: border-box;
-    padding: 10px 0;
-    background: $mainBG_2;
+.cardWrap {
+    @include bgStyle_1;
 
-    .cardBox {
+    .cardList {
         width: 100%;
-        height: 202px;
-        box-sizing: border-box;
-        padding: 0 10px 15px 10px;
-        background: $mainBG_1;
-        display: flex;
-        align-items: flex-end;
-        position: relative;
-
-        .title {
-            font-size: 15px;
-            top: 10px;
-            left: 10px;
-            position: absolute;
-            color: $title_2;
-            font-weight: bold;
-        }
-
-        ul {
+        height: auto;
+        padding: 10px 0;
+    
+        .cardBox {
             width: 100%;
-            height: auto;
+            height: 200px;
+            background: $mainBG_1;
+            padding: 0 10px 15px 10px;
             display: flex;
-            overflow-y: auto;
-
-            li {
-                width: 250px;
-                height: 150px;
-                border-radius: 5px;
-                background: $cardLinear;
+            align-items: flex-end;
+            position: relative;
+    
+            .title {
+                color: $mainWord_1;
+                font-size: 14px;
+                font-weight: bold;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+    
+            ul {
+                width: 100%;
+                height: auto;
                 display: flex;
-                justify-content: flex-end;
-                flex-direction: column;
-                flex-shrink: 0;
-                margin-right: 15px;
-
-                &.empty {
-                    background: $cardLinear_Empty;
-                }
-
-                &.wait {
-
-                    .ing {
-                        opacity: 1;
+                overflow-y: auto;
+    
+                li {
+                    width: 250px;
+                    height: 150px;
+                    background: $cardLinear;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-shrink: 0;
+                    overflow: hidden;
+                    position: relative;
+                    margin-right: 15px;
+    
+                    &.empty {
+                        background: $cardLinear_Empty;
                     }
-                }
-
-                .add {
-                    width: 100%;
-                    height: 123px;
-                }
-
-                .status {
-                    width: 100%;
-                    text-align: center;
-                    color: $cardWord;
-                    font-size: 12px;
-                    font-weight: bold;
-                    margin-bottom: 8px;
-                }
-
-                .innerTitle {
-                    padding-left: 21px;
-                    font-size: 21px;
-                    font-weight: bold;
-                    color: $cardWord;
-                }
-
-                .smallTitle {
-                    margin-top: 8px;
-                    font-size: 14px;
-                    font-weight: bold;
-                    padding-left: 23px;
-                    color: $cardWord;
-                }
-
-                .account {
-                    margin-top: 30px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    padding-left: 21px;
-                    color: $cardWord;
-                }
-
-                .ing {
-                    width: 96%;
-                    height: auto;
-                    margin: 10px auto 5px;
-                    @include cardStatus;
+    
+                    .add {
+                        width: 100%;
+                        height: 125px;
+                    }
+    
+                    .status {
+                        width: 100%;
+                        color: $cardWord;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+    
+                    .innerTitle {
+                        color: $cardWord;
+                        font-size: 20px;
+                        font-weight: bold;
+                        padding-left: 21px;
+                        margin-top: 25px;
+                    }
+    
+                    .smallTitle {
+                        color: $cardWord;
+                        font-size: 14px;
+                        font-weight: bold;
+                        padding-left: 23px;
+                        margin-top: 8px;
+                    }
+    
+                    .account {
+                        color: $cardWord;
+                        font-size: 20px;
+                        font-weight: bold;
+                        padding-left: 21px;
+                        margin-top: 30px;
+                    }
+    
+                    .ing {
+                        width: auto;
+                        height: auto;
+                        @include cardStatus;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
                 }
             }
         }
     }
-}
-
-//內容
-.cardContent {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    padding: 0 4vw;
-
-    ul {
+    
+    //內容
+    .cardContent {
         width: 100%;
         height: auto;
-
-        li {
+        background: $mainBG_1;
+        padding: 14px;
+    
+        ul {
             width: 100%;
             height: auto;
-
-            .title {
-                margin: 15px 0 6px;
-                font-size: 15px;
-                color: $title_2;
-                font-weight: bold;
-            }
-
-            input {
+    
+            li {
                 width: 100%;
-                height: 42px;
-                @include mainInput;
-            }
+                height: auto;
 
-            .remind {
-                margin-top: 5px;
-                padding-left: 3px;
-                box-sizing: border-box;
-                font-size: 12px;
-                font-weight: bold;
-                color: $remind;
-            }
-        }
+                &:first-child {
 
-        button {
-            width: 100%;
-            height: 42px;
-            margin: 25px 0;
-            @include mainBtn;
+                    .title {
+                        margin-top: 0;
+                    }
+                }
+    
+                .title {
+                    color: $title_1;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    margin: 10px 0 6px;
+                }
+    
+                input {
+                    width: 100%;
+                    height: 10vw;
+                    @include mainInput;
+                }
+    
+                .remind {
+                    color: $remind;
+                    font-size: 3vw;
+                    font-weight: bold;
+                    padding-left: 3px;
+                    margin-top: 5px;
+                }
+            }
+    
+            button {
+                width: 85%;
+                height: 12vw;
+                @include mainBtn;
+                display: block;
+                margin: 25px auto;
+            }
         }
     }
 }

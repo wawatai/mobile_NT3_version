@@ -2,27 +2,32 @@
 .eventType {
     width: 100%;
     height: auto;
-    overflow-x: auto;
     background: $mainBG_1;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    z-index: 100;
+    overflow-x: auto;
 
     ul {
+        width: 100%;
+        height: auto;
         display: flex;
 
         li {
-            width: 22.4vw;
-            height: 72px;
+            width: 22.5vw;
+            height: 70px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-sizing: border-box;
-            border-bottom: solid 2px transparent;
+            border-bottom: solid 3px transparent;
 
             &:active,&.active {
-                border-color: $choose_Border;
+                border-color: $mainBorder_1;
 
-                span {
-                    color: $choose_ActiveWord;
+                p {
+                    color: $title_1
                 }
             }
 
@@ -32,10 +37,10 @@
                 margin-bottom: 8px;
             }
 
-            span {
+            p {
+                color: $mainWord_1;
                 font-size: 12px;
                 font-weight: bold;
-                color: $choose_Word;
             }
         }
     }
@@ -43,69 +48,70 @@
 
 //優惠列表
 .eventList {
-    width: 100%;
-    height: calc(100vh - 168px);
-    overflow-y: auto;
-    box-sizing: border-box;
-    padding: 10px 14px 0;
-    background: $mainBG_2;
+    @include bgStyle_1;
+    padding: 80px 14px 20px;
 
     ul {
-        display: flex;
-        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
 
         li {
             width: 100%;
             height: auto;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
 
             .eventBox {
                 width: 100%;
                 height: auto;
                 background: $mainBG_1;
-                border-radius: 1.5vw;
+                border: solid 1px $mainBorder_1;
+                border-radius: 5px;
                 overflow: hidden;
-                border: solid 1px $mainBorder_2;
 
                 .eventImg {
-                    background: $mainBG_2;
+                    width: 97%;
+                    height: auto;
                     margin: 6px auto 0;
-                    border-radius: 5px;
-                    overflow: hidden;
                 }
 
                 .textBox {
                     width: 100%;
-                    height: 36px;
+                    height: 10vw;
                     display: flex;
                     align-items: center;
-                    box-sizing: border-box;
-                    padding: 0 10px;
                     justify-content: space-between;
+                    padding: 0 10px;
 
                     p {
-                        color: $mainWord_1;
-                        font-size: 4vw;
-                        font-weight: bold;
                         width: 50%;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
+                        color: $mainWord_1;
+                        font-size: 3.7vw;
+                        font-weight: bold;
+                        flex-shrink: 0;
+                        @include textHidden;
                     }
 
                     div {
+                        width: auto;
+                        height: auto;
                         display: flex;
-                        align-items: center;
 
                         button {
-                            width: 74px;
-                            height: 27px;
-                            @include checkEvent;
+                            width: 18vw;
+                            height: 7vw;
+
+                            &:first-child {
+                                @include secondBtn;
+                                font-size: 3.4vw;
+                                padding: 0;
+                            }
 
                             &:last-child {
+                                @include mainBtn;
+                                font-size: 3.4vw;
+                                padding: 0;
+                                margin-left: 10px;
                                 display: none;
-                                margin-left: 5px;
-                                @include checkEvent_2;
 
                                 &.display {
                                     display: block;
@@ -121,59 +127,50 @@
 
 //優惠內頁
 .eventDetail {
-    width: 100%;
-    height: calc(100vh - 110px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 15px;
-    background: $mainBG_2;
-    overflow-y: auto;
+    @include bgStyle_1;
 
     .eventImg {
-        box-sizing: border-box;
-        padding: 6px;
+        width: 97%;
+        height: auto;
+        margin: 6px auto 0;
     }
 
     .detailContent {
-        width: 94.13vw;
+        width: 92vw;
         height: auto;
-        box-sizing: border-box;
-        padding: 10px 15px 15px;
-        margin-top: 10px;
         background: $mainBG_1;
         border-radius: 5px;
-        box-shadow: 0 0 5px 0 $boxshadow_2;
+        box-shadow: 0 5px 6px -2px $mainShadow_2;
+        padding: 0 14px 20px;
+        margin: 10px auto;
 
         ul {
 
             .title {
                 width: 100%;
-                height: 25px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 16px;
-                font-weight: bold;
-                margin-bottom: 10px;
+                height: auto;
                 color: $title_1;
+                font-size: 4vw;
+                font-weight: bold;
+                text-align: center;
+                padding: 20px 0;
             }
 
             ul {
-                list-style: disc;
                 width: 90%;
+                height: auto;
+                list-style: disc;
                 margin: 0 auto;
 
                 li {
-                    font-size: 14px;
-                    font-weight: bold;
                     color: $mainWord_1;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    line-height: 5.5vw;
                     margin-top: 20px;
-                    color: $title_2;
-                    line-height: 18px;
 
                     &:nth-of-type(1) {
-                        margin-top: 10px;
+                        margin: 0;
                     }
 
                     .innerImg {
@@ -181,6 +178,8 @@
                     }
 
                     ul {
+                        width: 100%;
+                        height: auto;
                         list-style: decimal;
     
                         li {
@@ -194,15 +193,6 @@
                     }
                 }
             }
-        }
-
-        .contentFooter {
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px 0;
         }
     }
 }

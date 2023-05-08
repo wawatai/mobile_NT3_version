@@ -2,32 +2,27 @@
 .eventApplyType {
     width: 100%;
     height: auto;
-    overflow-x: auto;
     position: fixed;
     top: 45px;
-    left: 0px;
-    z-index: 10;
-    background: $mainBG_1;
+    left: 0;
+    z-index: 100;
 
     ul {
+        width: 100%;
+        height: auto;
+        background: $BG;
         display: flex;
+        padding: 10px 14px 0;
 
         li {
             width: 34%;
             height: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-            border-bottom: solid 2px transparent;
-            font-size: 3.4vw;
-            font-weight: bold;
-            color: $choose_Word;
+            @include pageStyle;
+            margin-right: 5px;
+            border-radius: 10px 10px 0 0;
 
-            &:active,&.active {
-                border-color: $choose_Border;
-                color: $choose_ActiveWord;
+            &:last-child {
+                margin: 0;
             }
         }
     }
@@ -35,12 +30,9 @@
 
 //優惠列表
 .applyList {
+    @include bgStyle_1;
+    padding: 60px 14px 20px;
     display: none;
-    width: 100%;
-    height: calc(100vh - 132px);
-    background: $mainBG_2;
-    overflow-y: scroll;
-    margin-top: 40px;
 
     &.display {
         display: block;
@@ -49,40 +41,34 @@
     .listBox {
         width: 100%;
         height: auto;
-        box-sizing: border-box;
-        padding: 10px 4% 0;
 
         .list {
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 13px 2px $boxshadow_1;
-            border: solid 1px $mainBorder_2;
+            width: 100%;
+            height: auto;
             background: $mainBG_1;
+            border: solid 1px $mainBorder_1;
+            border-radius: 5px;
+            box-shadow: 0 5px 6px -2px $mainShadow_2;
+            margin-bottom: 10px;
 
             .title {
                 width: 100%;
-                height: 40px;
+                height: 10vw;
+                border-bottom: solid 1px $mainBorder_1;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border-bottom: solid 1px $mainBorder_1;
                 color: $title_1;
-                font-size: 16px;
+                font-size: 4vw;
                 font-weight: bold;
             }
 
             .tips {
-                display: none;
-                width: 56vw;
-                margin: 6px auto 0;
                 @include smallTip;
-                padding: 7px 0;
+                width: 60%;
+                margin: 6px auto 0;
 
-                &.display {
-                    display: block;
-                }
-
-                em {
+                span {
                     margin-right: 5px;
                 }
             }
@@ -90,32 +76,33 @@
             ul {
                 width: 100%;
                 height: auto;
+                padding: 5px 0;
 
                 li {
                     width: 100%;
-                    height: auto;
-                    box-sizing: border-box;
-                    padding: 6px 13px;
+                    height: 8vw;
                     display: flex;
-                    justify-content: space-between;
-                    font-size: 14px;
-                    font-weight: bold;
-                    color: $title_2;
                     align-items: center;
+                    justify-content: space-between;
+                    padding: 0 14px;
 
                     &.cur {
-                        background: $currentBG;
+                        background: $wordBox_secondBG;
                     }
                     
                     label {
-                        flex-shrink: 0;
                         width: 35%;
+                        color: $mainWord_1;
+                        font-size: 3.7vw;
+                        font-weight: bold;
+                        flex-shrink: 0;
                     }
 
                     p {
-                        font-size: 13px;
                         color: $mainWord_1;
-                        line-height: 18px;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                        line-height: 5.5vw;
 
                         em {
                             color: $remind;
@@ -131,23 +118,35 @@
             .btnBox {
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
-                padding: 15px 12px;
                 display: flex;
                 justify-content: space-between;
+                padding: 10px 14px 20px;
+
+                &.single {
+                    justify-content: center;
+
+                    button {
+                        width: 50vw;
+                        
+                        &.checkBtn {
+                            @include mainBtn;
+                            font-size: 3.4vw;
+                        }
+                    }
+                }
 
                 button {
-                    width: calc((100% - 10px) / 2);
-                    height: 32px;
+                    width: 40vw;
+                    height: 8vw;
 
                     &.applyBtn {
                         @include mainBtn;
-                        font-size: 16px;
+                        font-size: 3.4vw;
                     }
 
                     &.checkBtn {
-                        @include noBgBtn_Normal;
-                        font-size: 16px;
+                        @include secondBtn;
+                        font-size: 3.4vw;
                     }
                 }
             }
@@ -157,13 +156,8 @@
 
 //優惠申請紀錄
 .applyRecord {
-    width: 100%;
-    height: calc(100vh - 132px);
-    background: $mainBG_2;
-    overflow-y: auto;
-    margin-top: 40px;
-    box-sizing: border-box;
-    padding-top: 10px;
+    @include bgStyle_1;
+    padding: 50px 0 20px;
     display: none;
 
     &.display {
@@ -174,8 +168,7 @@
         width: 100%;
         height: auto;
         background: $mainBG_1;
-        padding: 15px;
-        box-sizing: border-box;
+        padding: 14px;
         
         form {
             width: 100%;
@@ -191,51 +184,54 @@
                     margin-bottom: 20px;
 
                     p {
-                        font-size: 14px;
+                        color: $title_1;
+                        font-size: 3.4;
                         font-weight: bold;
-                        color: $title_2;
                         margin-bottom: 10px;
                     }
 
                     select {
                         width: 100%;
-                        height: 42px;
+                        height: 10vw;
                         @include mainSelect;
                     }
 
                     .inputBox {
                         width: 100%;
-                        height: 42px;
-                        border-radius: 5px;
+                        height: 10vw;
                         border: solid 1px $mainBorder_2;
-                        box-sizing: border-box;
+                        border-radius: 30px;
+                        color: $mainWord_1;
+                        font-size: 4vw;
+                        font-weight: bold;
                         display: flex;
                         align-items: center;
                         justify-content: space-around;
-                        font-size: 15px;
-                        font-weight: bold;
-                        color: $mainWord_1;
-
+    
                         input {
-                            border: none;
-                            background: none;
                             width: auto;
                             height: 100%;
+                            border: none;
+                            background: none;
                             color: $mainWord_1;
-                            font-size: 15px;
+                            font-size: 3.4vw;
                             font-weight: bold;
                         }
                     }
 
                     .btnBox {
-                        width: 100%;
+                        width: 90%;
                         height: auto;
                         display: flex;
+                        margin: 20px auto;
 
                         button {
                             width: 25%;
-                            height: 38px;
-                            @include changeBtn;
+                            height: 10vw;
+                            @include secondBtn;
+                            border-right-width: 0;
+                            border-radius: 0;
+                            font-size: 4vw;
 
                             &:nth-of-type(1) {
                                 border-radius: 5px 0 0 5px;
@@ -243,6 +239,7 @@
                         
                             &:last-child {
                                 border-radius: 0 5px 5px 0;
+                                border-right-width: 1px;
                             }
                         }
                     }
@@ -251,9 +248,11 @@
                         margin: 0;
 
                         button {
-                            width: 100%;
-                            height: 42px;
+                            width: 80%;
+                            height: 10vw;
                             @include mainBtn;
+                            display: block;
+                            margin: 0 auto;
                         }
                     }
                 }
@@ -264,19 +263,17 @@
     .reviewBody {
         width: 100%;
         height: auto;
-        box-sizing: border-box;
-        padding: 10px 4% 0;
+        padding: 10px 14px;
 
         .noData {
             display: none;
             width: 100%;
             height: auto;
-            box-sizing: border-box;
-            padding: 80px;
-            color: $title_3;
+            color: $time;
+            font-size: 3.7vw;
             font-weight: bold;
             text-align: center;
-            font-size: 14px;
+            padding: 80px;
 
             &.display {
                 display: block;
@@ -287,71 +284,55 @@
             display: none;
             width: 100%;
             height: auto;
-            margin-bottom: 10px;
             background: $mainBG_1;
-            border-radius: 5px;
-            box-shadow: 0 0 5px 0 $boxshadow_2;
-            border: solid 1px $mainBorder_2;
+            border-radius: 10px;
+            border: solid 1px $mainBorder_1;
+            margin-bottom: 10px;
 
             &.display {
                 display: block;
             }
 
+            .title {
+                width: 100%;
+                height: 10vw;
+                border-bottom: solid 1px $mainBorder_1;
+                color: $title_1;
+                font-size: 4vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 14px;
+                
+                .status {
+                    font-size: 3.4vw;
+                    color: $time;
+
+                    .sus {
+                        color: $remind_Sp;
+                    }
+
+                    .fail {
+                        color: $remind;
+                    }
+                }
+            }
+
             ul {
                 width: 100%;
                 height: auto;
+                padding: 5px 14px;
 
-                .title {
+                li {
                     width: 100%;
-                    height: 38px;
+                    height: 8vw;
+                    color: $mainWord_1;
+                    font-size: 3.4vw;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    box-sizing: border-box;
-                    padding: 0 20px;
-                    border-bottom: solid 1px $mainBorder_1;
-
-                    p {
-                        color: $title_1;
-                        font-weight: bold;
-                        font-size: 14px;
-
-                        span {
-                            color: $title_2;
-
-                            &.status {
-                                color: $mainWord_1;
-                            }
-                        }
-                    }
-                }
-
-                ul {
-                    box-sizing: border-box;
-                    padding: 2.67vw 4vw;
-
-                    li {
-                        width: 100%;
-                        height: 25px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-bottom: 10px;
-
-                        &:last-child {
-                            margin: 0;
-                        }
-
-                        p {
-                            font-size: 14px;
-                            font-weight: bold;
-                            color: $title_2;
-
-                            &:last-child {
-                                color: $mainWord_1;
-                            }
-                        }
-                    }
                 }
             }
         }

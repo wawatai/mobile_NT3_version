@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
     <script src="../js/javascript.js"></script>
     <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
@@ -24,60 +20,61 @@
     </header>
     <!--main-->
     <main>
-        <!--銀行卡-->
-        <div class="cardList">
-            <div class="cardBox">
-                <p class="title">
-                    卡片數量<span> 0</span> / 5
-                </p>
+        <div class="cardWrap">
+            <!--銀行卡-->
+            <div class="cardList">
+                <div class="cardBox">
+                    <p class="title">
+                        卡片數量<span> 0</span> / 5
+                    </p>
+                    <ul>
+                        <li class="empty">
+                            <div class="add"></div>
+                            <p class="status">請先綁定一張銀行卡，用於收款</p>
+                        </li>
+                        <li class="wait">
+                            <p class="innerTitle">中央信託</p>
+                            <p class="smallTitle">010</p>
+                            <p class="account">0002220003</p>
+                            <div class="ing">審核中</div>
+                        </li>
+                        <li>
+                            <p class="innerTitle">中央信託</p>
+                            <p class="smallTitle">010</p>
+                            <p class="account">0002220003</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--內容-->
+            <div class="cardContent">
                 <ul>
-                    <li class="empty">
-                        <div class="add"></div>
-                        <p class="status">請先綁定一張銀行卡，用於收款</p>
-                    </li>
-                    <li class="wait">
-                        <p class="innerTitle">中央信託</p>
-                        <p class="smallTitle">010</p>
-                        <p class="account">0002220003</p>
-                        <div class="ing">審核中</div>
+                    <li>
+                        <p class="title">銀行名稱</p>
+                        <input type="text" name="" id="">
+                        <p class="remind">輸入一個相關字，產生銀行選單</p>
                     </li>
                     <li>
-                        <p class="innerTitle">中央信託</p>
-                        <p class="smallTitle">010</p>
-                        <p class="account">0002220003</p>
-                        <div class="ing">審核中</div>
+                        <p class="title">分行名稱</p>
+                        <input type="text" name="" id="">
                     </li>
+                    <li>
+                        <p class="title">開戶姓名</p>
+                        <input type="text" name="" id="" value="美術一">
+                    </li>
+                    <li>
+                        <p class="title">銀行帳號</p>
+                        <input type="text" name="" id="">
+                        <p class="remind">請認真校對銀行帳號，帳號錯誤資金將無法到賬!</p>
+                    </li>
+                    <li>
+                        <p class="title">確認帳號</p>
+                        <input type="text" name="" id="">
+                        <p class="remind">請認真校對銀行帳號，帳號錯誤資金將無法到賬!</p>
+                    </li>
+                    <button>確認</button>
                 </ul>
             </div>
-        </div>
-        <!--內容-->
-        <div class="cardContent">
-            <ul>
-                <li>
-                    <p class="title">銀行名稱</p>
-                    <input type="text" name="" id="">
-                    <p class="remind">輸入一個相關字，產生銀行選單</p>
-                </li>
-                <li>
-                    <p class="title">分行名稱</p>
-                    <input type="text" name="" id="">
-                </li>
-                <li>
-                    <p class="title">開戶姓名</p>
-                    <input type="text" name="" id="" value="美術一">
-                </li>
-                <li>
-                    <p class="title">銀行帳號</p>
-                    <input type="text" name="" id="">
-                    <p class="remind">請認真校對銀行帳號，帳號錯誤資金將無法到賬!</p>
-                </li>
-                <li>
-                    <p class="title">確認帳號</p>
-                    <input type="text" name="" id="">
-                    <p class="remind">請認真校對銀行帳號，帳號錯誤資金將無法到賬!</p>
-                </li>
-                <button>確認</button>
-            </ul>
         </div>
     </main>
     <!--footer-->
@@ -106,18 +103,24 @@
         </ul>
     </footer>
     <!--彈窗-->
-    <div class="filter display">
-        <div class="jumpWindow plsGo display">
-            <div class="title">提示</div>
-            <div class="content">請至個人頁面綁定資料</div>
-            <div class="btnBox">
+    <div class="filter">
+        <div class="jumpWindow plsGo">
+            <div class="title">
+                提示
+                <i class="close_ic"></i>
+            </div>
+            <div class="content">
+                <p>請先登入</p>
                 <button class="close">確認</button>
             </div>
         </div>
         <div class="jumpWindow plsGo2">
-            <div class="title">提示</div>
-            <div class="content">已有資料審核中</div>
-            <div class="btnBox">
+            <div class="title">
+                提示
+                <i class="close_ic"></i>
+            </div>
+            <div class="content">
+                <p>已有資料審核中</p>
                 <button class="close">確認</button>
             </div>
         </div>

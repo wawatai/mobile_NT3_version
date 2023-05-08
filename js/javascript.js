@@ -6,11 +6,11 @@ $(document).on('ready', function() {
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 3500,
-		arrows: true,
+		arrows: false,
 	})
 })
 
-//gameList Btn
+//gameList
 $(function(){
     $('.gameList li').click(function(){
         $(this).addClass('active');
@@ -24,264 +24,231 @@ $(function(){
     })
 })
 
-//filter
-$(function(){
-    $('.jumpWindow .close').click(function(){
-        $('.filter').removeClass('display');
-    })
-
-    $('.loginBtn').click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.loginWindow').addClass('display');
-    })
-
-    $('.loginWindow .forget').click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.forgetWindow').addClass('display');
-    })
-
-    $('.registerBtn,.ruleWindow .back').click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.registerWindow').addClass('display');
-    })
-
-    $('.registerWindow .isCheck p').click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.ruleWindow').addClass('display');
-    })
-
-    $(".applyList .applyBtn").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.plsGo').addClass('display');
-    })
-    $(".applyList .checkBtn").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.eventWindow').addClass('display');
-    })
-
-    $(".changePhoneBtn").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.phoneWindow').addClass('display');
-    })
-    $(".changePwdBtn").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.passwordWindow').addClass('display');
-    })
-
-    $(".vipWrap .topBox .check").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.checkPoint').addClass('display');
-    })
-
-    $(".searchContent .opAcc").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.accWindow').addClass('display');
-    })
-    $(".searchContent .opPlat").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.platWindow').addClass('display');
-    })
-
-    $(".cardContent button").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.plsGo2').addClass('display');
-    })
-
-    $(".transWrap .check").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.plsGo').addClass('display');
-    })
-
-    $(".forActive .check,.forHistory .check").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.bettingDetail').addClass('display');
-    })
-
-    $(".bettingWrap .recordBox .check").click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.pointWindow').addClass('display');
-    })
-})
-//請先登入
-function unlogin(){
-    $('.jumpWindow').removeClass('display');
-    $('.filter,.plsGo').addClass('display');
-}
-
-//register choose
-$(function(){
-    $('.jumpWindow .choose .line').click(function(){
-        $('.line').removeClass('display');
-        $('.weChat').addClass('display');
-    })
-
-    $('.jumpWindow .choose .weChat').click(function(){
-        $('.line').addClass('display');
-        $('.weChat').removeClass('display');
-    })
-})
-
 //news切換
 $(function(){
-    $('.jumpWindow.news .typeList li').click(function(){
-        $($(this).children()).addClass('active');
-        $($(this).siblings().children()).removeClass('active');
-    })
+    $(".jumpWindow.news li").on("click",function(){
+        var n = $(this).index();
 
-    $('.jumpWindow.news .typeList li:nth-of-type(1)').click(function(){
-        $('.jumpWindow.news .normal').addClass('display');
-        $('.jumpWindow.news .normal').siblings().removeClass('display');
-    })
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
 
-    $('.jumpWindow.news .typeList li:nth-of-type(2)').click(function(){
-        $('.jumpWindow.news .hot').addClass('display');
-        $('.jumpWindow.news .hot').siblings().removeClass('display');
-    })
-
-    $('.jumpWindow.news .typeList li:nth-of-type(3)').click(function(){
-        $('.jumpWindow.news .deposit').addClass('display');
-        $('.jumpWindow.news .deposit').siblings().removeClass('display');
+        $(".jumpWindow.news .content ul:eq("+ n +")")
+        .addClass("display")
+        .siblings().removeClass("display");
     })
 })
 
-//realLogin
+//個人資料頁更變切換
 $(function(){
-    $('.realLogin').click(function(){
-        $('.jumpWindow,.loginBtn').removeClass('display');
-        $('.filter,.news,.alLogin').addClass('display');
-        $('.operate').addClass("login");
-        
-        $('.gameBox.liveBox li').attr('onclick',"callLive()");
-        $('.gameBox.sportBox li').attr('onclick',"callSport()");
-        $('.gameBox.lotteryBox li').attr('onclick',"callLottery()");
-
-        $('.gameBox.slotBox li').attr('onclick',"window.location.href='./html/slotPage.html'");
-        $(".gameBox.fishBox li").attr('onclick',"window.location.href='./html/fishPage.html'");
-        $(".gameBox.boardBox li").attr('onclick',"window.location.href='./html/boardPage.html'");
-
-        $('.operate button:eq(0)').attr('onclick',"window.location.href='./html/deposit.html'");
-        $('.operate button:eq(1)').attr('onclick',"window.location.href='./html/transfer.html'");
-        $('.operate button:eq(2)').attr('onclick',"window.location.href='./html/withdrawal.html'");
-        $('.operate button:eq(3)').attr('onclick',"window.location.href='./html/vip.html'");
-
-        $('footer li:nth-of-type(2)').attr('onclick',"window.location.href='./html/event.html'");
-        $('footer li:nth-of-type(3)').attr('onclick',"window.location.href='./html/wallet.html'");
-        $('footer li:nth-of-type(4)').attr('onclick',"window.location.href='./html/help_often_contact.html'");
-        $('footer li:nth-of-type(5)').attr('onclick',"window.location.href='./html/member.html'");
-    })
-})
-function callSport() {
-    $('.jumpWindow').removeClass('display');
-    $('.filter,.gameWindow.sport').addClass('display');
-}
-function callLive() {
-    $('.jumpWindow').removeClass('display');
-    $('.filter,.gameWindow.live').addClass('display');
-}
-function callFish() {
-    $('.jumpWindow').removeClass('display');
-    $('.filter,.gameWindow.fish').addClass('display');
-}
-function callLottery() {
-    $('.jumpWindow').removeClass('display');
-    $('.filter,.gameWindow.lottery').addClass('display');
-}
-function callBoard() {
-    $('.jumpWindow').removeClass('display');
-    $('.filter,.gameWindow.board').addClass('display');
-}
-function callSlot() {
-    $('.jumpWindow').removeClass('display');
-    $('.filter,.gameWindow.slot').addClass('display');
-}
-
-//slotPage .gameBox .love
-$(function(){
-    $('.slotWrap .gameBox .love').click(function(){
-        $(this).toggleClass('active');
-    })
-})
-//slotPage .slotHeader切換
-$(function(){
-    $('.slotHeader .listBox li').click(function(){
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
+    $(".memberInfo .chBtn").click(function(){
+        $(this).closest(".btnBox").prev().toggleClass("active");
     })
 })
 
 //event .eventType切換
 $(function(){
     $('.eventType li').click(function(){
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
+        $(this)
+        .addClass('active')
+        .siblings().removeClass('active');
     })
 })
 
-//walletWrap btnBox
+//record
 $(function(){
-    $('.walletWrap .btnBox button:nth-of-type(1)').click(function(){
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-        $('.walletList .forActive').addClass('display');
-        $('.walletList .forActive').siblings().removeClass('display');
+    $(".searchContent .check").click(function(){
+        $(".noData")
+        .removeClass("display");
+        $(".recordBox")
+        .addClass("display");
     })
 
-    $('.walletWrap .btnBox button:nth-of-type(2)').click(function(){
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-        $('.walletList .forHistory').addClass('display');
-        $('.walletList .forHistory').siblings().removeClass('display');
-    })
+    $(".searchContent .date button").click(function(){
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
 
-    $('.walletWrap .btnBox button:nth-of-type(3)').click(function(){
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-        $('.walletList .forPlatform').addClass('display');
-        $('.walletList .forPlatform').siblings().removeClass('display');
-    })
-})
-//walletWrap openBtn
-$(function(){
-    $('.walletWrap .openBtn div').click(function(){
-        $(this).toggleClass('active');
-        $($(this).closest('.openBtn').prev('ul')).toggleClass('active');
+        $(".noData").addClass("display");
+        $(".recordBox").removeClass("display");
     })
 })
 
-//member opLang
+//eventApply
 $(function(){
-    $('.memberWrap .opLang').click(function(){
-        $('.jumpWindow').removeClass('display');
-        $('.filter,.langWindow').addClass('display');
+    $(".eventApplyType li").click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
     })
 
-    $('.langWindow li:nth-of-type(1)').click(function(){
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-        $('.lang_tw').addClass('active');
-        $('.lang_ch').removeClass('active');
-        $('.filter').removeClass('display');
+    $(".eventApplyType li:eq(0)").click(function(){
+        $(".applyRecord,.applyList").removeClass("display");
+        $(".applyList.choose").addClass("display");
     })
-    $('.langWindow li:nth-of-type(2)').click(function(){
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-        $('.lang_tw').removeClass('active');
-        $('.lang_ch').addClass('active');
-        $('.filter').removeClass('display');
+    $(".eventApplyType li:eq(1)").click(function(){
+        $(".applyRecord,.applyList").removeClass("display");
+        $(".applyList.already").addClass("display");
+    })
+    $(".eventApplyType li:eq(2)").click(function(){
+        $(".applyList").removeClass("display");
+        $(".applyRecord").addClass("display");
+    })
+
+    $(".applyRecord .bigBtn button").click(function(){
+        $(".reviewBody .noData").removeClass("display");
+        $(".reviewBody .recordBox").addClass("display");
+    })
+
+    $(".applyRecord .btnBox button").click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
+        $(".reviewBody .noData").addClass("display");
+        $(".reviewBody .recordBox").removeClass("display");
+    })
+})
+
+//mail
+$(function(){
+    $("header .editBtn").click(function(){
+        $(".editBox,.detailBtn.edit").addClass("display");
+        $(".editBtn").removeClass("display");
+        $(".mailBox").addClass("editing");
+    })
+    $("header .detailBtn.edit").click(function(){
+        $(".editBox,.detailBtn.edit").removeClass("display");
+        $(".editBtn").addClass("display");
+        $(".mailBox").removeClass("editing");
+    })
+
+    $(".topList li").click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+    })
+    $(".topList li:eq(0)").click(function(){
+        $(".mailBody.normal").addClass("display");
+        $(".mailBody.post").removeClass("display");
+        $("header .editBtn").addClass("display");
+    })
+    $(".topList li:eq(1)").click(function(){
+        $(".mailBody.normal").removeClass("display");
+        $(".mailBody.post").addClass("display");
+        $("header .editBtn").removeClass("display");
+    })
+
+
+    $(".mailBody .subClass li").click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active"); 
+    })
+    $(".mailBody.normal .subClass li:eq(0)").click(function(){
+        $(".mailBox.system").addClass("display");
+        $(".mailBox.personal").removeClass("display");
+    })
+    $(".mailBody.normal .subClass li:eq(1)").click(function(){
+        $(".mailBox.system").removeClass("display");
+        $(".mailBox.personal").addClass("display");
+    })
+    $(".mailBody.post .subClass li:eq(0)").click(function(){
+        $(".mailBox.hot").addClass("display");
+        $(".mailBox.hot").siblings().removeClass("display");
+    })
+    $(".mailBody.post .subClass li:eq(1)").click(function(){
+        $(".mailBox.nor").addClass("display");
+        $(".mailBox.nor").siblings().removeClass("display");
+    })
+    $(".mailBody.post .subClass li:eq(2)").click(function(){
+        $(".mailBox.dep").addClass("display");
+        $(".mailBox.dep").siblings().removeClass("display");
+    })
+})
+
+//smallTip展開
+$(function(){
+    $(".smallInfo").on("click",function(){
+        $(this).find(".inner")
+        .toggleClass("active");
+    })
+})
+
+//錢包展開
+$(function(){
+    $(".withWrap .walletBox .check").click(function(){
+        $(".walletDetail")
+        .toggleClass("active");
+    })
+
+    $('.openBtn').click(function(){
+        $(this)
+        .toggleClass('active')
+        .prev('ul,.innerBox').toggleClass('active');
+    })
+})
+
+//deposit
+$(function(){
+    $(".depList li").click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+    })
+
+    $(".depList li:eq(0)").click(function(){
+        $(".depContent").removeClass("display");
+        $(".depContent.card").addClass("display");
+    })
+    $(".depList li:eq(1)").click(function(){
+        $(".depContent").removeClass("display");
+        $(".depContent.atm").addClass("display");
+    })
+    $(".depList li:eq(2)").click(function(){
+        $(".depContent").removeClass("display");
+        $(".depContent.shop").addClass("display");
+    })
+
+    $(".depContent.card .check").click(function(){
+        $(".depList,.depContent").removeClass("display");
+        $(".depContent.already").addClass("display");
+    })
+    $(".depContent.already .change").click(function(){
+        $(".depContent").removeClass("display");
+        $(".depList,.depContent.card").addClass("display");
+    })
+})
+
+//slotPage
+$(function(){
+    $('.slotWrap .gameBox .love').click(function(){
+        $(this)
+        .toggleClass('active');
+    })
+})
+$(function(){
+    $('.slotHeader .listBox li').click(function(){
+        $(this)
+        .addClass('active')
+        .siblings().removeClass('active');
     })
 })
 
 //help
-function backToPage(){
-    $("header .helpPage").removeClass("display");
-    $("header .helpPage:eq(0)").addClass("display");
-
-    $(".helpInner").removeClass("display");
-    $(".helpWrap").addClass("display");
-}
 $(function(){
-    $(".helpInner li").click(function(){
-        $(this).toggleClass("active");
+    $("header .helpPage:not(:first-child) .back_arrow").on("click",function(){
+        $(this).closest(".helpPage")
+        .removeClass("display");
+
+        $("header .helpPage:first-child")
+        .addClass("display");
+
+        $(".helpInner")
+        .removeClass("display");
+
+        $(".helpWrap")
+        .addClass("display");
+    })
+
+    $(".helpInner li .title").click(function(){
+        $(this).closest("li")
+        .toggleClass("active");
     })
 
     $(".helpBody li:eq(0)").click(function(){
@@ -349,185 +316,169 @@ $(function(){
     })
 })
 
-//eventApply
+//filter
 $(function(){
-    $(".eventApplyType li").click(function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active");
+    $('.jumpWindow .close,.jumpWindow .close_ic').click(function(){
+        $('.filter')
+        .removeClass('display');
     })
 
-    $(".eventApplyType li:eq(0)").click(function(){
-        $(".applyRecord,.applyList").removeClass("display");
-        $(".applyList.choose").addClass("display");
-    })
-    $(".eventApplyType li:eq(1)").click(function(){
-        $(".applyRecord,.applyList").removeClass("display");
-        $(".applyList.already").addClass("display");
-    })
-    $(".eventApplyType li:eq(2)").click(function(){
-        $(".applyList").removeClass("display");
-        $(".applyRecord").addClass("display");
+    $(".unLogin").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.plsGo')
+        .addClass('display');
     })
 
-    $(".applyRecord .bigBtn button").click(function(){
-        $(".reviewBody .noData").removeClass("display");
-        $(".reviewBody .recordBox").addClass("display");
+    $(".openNews").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.news')
+        .addClass('display');
     })
 
-    $(".applyRecord .btnBox button").click(function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active");
-
-        $(".reviewBody .noData").addClass("display");
-        $(".reviewBody .recordBox").removeClass("display");
-    })
-})
-
-//個人資料頁
-$(function(){
-    $(".memberInfo .chBtn").click(function(){
-        $(this).prev().toggleClass("active");
-    })
-})
-
-//vip
-$(function(){
-    $(".checkPoint button").click(function(){
-        $($(this).prev().children()).toggleClass("display");
-    })
-})
-
-//mail
-$(function(){
-    $("header .editBtn").click(function(){
-        $(".editBox,.detailBtn.edit").addClass("display");
-        $(".editBtn").removeClass("display");
-        $(".mailBox").addClass("editing");
-    })
-    $("header .detailBtn.edit").click(function(){
-        $(".editBox,.detailBtn.edit").removeClass("display");
-        $(".editBtn").addClass("display");
-        $(".mailBox").removeClass("editing");
+    $('.loginBtn .login').click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.loginWindow')
+        .addClass('display');
     })
 
-    $(".topList li").click(function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active");
-    })
-    $(".topList li:eq(0)").click(function(){
-        $(".mailBody.normal").addClass("display");
-        $(".mailBody.post").removeClass("display");
-        $("header .editBtn").addClass("display");
-    })
-    $(".topList li:eq(1)").click(function(){
-        $(".mailBody.normal").removeClass("display");
-        $(".mailBody.post").addClass("display");
-        $("header .editBtn").removeClass("display");
+    $('.loginWindow .forget').click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.jumpWindow.forget')
+        .addClass('display');
     })
 
-
-    $(".mailBody .subClass li").click(function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active"); 
-    })
-    $(".mailBody.normal .subClass li:eq(0)").click(function(){
-        $(".mailBox.system").addClass("display");
-        $(".mailBox.personal").removeClass("display");
-    })
-    $(".mailBody.normal .subClass li:eq(1)").click(function(){
-        $(".mailBox.system").removeClass("display");
-        $(".mailBox.personal").addClass("display");
-    })
-    $(".mailBody.post .subClass li:eq(0)").click(function(){
-        $(".mailBox.hot").addClass("display");
-        $(".mailBox.hot").siblings().removeClass("display");
-    })
-    $(".mailBody.post .subClass li:eq(1)").click(function(){
-        $(".mailBox.nor").addClass("display");
-        $(".mailBox.nor").siblings().removeClass("display");
-    })
-    $(".mailBody.post .subClass li:eq(2)").click(function(){
-        $(".mailBox.dep").addClass("display");
-        $(".mailBox.dep").siblings().removeClass("display");
-    })
-})
-
-//bettingRecord + dealRecord
-$(function(){
-    $(".searchContent .check").click(function(){
-        $(".noData").removeClass("display");
-        $(".recordBox").addClass("display");
+    $(".loginWindow .registerBtn p,.loginBtn .signup,.jumpWindow.rule .back").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.jumpWindow.register')
+        .addClass('display');
     })
 
-    $(".searchContent .date button").click(function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active");
-
-        $(".noData").addClass("display");
-        $(".recordBox").removeClass("display");
-    })
-})
-
-//deposit
-$(function(){
-    $(".depList li").click(function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active");
+    $('.register .isCheck span').click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.jumpWindow.rule')
+        .addClass('display');
     })
 
-    $(".depList li:eq(0)").click(function(){
-        $(".depContent").removeClass("display");
-        $(".depContent.card").addClass("display");
+    $(".openSport").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.gameWindow.sport')
+        .addClass('display');
     })
-    $(".depList li:eq(1)").click(function(){
-        $(".depContent").removeClass("display");
-        $(".depContent.atm").addClass("display");
+    $(".openLive").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.gameWindow.live')
+        .addClass('display');
     })
-    $(".depList li:eq(2)").click(function(){
-        $(".depContent").removeClass("display");
-        $(".depContent.shop").addClass("display");
+    $(".openLottery").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.gameWindow.lottery')
+        .addClass('display');
     })
-
-    $(".depContent.card .check").click(function(){
-        $(".depList,.depContent").removeClass("display");
-        $(".depContent.already").addClass("display");
+    $(".openSlot").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.gameWindow.slot')
+        .addClass('display');
     })
-    $(".depContent.already .change").click(function(){
-        $(".depContent").removeClass("display");
-        $(".depList,.depContent.card").addClass("display");
+    $(".openFish").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.gameWindow.fish')
+        .addClass('display');
     })
-})
-
-//transWrap
-$(function(){
-    $(".transWrap .subClass li").click(function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active");
-    })
-
-    $(".transWrap .subClass li:eq(0)").click(function(){
-        $(".transWrap .forActive").addClass("display");
-        $(".transWrap .forPlatform").removeClass("display");
-    })
-    $(".transWrap .subClass li:eq(1)").click(function(){
-        $(".transWrap .forActive").removeClass("display");
-        $(".transWrap .forPlatform").addClass("display");
+    $(".openBoard").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.gameWindow.board')
+        .addClass('display');
     })
 
-    $('.transWrap .openBtn div').click(function(){
-        $(this).toggleClass('active');
-        $($(this).closest('.openBtn').prev('ul')).toggleClass('active');
+    $(".recordBox .check").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.pointWindow')
+        .addClass('display');
     })
-})
-
-//withWrap
-$(function(){
-    $(".withWrap .walletBox .check").click(function(){
-        $(".walletDetail").toggleClass("active");
+    $(".recordBox .num.link").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.pointDetail')
+        .addClass('display');
     })
 
-    $('.withWrap .openBtn div').click(function(){
-        $(this).toggleClass('active');
-        $($(this).closest('.openBtn').prev('ul')).toggleClass('active');
+    $('.opLang').click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.langWindow')
+        .addClass('display');
+    })
+
+    $(".changePhoneBtn").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.phoneWindow')
+        .addClass('display');
+    })
+    $(".changePwdBtn").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.passwordWindow')
+        .addClass('display');
+    })
+
+    $(".searchContent .opAcc").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.accWindow')
+        .addClass('display');
+    })
+    $(".searchContent .opPlat").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.platWindow')
+        .addClass('display');
+    })
+
+    $(".cardContent button").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.plsGo2')
+        .addClass('display');
+    })
+
+    $(".applyList .applyBtn").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.plsGo')
+        .addClass('display');
+    })
+    $(".applyList .checkBtn").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.eventWindow')
+        .addClass('display');
+    })
+
+    $(".transWrap .check").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.plsGo')
+        .addClass('display');
+    })
+
+    $(".waterBox .btnBox button:last-child").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.bettingDetail')
+        .addClass('display');
     })
 })

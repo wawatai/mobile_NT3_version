@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="131" height="105" viewBox="0 0 131 105">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #525260;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="44" y="1306" width="131" height="105" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="3" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-color="#422407" flood-opacity="0.45"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+      <feImage preserveAspectRatio="none" x="53.125" y="1312.56" width="111.781" height="84.82" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTExLjc4MSIgaGVpZ2h0PSI4NC44MiIgdmlld0JveD0iMCAwIDExMS43ODEgODQuODIiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iNTUuODkxIiB5MT0iODQuODIiIHgyPSI1NS44OTEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTdhNzMyIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC45MSIgc3RvcC1jb2xvcj0iI2ZmZWE5NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmVhOTYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjExMS43ODEiIGhlaWdodD0iODQuODIiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite-2" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in2="blend"/>
+    </filter>
+  </defs>
+  <path id="形狀_25" data-name="形狀 25" class="cls-1" d="M56.375,1349.39c13.875,8.86,29.779,3.05,36.27-9.3,5.519,3.86,11.574,5.33,18.166,3.63,6.545-1.69,11.134-5.83,14.128-11.91a12.013,12.013,0,0,1,6.367,6.4,18.784,18.784,0,0,1,.844,2.51c2.314,8.59,4.648,17.18,6.905,25.79,2.032,7.75-1.636,14.04-9.32,16.1q-26.492,7.11-52.989,14.2c-7.593,2.03-13.961-1.57-16.047-9.17-2.4-8.75-4.716-17.52-7.055-26.29A12.268,12.268,0,0,1,56.375,1349.39Zm27.763-24.12a14.091,14.091,0,1,1-17.3-10.03A14.133,14.133,0,0,1,84.138,1325.27Zm77.031,21.45c1.146,4.27,2.312,8.54,3.428,12.81,1.322,5.07-1.7,8.27-6.8,7.24-2.247-.45-4.485-0.94-6.737-1.36a1.916,1.916,0,0,1-1.782-1.59c-2.27-8.66-4.632-17.3-6.881-25.97a2.559,2.559,0,0,1,.592-2.08c1.793-1.77,3.71-3.43,5.628-5.07,3.431-2.94,7.7-1.67,8.963,2.71C158.85,1337.83,159.977,1342.28,161.169,1346.72Zm-45.457-26.35a10.562,10.562,0,1,1-12.961-7.43A10.595,10.595,0,0,1,115.712,1320.37Z" transform="translate(-44 -1306)"/>
+</svg>

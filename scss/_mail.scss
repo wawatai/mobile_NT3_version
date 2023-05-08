@@ -2,28 +2,31 @@
 .topList {
     width: 100%;
     height: auto;
-    background: $mainBG_1;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    z-index: 100;
 
     ul {
         width: 100%;
         height: auto;
+        background: $mainBG_1;
         display: flex;
 
         li {
             width: 50%;
             height: 40px;
-            box-sizing: border-box;
-            border-bottom: solid 2px transparent;
+            border-bottom: solid 3px transparent;
+            color: $mainWord_1;
+            font-size: 4vw;
+            font-weight: bold;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
-            font-weight: bold;
-            color: $choose_Word;
 
             &.active {
-                color: $choose_ActiveWord;
-                border-color: $choose_Border;
+                color: $title_1;
+                border-color: $mainBorder_1;
             }
         }
     }
@@ -31,6 +34,7 @@
 
 //內容
 .mailBody {
+    padding-top: 40px;
 
     &.normal {
         display: none;
@@ -43,9 +47,12 @@
         .subClass {
             width: 100%;
             height: auto;
-            box-sizing: border-box;
-            padding: 10px 15px;
-            background: $mainBG_2;
+            background: $BG;
+            position: fixed;
+            top: 85px;
+            left: 0;
+            z-index: 100;
+            padding: 14px 32px;
 
             ul {
                 width: 100%;
@@ -54,15 +61,20 @@
 
                 li {
                     width: 50%;
-                    height: 10.67vw;
-                    @include bigGrayBtn;
+                    height: 11vw;
+                    @include secondBtn;
+                    border-right-width: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
                     &:nth-of-type(1){
-                        border-radius: 5px 0 0 5px;
+                        border-radius: 30px 0 0 30px;
                     }
 
                     &:last-child {
-                        border-radius: 0 5px 5px 0;
+                        border-radius: 0 30px 30px 0;
+                        border-right-width: 1px;
                     }
                 }
             }
@@ -72,39 +84,43 @@
         .editBox {
             width: 100%;
             height: auto;
-            padding: 16px;
-            box-sizing: border-box;
-            justify-content: space-between;
+            background: $BG;
             display: none;
+            justify-content: space-between;
+            position: fixed;
+            top: 145px;
+            left: 0;
+            z-index: 100;
+            padding: 16px;
 
             &.display {
                 display: flex;
             }
 
             .all {
+                color: $mainWord_1;
+                font-size: 4vw;
+                font-weight: bold;
                 display: flex;
                 align-items: center;
-                color: $title_2;
-                font-size: 16px;
-                font-weight: bold;
 
                 input {
+                    width: 4.5vw;
+                    height: 4.5vw;
+                    @include checkbox;
                     margin-right: 10px;
-                    @include checkBox;
                 }
             }
 
             .modify {
 
                 button {
-                    width: 82px;
-                    height: 28px;
-                    @include noBgBtn_Color1;
-                    font-size: 12px;
+                    width: 14vw;
+                    height: 8vw;
+                    @include mailBtn_1;
 
                     &.delete {
-                        @include noBgBtn_Color2;
-                        font-size: 12px;
+                        @include mailBtn_2;
                         margin-left: 10px;
                     }
                 }
@@ -114,11 +130,11 @@
         //內容
         .mailBox {
             width: 100%;
-            height: calc(100vh - 200px);
-            overflow-y: auto;
+            height: auto;
+            padding-top: 60px;
 
             &.editing {
-                height: calc(100vh - 260px);
+                padding-top: 110px;
 
                 .title,.textBox {
                     padding: 0 30px 0 50px;
@@ -140,54 +156,49 @@
             ul {
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
-                padding: 15px 4%;
+                padding: 15px 14px;
 
                 li {
                     width: 100%;
-                    height: 108px;
-                    margin-bottom: 10px;
+                    height: 28vw;
                     @include mailWrap;
+                    margin-bottom: 10px;
 
                     .title {
                         width: 100%;
                         height: 40%;
-                        box-sizing: border-box;
-                        padding: 0 30px;
+                        color: $title_1;
+                        font-size: 4vw;
+                        font-weight: bold;
                         display: flex;
                         align-items: flex-end;
-                        font-size: 16px;
-                        font-weight: bold;
-                        color: $title_2;
+                        padding: 0 30px;
                     }
 
                     .textBox {
                         width: 100%;
                         height: 60%;
                         display: flex;
-                        box-sizing: border-box;
-                        padding: 0 30px;
                         align-items: center;
                         position: relative;
+                        padding: 0 30px;
 
                         p {
                             width: 100%;
                             height: auto;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
                             color: $mainWord_1;
-                            font-size: 14px;
+                            font-size: 3.4vw;
                             font-weight: bold;
+                            @include textHidden;
                         }
 
                         .date {
+                            color: $time;
+                            font-size: 3vw;
+                            font-weight: bold;
                             position: absolute;
                             top: 0;
                             right: 30px;
-                            font-size: 13px;
-                            font-weight: bold;
-                            color: $title_Time;
                         }
                     }
 
@@ -202,7 +213,24 @@
                         justify-content: center;
 
                         input {
-                            @include checkBox;
+                            width: 5.5vw;
+                            height: 5.5vw;
+                            @include checkbox;
+                        }
+                    }
+
+                    &.read {
+
+                        .title {
+                            color: $mailWrap_readColor;
+                        }
+
+                        .textBox {
+
+                            p,
+                            .date {
+                                color: $mailWrap_readColor;
+                            }
                         }
                     }
                 }
@@ -221,9 +249,12 @@
         .subClass {
             width: 100%;
             height: auto;
-            box-sizing: border-box;
-            padding: 10px 15px;
-            background: $mainBG_2;
+            background: $BG;
+            position: fixed;
+            top: 85px;
+            left: 0;
+            z-index: 100;
+            padding: 14px 32px;
 
             ul {
                 width: 100%;
@@ -232,15 +263,21 @@
 
                 li {
                     width: 34%;
-                    height: 10.67vw;
-                    @include bigGrayBtn;
-                    
-                    &:nth-of-type(1) {
-                        border-radius: 5px 0 0 5px;
+                    height: 11vw;
+                    @include secondBtn;
+                    border-radius: 0;
+                    border-right-width: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:nth-of-type(1){
+                        border-radius: 30px 0 0 30px;
                     }
 
                     &:last-child {
-                        border-radius: 0 5px 5px 0;
+                        border-radius: 0 30px 30px 0;
+                        border-right-width: 1px;
                     }
                 }
             }
@@ -249,10 +286,12 @@
         //內容
         .mailBox {
             width: 100%;
-            height: calc(100vh - 200px);
-            overflow-y: auto;
+            height: auto;
+            padding-top: 60px;
 
-            &.hot,&.nor,&.dep {
+            &.hot,
+            &.nor,
+            &.dep {
                 display: none;
 
                 &.display {
@@ -263,26 +302,22 @@
             ul {
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
-                padding: 15px 4%;
+                padding: 15px 14px;
 
                 li {
                     width: 100%;
                     height: auto;
-                    margin-bottom: 10px;
                     @include mailWrap;
+                    margin-bottom: 10px;
 
                     p {
                         width: 100%;
                         height: auto;
-                        box-sizing: border-box;
-                        padding: 30px;
-                        font-size: 16px;
+                        color: $mainWord_1;
+                        font-size: 4vw;
                         font-weight: bold;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        color: $title_2;
+                        @include textHidden;
+                        padding: 30px;
                     }
                 }
             }
@@ -294,38 +329,39 @@
 .mailContent {
     width: 90%;
     height: calc(100vh - 125px);
-    overflow-y: auto;
-    box-sizing: border-box;
-    padding: 10vw 15px;
-    border-radius: 10px;
-    margin: 15px auto;
-    box-shadow: 0 2px 4px 0 $boxshadow_1;
-    position: relative;
     background: $mainBG_1;
-    border: solid 1px $mainBorder_2;
+    border: solid 1px $mainBorder_1;
+    border-radius: 10px;
+    box-shadow: 0 5px 6px -2px $mainShadow_2;
+    position: relative;
+    overflow-y: auto;
+    margin: 15px auto;
+    padding: 10vw 15px;
 
     &::before {
         content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+        position: fixed;
+        top: 61px;
+        left: calc(50% + 1px);
+        transform: translateX(-50%);
+        width: calc(90% - 2px);
         height: 8vw;
         border-radius: 10px 10px 0 0;
         background: $mailCnt_TopBG;
     }
 
     .title {
-        margin: 20px 0;
-        font-size: 17px;
+        color: $title_1;
+        font-size: 4vw;
         font-weight: bold;
-        color: $title_2;
+        margin: 20px 0;
     }
 
     .msg {
-        line-height: 20px;
-        font-size: 14px;
-        font-weight: bold;
         color: $mainWord_1;
+        font-size: 3.4vw;
+        font-weight: bold;
+        line-height: 5.5vw;
+        margin-bottom: 10px;
     }
 }
