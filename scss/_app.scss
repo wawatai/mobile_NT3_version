@@ -2,7 +2,7 @@
 //     width: 100%;
 //     height: calc(100vh - 92px);
 //     box-sizing: border-box;
-//     padding: 10px 15px;
+//     padding: 2.5vw 3.65vw;
 //     background: $backgroundColor_4;
 //     overflow-y: auto;
 
@@ -33,7 +33,7 @@
 //                 display: flex;
 //                 align-items: center;
 //                 justify-content: space-between;
-//                 padding: 0 18px;
+//                 padding: 0 5vw;
 //                 width: 100%;
 //                 height: auto;
 //                 box-sizing: border-box;
@@ -41,19 +41,19 @@
 
 //                 span {
 //                     display: inline-block;
-//                     width: calc(100% - 17px);
+//                     width: calc(100% - 3.65vw);
 //                     white-space: nowrap;
 //                     overflow: hidden;
 //                     text-overflow: ellipsis;
-//                     font-size: 4vw;
+//                     font-size: 1rem;
 //                     font-weight: bold;
 //                     color: $font-color_2;
 //                 }
 
 //                 .download_ic {
 //                     display: block;
-//                     width: 18px;
-//                     height: 18px;
+//                     width: 5vw;
+//                     height: 5vw;
 //                 }
 //             }
 //         }

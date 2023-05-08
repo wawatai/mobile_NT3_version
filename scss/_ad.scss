@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     flex-shrink: 0;
+    padding: 1.5vw 3vw;
 
     .single-item {
         margin: 0;
@@ -22,17 +23,18 @@
         }
         
         .slick-dots {
-            bottom: 0;
+            bottom: 1vw;
 
             li {
-                margin: 0 8px;
+                margin: 0 0.5vw;
                 
                 button {
 
                     &::before {
-                        width: 30px;
-                        height: 3px;
+                        width: 3.2vw;
+                        height: 3.2vw;
                         background: $ad_BG;
+                        border-radius: 50%;
                         opacity: 0.5;
                         color: transparent;
                         top: 50%;
@@ -45,8 +47,10 @@
                     button {
 
                         &::before {
+                            width: 3.2vw;
+                            height: 3.2vw;
                             opacity: 1;
-                            background: $ad_BG;
+                            background: $ad_actBG;
                         }
                     }
                 }
@@ -63,11 +67,11 @@
             &::before {
                 content: "";
                 position: absolute;
-                width: 8px;
-                height: 8px;
+                width: 0.8vw;
+                height: 0.8vw;
                 border-style: solid;
                 border-width: 0 0 6px 6px;
-                border-color: $ad_BG;
+                border-color: transparent;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%) rotate(45deg);

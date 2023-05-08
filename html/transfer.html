@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
     <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/F7ico_64x64.ico" type="image/x-icon">
 </head>
 <body>
     <!--header-->
@@ -19,7 +19,7 @@
         <!--content-->
         <div class="content">
             <i class="back_arrow" onclick="window.location.href='./wallet.html'"></i>
-            <div class="title">轉帳專區</div>
+            <div class="title">轉帳</div>
             <button class="detailBtn" onclick="window.location.href='./help_new_transfer.html'">教學</button>
         </div>
     </header>
@@ -63,15 +63,17 @@
                     <select>
                         <option value="">BNG娛樂</option>
                     </select>
+                    <span class="arrow"></span>
                 </div>
                 <div class="selectBox">
                     <p class="smallWord">到</p>
                     <select>
                         <option value="">中心錢包</option>
                     </select>
+                    <span class="arrow"></span>
                 </div>
                 <input type="text" value="0">
-                <button class="check">確認轉帳</button>
+                <button class="check" disabled>確認轉帳</button>
             </div>
             <!-- <div class="subClass">
                 <ul>
@@ -114,9 +116,6 @@
                     <li>
                         <div>
                             BNG娛樂
-                            <i class="smallInfo display">
-                                <div class="inner">中心錢包</div>
-                            </i>
                         </div>
                         <p>$0</p>
                     </li>

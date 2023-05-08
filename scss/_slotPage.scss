@@ -4,16 +4,17 @@
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    background: $mainBG_2;
 
     //slot上選單
     .slotHeader {
         width: 100%;
-        height: 80px;
+        height: auto;
         box-sizing: border-box;
-        padding: 0 4%;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        background: $mainBG_2;
 
         //選單
         .listBox {
@@ -23,19 +24,20 @@
             ul {
                 display: flex;
                 justify-content: space-between;
-                margin-bottom: 8px;
-                padding: 0 2%;
                 box-sizing: border-box;
+                background: $mainBG_1;
 
                 li {
-                    font-size: 13px;
+                    width: 33%;
+                    font-size: 0.85rem;
                     font-weight: bold;
-                    padding: 5px 1.33vw;
                     color: $choose_Word;
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                     border-bottom: solid 2px transparent;
-                    
+                    padding: 2vw 4%;
+
                     &.active {
                         color: $choose_ActiveWord;
                         border-color: $choose_Border;
@@ -43,16 +45,12 @@
 
                     i {
                         display: block;
-                        width: 13px;
-                        height: 13px;
-                        margin-right: 5px;
+                        width: 3.7vw;
+                        height: 3.7vw;
+                        margin-right: 2vw;
 
                         &.hot_ic {
-                            height: 16px;
-                        }
-
-                        &.love_ic {
-                            margin-bottom: -4px;
+                            height: 4.5vw;
                         }
                     }
                 }
@@ -61,15 +59,15 @@
 
         //搜尋列
         .searchBox {
-            width: 100%;
-            height: 28px;
-            margin-bottom: 5px;
+            width: 92%;
+            height: 7vw;
             @include slotSearch;
+            margin: 2.5vw auto;
 
             .search_ic {
                 display: block;
-                width: 15px;
-                height: 15px;
+                width: 3.65vw;
+                height: 3.65vw;
             }
 
             input {
@@ -91,16 +89,20 @@
 
         .gameBox {
             width: calc((96vw - 30px)/2);
-            height: 175px;
+            height: 44vw;
             margin: 0 1vw 8px;
             @include slotGameBox;
 
+            img {
+                border-bottom: 1px solid $mainBorder_2;
+            }
+
             p {
                 width: 100%;
-                height: 30px;
+                height: 7.4vw;
                 box-sizing: border-box;
-                padding: 0 15px;
-                font-size: 14px;
+                padding: 0 1.65vw;
+                font-size: 0.89rem;
                 font-weight: bold;
                 color: $slotGame_Word;
                 display: flex;
@@ -108,21 +110,21 @@
                 justify-content: space-between;
 
                 .love {
-                    width: 17px;
-                    height: 17px;
+                    width: 3.65vw;
+                    height: 3.65vw;
                 }
             }
 
             .btnBox {
                 width: 100%;
-                height: 32px;
+                height: auto;
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
 
                 button {
                     width: 20vw;
-                    height: 32px;
+                    height: 9vw;
                     @include slotGameBtn_1;
 
                     &.try {

@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
     <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/F7ico_64x64.ico" type="image/x-icon">
 </head>
 <body>
     <!--header-->
@@ -25,11 +25,12 @@
     </header>
     <!--main-->
     <main>
-        <div class="marqueeBox">
+        <div class="marqueeBox inner">
             <i class="marquee_ic"></i>
             <div class="marquee">
                 <pre>公告測試公告測試公告測試</pre>
             </div>
+            <span></span>
         </div>
         <!--存款-->
         <div class="depositWrap">
@@ -53,9 +54,10 @@
                 </div>
             </div>
             <div class="depContent card display">
-                <p class="title">
+                <p class="title"> 
+                    <span>※</span>
                     選擇銀行
-                    <span class="remind">僅接受綁定銀行轉入之款項</span>
+                    <!-- <span class="remind">僅接受綁定銀行轉入之款項</span> -->
                 </p>
                 <select>
                     <option value="">上海銀行</option>
@@ -66,32 +68,40 @@
                     尾號:
                     <span class="num">41879</span>
                 </span>
-                <p class="title">存款金額</p>
-                <input type="text" placeholder="請輸入存款金額">
-                <span class="remind">單筆存款金額需介於 0 - 不限制</span>
-                <button class="check">立即存款</button>
-            </div>
-            <div class="depContent atm">
                 <p class="title">
-                    <span>※ </span>
-                    選擇帳號
-                </p>
-                <select>
-                    <option value="">虛擬銀行</option>
-                    <option value="">虛擬銀行</option>
-                    <option value="">虛擬銀行</option>
-                </select>
-                <p class="title">
-                    <span>※ </span>
+                    <span>※</span>
                     存款金額
                 </p>
                 <input type="text" placeholder="請輸入存款金額">
                 <span class="remind">單筆存款金額需介於 0 - 不限制</span>
                 <button class="check">立即存款</button>
             </div>
-            <div class="depContent shop">
+            <div class="depContent atm">
+                <p class="title">
+                    <span>※</span>
+                    選擇通道
+                </p>
+                <select>
+                    <option value="">虛擬銀行</option>
+                    <option value="">虛擬銀行</option>
+                    <option value="">虛擬銀行</option>
+                </select>
+                <select>
+                    <option value="">永豐銀行</option>
+                    <option value="">永豐銀行</option>
+                    <option value="">永豐銀行</option>
+                </select>
                 <p class="title">
                     <span>※ </span>
+                    存款金額
+                </p>
+                <input type="text" placeholder="請輸入充值金額">
+                <span class="remind">單筆存款金額需介於 $1,000 - $30,000</span>
+                <button class="check" disabled>立即存款</button>
+            </div>
+            <div class="depContent shop">
+                <p class="title">
+                    <span>※</span>
                     選擇帳號
                 </p>
                 <select>
@@ -141,7 +151,9 @@
             <div class="remindBox">
                 <p class="title">重要提醒</p>
                 <p>1.系統將發配一組專屬交易單號，請至您選擇的超商門市進行繳費。</p>
-                <p><span class="sp">2.繳費完成後請妥善保管交易收據，以便查證。</span></p>
+                <p>
+                    <span class="sp">2.繳費完成後請妥善保管交易收據，以便查證。</span>
+                </p>
                 <p>3.為了加快上分速度，請至交易紀錄上傳交易成功的明細。</p>
             </div>
         </div>
@@ -172,13 +184,13 @@
         </ul>
     </footer>
     <!--彈窗-->
-    <div class="filter display">
+    <div class="filter displa">
         <!--無信用卡提示-->
-        <div class="jumpWindow plsGo display">
+        <div class="jumpWindow plsGo displa">
             <div class="title">提示</div>
             <div class="content">
                 <p>無可使用的銀行卡，</p>
-                <p>請前往綁定銀行卡</p>
+                <p>請前往銀行卡綁定</p>
             </div>
             <div class="btnBox">
                 <button class="close">確認</button>
